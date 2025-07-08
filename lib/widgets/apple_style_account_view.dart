@@ -7,11 +7,13 @@ import 'package:tpe_component_sdk/tpe_component_sdk.dart';
 class AppleStyleAccountView extends StatelessWidget {
   final UserProfile user;
   final List<AccountSection> sections;
+  final TpeBalanceCardData data;
 
   const AppleStyleAccountView({
     super.key,
     required this.user,
     required this.sections,
+    required this.data,
   });
 
   @override
@@ -86,6 +88,12 @@ class AppleStyleAccountView extends StatelessWidget {
             debugPrint('Transfer tapped');
           },
         ),
+        TPEBalanceCardTLType(
+          data: data,
+          backgroundColor: TPEColors.blue100,
+          showBalanceToggle: true,
+        ),
+        TpeBalanceCardTwType(data: data, backgroundColor: TPEColors.white),
         const SizedBox(height: 28),
         Text(
           user.fullName,
