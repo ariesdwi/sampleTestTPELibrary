@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 
-class AccountItem {
+class CatalogItem {
   final IconData icon;
   final String label;
+  final Widget? destination;
 
-  AccountItem({
+  CatalogItem({
     required this.icon,
     required this.label,
+    this.destination,
   });
 }
