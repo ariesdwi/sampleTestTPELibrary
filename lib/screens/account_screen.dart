@@ -19,15 +19,6 @@ class AccountScreen extends StatelessWidget {
           email: "aries@example.com",
           points: 120,
         ),
-        data: TpeBalanceCardData(
-          accountNumber: '1234567890',
-          currency: 'USD',
-          currentBalance: 1000000,
-          copySuccessMessage: 'Account number copied successfully',
-          copyTitleText: "Salin",
-          titleBalanceText: "Saldo Rekening Utama",
-          showCopy: true,
-        ),
         sections: _buildSections(),
       ),
       bottomNavigationBar: Padding(
