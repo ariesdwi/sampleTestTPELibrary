@@ -1,19 +1,16 @@
 import 'package:flutter/material.dart';
 import '../models/user_profile.dart';
 import '../models/account_section.dart';
-import '../models/account_item.dart';
 import 'package:tpe_component_sdk/tpe_component_sdk.dart';
 
 class AppleStyleAccountView extends StatelessWidget {
   final UserProfile user;
   final List<AccountSection> sections;
-  final TpeBalanceCardData data;
 
   const AppleStyleAccountView({
     super.key,
     required this.user,
     required this.sections,
-    required this.data,
   });
 
   @override
@@ -88,12 +85,34 @@ class AppleStyleAccountView extends StatelessWidget {
             debugPrint('Transfer tapped');
           },
         ),
-        TPEBalanceCardTLType(
-          data: data,
-          backgroundColor: TPEColors.blue100,
-          showBalanceToggle: true,
+        TpeComponentSectionHeader(
+          // leadingIcon: Icon(Icons.money, size: 28, color: Colors.blue),
+          title: "Aktivitas Terbaru",
+          subtitle: "Pantau aktivitas terbarumu",
         ),
-        TpeBalanceCardTwType(data: data, backgroundColor: TPEColors.white),
+        TPEBalanceCardTLType(
+          accountNumber: '1234567890',
+          currentBalance: 1000000,
+          currency: 'USD',
+        ),
+        TpeBalanceCardTwType(
+          accountNumber: '1234567890',
+          currency: 'USD',
+          currentBalance: 1000000,
+          copySuccessMessage: 'Account number copied successfully',
+          copyTitleText: "Salin",
+          titleBalanceText: "Saldo Rekening Utama",
+          showCopy: true,
+          textTitleBalanceStyle: TextStyle(
+            color: TPEColors.yellow90,
+            fontWeight: FontWeight.normal,
+          ),
+          textCopyStyle: TextStyle(color: TPEColors.black),
+          style: TpeBalanceTwCardStyle(backgroundColor: TPEColors.blue10),
+          seeAllCallback: () {
+            print("Lihat Semua Rekening");
+          },
+        ),
         const SizedBox(height: 28),
         Text(
           user.fullName,
