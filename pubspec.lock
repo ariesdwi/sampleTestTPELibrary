@@ -437,7 +437,7 @@ packages:
   tpe_component_sdk:
     dependency: "direct main"
     description:
-      path: "../TPEComponentSDK/tpecomponentsdk"
+      path: "../tpe_component_sdk"
       relative: true
     source: path
     version: "0.0.1"

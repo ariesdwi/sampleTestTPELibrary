@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'screens/account_screen.dart';
+import 'package:hello_ios/screens/splashscreen.dart';
+import 'screens/component_catalog_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,7 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       title: 'Account UI',
-      home: AccountScreen(),
+      home: SplashScreen(),
     );
   }
 }
