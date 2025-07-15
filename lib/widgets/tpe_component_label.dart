@@ -12,6 +12,7 @@ class TPEComponentLabel extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
+            const SizedBox(height: 8),
             TPELabelChip(
               label: 'Sukses',
               backgroundColor: const Color.fromRGBO(225, 248, 235, 1),
@@ -23,9 +24,9 @@ class TPEComponentLabel extends StatelessWidget {
               label: 'Gagal',
               backgroundColor: const Color.fromRGBO(252, 231, 231, 1),
               textColor: const Color.fromRGBO(232, 64, 64, 1),
-              borderRadius: BorderRadius.circular(8),
+              borderRadius: BorderRadius.circular(4),
             ),
-            const SizedBox(height: 28),
+            const SizedBox(height: 8),
           ],
         ),
       ),

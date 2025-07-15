@@ -82,7 +82,8 @@ class ComponentCatalogScreen extends StatelessWidget {
             icon: Icons.dashboard_customize, // Represents horizontal menu
             label: "Menu Horizontal",
             destination: const TPEComponentMenuHorizontal(),
-          ),
+          )
+
         ],
       ),
     ];
