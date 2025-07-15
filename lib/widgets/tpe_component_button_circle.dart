@@ -13,14 +13,14 @@ class TPEComponentButtonCircle extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             CircleIconButton(
-              icon: Icons.shopping_cart,
+              icon: Icons.logout,
               onPressed: () {
                 debugPrint("Cart pressed!");
               },
             ),
             const SizedBox(height: 8),
             CircleIconButton(
-              icon: Icons.notifications,
+              icon: Icons.notifications_outlined,
               badgeCount: 3,
               onPressed: () {
                 debugPrint("Notifications pressed!");

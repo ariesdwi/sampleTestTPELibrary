@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'component_catalog_screen.dart'; // Update the path if needed
+import '../main_tab_page.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -15,9 +15,7 @@ class _SplashScreenState extends State<SplashScreen> {
     Future.delayed(const Duration(seconds: 2), () {
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(
-          builder: (_) => const ComponentCatalogScreen(),
-        ),
+        MaterialPageRoute(builder: (_) => const MainTabPage()),
       );
     });
   }
@@ -33,7 +31,7 @@ class _SplashScreenState extends State<SplashScreen> {
             Icon(Icons.flutter_dash, size: 100, color: Colors.blue),
             SizedBox(height: 20),
             Text(
-              'Welcome to TPE UI Kit',
+              'Welcome to TPE Library',
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
           ],

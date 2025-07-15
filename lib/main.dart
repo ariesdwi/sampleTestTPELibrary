@@ -12,7 +12,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      title: 'Account UI',
+      title: 'TPE Library',
+      debugShowCheckedModeBanner: false,
       home: SplashScreen(),
     );
   }
