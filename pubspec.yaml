@@ -31,9 +31,10 @@ dependencies:
   flutter:
     sdk: flutter
   tpe_component_sdk:
-    git:
-      url: https://bitbucket.bri.co.id/scm/~70001390/tpecomponentsdk.git
-      ref: v1.0.1
+    path: ../tpecomponentsdk
+    # git:
+    #   url: https://bitbucket.bri.co.id/scm/~70001390/tpecomponentsdk.git
+    #   ref: v1.0.1
   tpe_homepage_sdk:
     path: ../tpe_homepage_sdk
 
