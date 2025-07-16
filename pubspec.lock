@@ -437,11 +437,9 @@ packages:
   tpe_component_sdk:
     dependency: "direct main"
     description:
-      path: "."
-      ref: "v1.0.1"
-      resolved-ref: "14eacc934b29a854703f4db25b3aaa6cb0776393"
-      url: "https://bitbucket.bri.co.id/scm/~70001390/tpecomponentsdk.git"
-    source: git
+      path: "../tpecomponentsdk"
+      relative: true
+    source: path
     version: "0.0.1"
   tpe_homepage_sdk:
     dependency: "direct main"
