@@ -30,13 +30,14 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  # tpe_component_sdk:
+  #   git:
+  #     url: https://bitbucket.bri.co.id/scm/~70001390/tpecomponentsdk.git
+  #     ref: v1.0.1
   tpe_component_sdk:
-    path: ../tpecomponentsdk
-    # git:
-    #   url: https://bitbucket.bri.co.id/scm/~70001390/tpecomponentsdk.git
-    #   ref: v1.0.1
+    path: ../TPESdkComponent/tpecomponentsdk
   tpe_homepage_sdk:
-    path: ../tpe_homepage_sdk
+    path: ../TPEHomepageSDK/tpehomepagesdk
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -51,6 +52,14 @@ dev_dependencies:
   # activated in the `analysis_options.yaml` file located at the root of your
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
+
+  # tpe_component_sdk:
+  #   path: ../TPEComponentSDK/tpecomponentsdk
+  #   # git:
+  #   #   url: https://bitbucket.bri.co.id/scm/~70001390/tpecomponentsdk.git
+  #   #   ref: v1.0.1
+  # tpe_homepage_sdk:
+  #   path: ../TPEHomepageSDK/tpehomepagesdk
   flutter_lints: ^5.0.0
 
 # For information on the generic Dart part of this file, see the
@@ -62,6 +71,8 @@ flutter:
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
+  assets:
+    - assets/images/
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:

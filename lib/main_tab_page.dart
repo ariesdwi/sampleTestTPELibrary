@@ -20,10 +20,10 @@ class _MainTabPageState extends State<MainTabPage> {
     const ComponentCatalogScreen(),
     ComingSoonWrapper(
       isComingSoon: isHomeFeatureComingSoon,
-      child: HomePageTL(
+      child: TPEHomePageTL(
         header: TPEHeaderTLComponent(
           userName: 'Aries',
-          onTap: () => debugPrint("Account tapped"),
+          // onTap: () => debugPrint("Account tapped"),
         ),
         balanceCard: const TPEBalanceCardTLType(
           accountNumber: '0452 0200 0002 805',
@@ -62,6 +62,74 @@ class _MainTabPageState extends State<MainTabPage> {
         ],
       ),
     ),
+    TpeHomepageTWType(
+      header: TPEHeaderTw(userName: 'Farischa'),
+      balanceCard: const TpeBalanceCardTwType(
+        accountNumber: '0452 0200 0002 805',
+        currentBalance: 1000000,
+        currency: 'IDR',
+      ),
+      listMenu: [
+        TPEHomeMenuItemVertical(
+          icon: const Icon(Icons.send),
+          title: 'Transfer',
+          onTap: () => debugPrint("Transfer tapped"),
+        ),
+
+        TPEHomeMenuItemVertical(
+          icon: const Icon(Icons.send),
+          title: 'Transfer',
+          onTap: () => debugPrint("Transfer tapped"),
+        ),
+
+        TPEHomeMenuItemVertical(
+          icon: const Icon(Icons.send),
+          title: 'Transfer',
+          onTap: () => debugPrint("Transfer tapped"),
+        ),
+
+        TPEHomeMenuItemVertical(
+          icon: const Icon(Icons.send),
+          title: 'Transfer',
+          onTap: () => debugPrint("Transfer tapped"),
+        ),
+      ],
+      sectionHeaderTransaction: const TpeComponentSectionHeader(
+        title: 'Transaction Menu',
+        subtitle: 'Manage your finances and account',
+        showLeadingIcon: true,
+      ),
+      listTransaction: [
+        const TpeTransactionListTw(
+          isLoading: false,
+          activityTitle: 'Transfer to BRI',
+          activityText: 'Transfer to BRI',
+          activityAmount: 'Rp 1.000.000',
+          activityDate: '12 Jan 2023',
+          activityIcon: 'assets/TRANSFER_NEW.png',
+          activityStatus: 1,
+        ),
+        const TpeTransactionListTw(
+          isLoading: false,
+          activityTitle: 'Transfer to BRI',
+          activityText: 'Transfer to BRI',
+          activityAmount: 'Rp 1.000.000',
+          activityDate: '12 Jan 2023',
+          activityIcon: 'assets/TRANSFER_NEW.png',
+          activityStatus: 2,
+        ),
+      ],
+      sectionHeaderPromo: TpeComponentSectionHeader(
+        title: 'Promo',
+        subtitle: 'Latest offers and discounts',
+      ),
+      promoBannerTw: TpePromoBannerTw(
+        imageUrls: [
+          // 'assets/promo.png',
+          // 'assets/promo.png',
+        ],
+      ),
+    ),
   ];
 
   @override
@@ -76,7 +144,8 @@ class _MainTabPageState extends State<MainTabPage> {
             icon: Icon(Icons.widgets),
             label: 'Components',
           ),
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home TW'),
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home TL'),
         ],
       ),
     );

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tpe_component_sdk/foundations/color_utils.dart';
 import 'package:tpe_component_sdk/tpe_component_sdk.dart';
 
 class TPEComponentCardBalance extends StatelessWidget {
