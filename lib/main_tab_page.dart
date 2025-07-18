@@ -51,13 +51,13 @@ class _MainTabPageState extends State<MainTabPage> {
           TPEHorizontalMenuItem(
             icon: const Icon(Icons.account_balance_wallet),
             title: 'Account Statement',
-            onTap: () => debugPrint("History tapped"),
+            onTap: () => debugPrint("Account Statemen tapped"),
             subtitle: "Download your Account Statement",
           ),
           TPEHorizontalMenuItem(
             icon: const Icon(Icons.qr_code_scanner),
             title: 'QR Transfer',
-            onTap: () => debugPrint("History tapped"),
+            onTap: () => debugPrint("QR tapped"),
             subtitle: "Send money instantly by scanning QR codes",
           ),
         ],
