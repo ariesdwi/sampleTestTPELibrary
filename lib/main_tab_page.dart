@@ -30,9 +30,10 @@ class _MainTabPageState extends State<MainTabPage> {
           currentBalance: 1000000,
           currency: 'IDR',
         ),
-        sectionHeader: const TpeComponentSectionHeader(
+        sectionHeader: TpeComponentSectionHeader(
           title: 'Transaction Menu',
           subtitle: 'Manage your finances and account',
+          onTap: () => debugPrint("Transaction Menu tapped"),
         ),
         menuItems: [
           TPEHorizontalMenuItem(
@@ -63,6 +64,7 @@ class _MainTabPageState extends State<MainTabPage> {
       ),
     ),
     TpeHomepageTWType(
+      backgroundImageUrl: 'assets/images/promo.png',
       header: TPEHeaderTw(userName: 'Farischa'),
       balanceCard: const TpeBalanceCardTwType(
         accountNumber: '0452 0200 0002 805',
@@ -94,10 +96,11 @@ class _MainTabPageState extends State<MainTabPage> {
           onTap: () => debugPrint("Transfer tapped"),
         ),
       ],
-      sectionHeaderTransaction: const TpeComponentSectionHeader(
+      sectionHeaderTransaction: TpeComponentSectionHeader(
         title: 'Transaction Menu',
         subtitle: 'Manage your finances and account',
         showLeadingIcon: true,
+        onTap: () => debugPrint("Transaction Menu tapped"),
       ),
       listTransaction: [
         const TpeTransactionListTw(
@@ -106,7 +109,8 @@ class _MainTabPageState extends State<MainTabPage> {
           activityText: 'Transfer to BRI',
           activityAmount: 'Rp 1.000.000',
           activityDate: '12 Jan 2023',
-          activityIcon: 'assets/TRANSFER_NEW.png',
+          activityIcon:
+              'https://hondapekalonganmotor.com/wp-content/uploads/2020/03/71044716-red-easy-vector-illustration-isolated-paper-bubble-banner-promo-this-element-is-well-adapted-for-web.jpg',
           activityStatus: 1,
         ),
         const TpeTransactionListTw(
@@ -115,7 +119,7 @@ class _MainTabPageState extends State<MainTabPage> {
           activityText: 'Transfer to BRI',
           activityAmount: 'Rp 1.000.000',
           activityDate: '12 Jan 2023',
-          activityIcon: 'assets/TRANSFER_NEW.png',
+          activityIcon: 'assets/images/TRANSFER_NEW.png',
           activityStatus: 2,
         ),
       ],
@@ -125,8 +129,8 @@ class _MainTabPageState extends State<MainTabPage> {
       ),
       promoBannerTw: TpePromoBannerTw(
         imageUrls: [
-          // 'assets/promo.png',
-          // 'assets/promo.png',
+          'assets/images/placeholder.png',
+          'https://hondapekalonganmotor.com/wp-content/uploads/2020/03/71044716-red-easy-vector-illustration-isolated-paper-bubble-banner-promo-this-element-is-well-adapted-for-web.jpg'
         ],
       ),
     ),
