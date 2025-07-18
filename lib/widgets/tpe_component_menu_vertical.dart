@@ -12,7 +12,7 @@ class TPEComponentMenuVertical extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            TPEHomeMenuItem(
+            TPEHomeMenuItemVertical(
               title: 'Transfer',
               icon: Icon(Icons.money, size: 28, color: Colors.blue),
               isNew: true,
@@ -21,7 +21,7 @@ class TPEComponentMenuVertical extends StatelessWidget {
               },
             ),
             const SizedBox(height: 8),
-             TPEHomeMenuItem(
+             TPEHomeMenuItemVertical(
               title: 'Payment',
               icon: Icon(Icons.money, size: 28, color: Colors.blue),
               isNew: false,
