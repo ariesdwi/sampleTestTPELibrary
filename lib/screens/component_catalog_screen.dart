@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 import '../models/catalog_item.dart';
 import '../models/catalog_section.dart';
@@ -10,34 +11,38 @@ import '../widgets/tpe_component_label.dart';
 import '../widgets/tpe_component_menu_horizontal.dart';
 import '../widgets/tpe_component_menu_vertical.dart';
 import '../widgets/tpe_component_section.dart';
+import '../widgets/tpe_component_header.dart';
 
 class ComponentCatalogScreen extends StatelessWidget {
   const ComponentCatalogScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final items = _buildSections().first.items;
+    final sections = _buildSections();
 
     return Scaffold(
       appBar: AppBar(title: const Text("Component Catalog")),
-      body: ListView.separated(
-        padding: const EdgeInsets.symmetric(vertical: 12),
-        itemCount: items.length,
-        separatorBuilder: (_, __) => const Divider(height: 1),
+      body: ListView.builder(
+        itemCount: sections.length,
         itemBuilder: (context, index) {
-          final item = items[index];
-          return ListTile(
-            leading: Icon(item.icon, color: Colors.blue),
-            title: Text(item.label),
-            trailing: const Icon(Icons.chevron_right),
-            onTap: () {
-              if (item.destination != null) {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (_) => item.destination!),
-                );
-              }
-            },
+          final section = sections[index];
+          return ExpansionTile(
+            title: Text(section.title, style: const TextStyle(fontWeight: FontWeight.bold)),
+            children: section.items.map((item) {
+              return ListTile(
+                leading: Icon(item.icon, color: Colors.blue),
+                title: Text(item.label),
+                trailing: const Icon(Icons.chevron_right),
+                onTap: () {
+                  if (item.destination != null) {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (_) => item.destination!),
+                    );
+                  }
+                },
+              );
+            }).toList(),
           );
         },
       ),
@@ -47,45 +52,41 @@ class ComponentCatalogScreen extends StatelessWidget {
   List<CatalogSection> _buildSections() {
     return [
       CatalogSection(
+        title: "Atoms",
         items: [
-          CatalogItem(
-            icon: Icons.radio_button_checked, // More representative of a circular icon
-            label: "Icon Circle Button",
-            destination: const TPEComponentButtonCircle(),
-          ),
-          CatalogItem(
-            icon: Icons.label_important, // Label style icon
-            label: "Label Success",
-            destination: const TPEComponentLabel(),
-          ),
-          CatalogItem(
-            icon: Icons.view_stream, // Vertical menu style icon
-            label: "Menu Vertical",
-            destination: const TPEComponentMenuVertical(),
-          ),
-          CatalogItem(
-            icon: Icons.smart_button, // Represents a button well
-            label: "Button",
-            destination: const TPEComponentButton(),
-          ),
-          CatalogItem(
-            icon: Icons.account_balance_wallet, // Represents a balance card better
-            label: "Card",
-            destination: const TPEComponentCardBalance(),
-          ),
-          CatalogItem(
-            icon: Icons.view_week, // Represents section/grouping
-            label: "Section",
-            destination: const TPEComponentSection(),
-          ),
-          CatalogItem(
-            icon: Icons.dashboard_customize, // Represents horizontal menu
-            label: "Menu Horizontal",
-            destination: const TPEComponentMenuHorizontal(),
-          )
-
+          CatalogItem(label: "TPEEyeToggleButton", icon: Icons.remove_red_eye),
+          CatalogItem(label: "TPECopyButton", icon: Icons.copy),
+          CatalogItem(label: "TPEArrowButton", icon: Icons.arrow_forward),
+          CatalogItem(label: "TPENotificationBadgeIcon", icon: Icons.notifications),
+          CatalogItem(label: "TPEFeatureIcon", icon: Icons.star),
+          CatalogItem(label: "TPEColoredLabel", icon: Icons.label_important, destination: const TPEComponentLabel()),
+          CatalogItem(label: "TPETextPrimary / Secondary", icon: Icons.text_fields),
+        ],
+      ),
+      CatalogSection(
+        title: "Molecules",
+        items: [
+          CatalogItem(label: "TPEAccountCard", icon: Icons.account_balance_wallet, destination: const TPEComponentCardBalance()),
+          CatalogItem(label: "TPECircleIconButton", icon: Icons.radio_button_checked, destination: const TPEComponentButtonCircle()),
+          CatalogItem(label: "TPETransactionItem", icon: Icons.receipt_long),
+          CatalogItem(label: "TPEPromoBanner", icon: Icons.local_offer),
+          CatalogItem(label: "TPEMenuItemHorizontal", icon: Icons.dashboard_customize, destination: const TPEComponentMenuHorizontal()),
+          CatalogItem(label: "TPEMenuItemVertical", icon: Icons.view_stream, destination: const TPEComponentMenuVertical()),
+        ],
+      ),
+      CatalogSection(
+        title: "Organisms",
+        items: [
+          CatalogItem(label: "TPEAccountHeader", icon: Icons.navigation, destination: const TPEComponentHeader()),
+          CatalogItem(label: "TPEMainFeatureScroller", icon: Icons.featured_play_list),
+          CatalogItem(label: "TPERencentTransactionList", icon: Icons.list),
+          CatalogItem(label: "TPEPromoSection", icon: Icons.local_activity),
+          CatalogItem(label: "TPEMenuIVertical", icon: Icons.vertical_split),
+          CatalogItem(label: "TPEMenuHorizontal", icon: Icons.horizontal_split),
+          CatalogItem(label: "TPESection", icon: Icons.view_week, destination: const TPEComponentSection()),
         ],
       ),
     ];
   }
 }
+
