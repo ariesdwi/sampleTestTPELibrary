@@ -25,10 +25,11 @@ class _MainTabPageState extends State<MainTabPage> {
           userName: 'Aries',
           // onTap: () => debugPrint("Account tapped"),
         ),
-        balanceCard: const TPEBalanceCardTLType(
-          accountNumber: '0452 0200 0002 805',
-          currentBalance: 1000000,
-          currency: 'IDR',
+        balanceCard: TPEBalanceCard(
+          type: TPEBalanceCardType.tl,
+          accountNumber: '1234567890',
+          currency: 'USD',
+          currentBalance: 1234.56,
         ),
         sectionHeader: TpeComponentSectionHeader(
           title: 'Transaction Menu',
@@ -66,10 +67,14 @@ class _MainTabPageState extends State<MainTabPage> {
     TpeHomepageTWType(
       backgroundImageUrl: 'assets/images/promo.png',
       header: TPEHeaderTw(userName: 'Farischa'),
-      balanceCard: const TpeBalanceCardTwType(
-        accountNumber: '0452 0200 0002 805',
-        currentBalance: 1000000,
-        currency: 'IDR',
+      balanceCard: TPEBalanceCard(
+        type: TPEBalanceCardType.tw,
+        accountNumber: '1234567890',
+        currency: 'USD',
+        currentBalance: 1234.56,
+        onSeeAll: () {
+          // Handle see all
+        },
       ),
       listMenu: [
         TPEHomeMenuItemVertical(
@@ -103,7 +108,7 @@ class _MainTabPageState extends State<MainTabPage> {
         onTap: () => debugPrint("Transaction Menu tapped"),
       ),
       listTransaction: [
-        const TpeTransactionListTw(
+        const TpeTransactionItemTw(
           isLoading: false,
           activityTitle: 'Transfer to BRI',
           activityText: 'Transfer to BRI',
@@ -113,7 +118,7 @@ class _MainTabPageState extends State<MainTabPage> {
               'https://hondapekalonganmotor.com/wp-content/uploads/2020/03/71044716-red-easy-vector-illustration-isolated-paper-bubble-banner-promo-this-element-is-well-adapted-for-web.jpg',
           activityStatus: 1,
         ),
-        const TpeTransactionListTw(
+        const TpeTransactionItemTw(
           isLoading: false,
           activityTitle: 'Transfer to BRI',
           activityText: 'Transfer to BRI',
@@ -130,7 +135,7 @@ class _MainTabPageState extends State<MainTabPage> {
       promoBannerTw: TpePromoBannerTw(
         imageUrls: [
           'assets/images/placeholder.png',
-          'https://hondapekalonganmotor.com/wp-content/uploads/2020/03/71044716-red-easy-vector-illustration-isolated-paper-bubble-banner-promo-this-element-is-well-adapted-for-web.jpg'
+          'https://hondapekalonganmotor.com/wp-content/uploads/2020/03/71044716-red-easy-vector-illustration-isolated-paper-bubble-banner-promo-this-element-is-well-adapted-for-web.jpg',
         ],
       ),
     ),

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:tpe_component_sdk/components/card/tpe_base_card/tpe_base_card.dart';
+import 'package:tpe_component_sdk/components/icon/tpe_balance_indicator.dart';
 import 'package:tpe_component_sdk/foundations/color_utils.dart';
 import 'package:tpe_component_sdk/tpe_component_sdk.dart';
 
@@ -13,31 +15,36 @@ class TPEComponentCardBalance extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            TPEBalanceCardTLType(
+            TPEBalanceCardTL(
               accountNumber: '1234567890',
-              currentBalance: 1000000,
               currency: 'USD',
+              currentBalance: 1234.56,
             ),
             const SizedBox(height: 28),
-            TpeBalanceCardTwType(
+
+            TPEBalanceCard(
+              type: TPEBalanceCardType.tw,
               accountNumber: '1234567890',
               currency: 'USD',
-              currentBalance: 1000000,
-              copySuccessMessage: 'Account number copied successfully',
-              copyTitleText: "Salin",
-              titleBalanceText: "Saldo Rekening Utama",
-              showCopy: true,
-              textTitleBalanceStyle: TextStyle(
-                color: TPEColors.yellow90,
-                fontWeight: FontWeight.normal,
-              ),
-              textCopyStyle: TextStyle(color: TPEColors.black),
-              style: TpeBalanceTwCardStyle(backgroundColor: TPEColors.blue10),
-              seeAllCallback: () {
-                print("Lihat Semua Rekening");
+              currentBalance: 1234.56,
+              onSeeAll: () {
+                // Handle see all
               },
             ),
-            const SizedBox(height: 28),
+
+            TPEBalanceCardTW(
+              accountNumber: '1234567890',
+              currency: 'USD',
+              currentBalance: 1234.56,
+            ),
+            
+            TPEBalanceCardTW(
+              accountNumber: '1234567890',
+              currency: 'USD',
+              currentBalance: 1234.56,
+              backgroundColor: TPEColors.blue80,
+              balanceIndicator: TPEBalanceIndicator(color: TPEColors.white),
+            ),
           ],
         ),
       ),
