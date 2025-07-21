@@ -10,6 +10,7 @@ import 'package:hello_ios/widgets/atoms/tpe_menu_badge_label.dart';
 import 'package:hello_ios/widgets/atoms/tpe_text_variant.dart';
 import 'package:hello_ios/widgets/tpe_organism_menu.dart';
 import 'package:hello_ios/widgets/tpe_organism_promo.dart';
+import 'package:hello_ios/widgets/tpe_organism_transaction.dart';
 import 'package:hello_ios/widgets/tpe_transaction_item.dart';
 import '../models/catalog_item.dart';
 import '../models/catalog_section.dart';
@@ -68,7 +69,7 @@ class ComponentCatalogScreen extends StatelessWidget {
         items: [
           CatalogItem(label: "TPETextVariant", icon: Icons.text_fields, destination: const TextVariant()),
           CatalogItem(label: "TPEBaseIcon", icon: Icons.copy, destination: const BaseIcon()),
-          CatalogItem(label: "TPEBaseCard", icon: Icons.arrow_forward, destination: const BaseCard()),
+          CatalogItem(label: "TPEPromoCard", icon: Icons.arrow_forward, destination: const BaseCard()),
           CatalogItem(label: "TPEEyeToggleButton", icon: Icons.remove_red_eye, destination: const EyeToggleButton()),
           CatalogItem(label: "TPECopyIcon", icon: Icons.star, destination: const CopyButton()),
           CatalogItem(label: "TPEBalanceIndicator", icon: Icons.label_important, destination: const TPEBalanceDot()),
@@ -85,17 +86,17 @@ class ComponentCatalogScreen extends StatelessWidget {
           CatalogItem(label: "TPETransactionItem", icon: Icons.receipt_long, destination: const TransactionItem()),
           CatalogItem(label: "TPEMenuItemHorizontal", icon: Icons.dashboard_customize, destination: const TPEComponentMenuHorizontal()),
           CatalogItem(label: "TPEMenuItemVertical", icon: Icons.view_stream, destination: const TPEComponentMenuVertical()),
+          CatalogItem(label: "TPESection", icon: Icons.view_week, destination: const TPEComponentSection()),
         ],
       ),
       CatalogSection(
         title: "Organisms",
         items: [
           CatalogItem(label: "TPEAccountHeader", icon: Icons.navigation, destination: const TPEComponentHeader()),
-          CatalogItem(label: "TPEtTransactionList", icon: Icons.list, destination: const TransactionItem()),
+          CatalogItem(label: "TPEtTransactionList", icon: Icons.list, destination: const TransactionItemList()),
           CatalogItem(label: "TPEPromoSection", icon: Icons.local_activity, destination: const TPEOrganismPromoBanner()),
           CatalogItem(label: "TPEMenuIVertical", icon: Icons.vertical_split, destination: const TpeOrganismMenu()),
           CatalogItem(label: "TPEMenuHorizontal", icon: Icons.horizontal_split, destination: TPEComponentMenuHorizontalPage()),
-          CatalogItem(label: "TPESection", icon: Icons.view_week, destination: const TPEComponentSection()),
         ],
       ),
     ];

@@ -23,8 +23,7 @@ class _MainTabPageState extends State<MainTabPage> {
       child: TPEHomePageTL(
         header: TPEHeaderTLComponent(
           userName: 'Aries',
-          rightCircleButton: TPECircleIconButton(icon: Icons.logout),
-          // onTap: () => debugPrint("Account tapped"),
+          rightCircleButton: TPECircleIconButton(icon: Icons.logout)
         ),
         balanceCard: TPEBalanceCard(
           type: TPEBalanceCardType.tl,
@@ -105,7 +104,7 @@ class _MainTabPageState extends State<MainTabPage> {
       sectionHeaderTransaction: TpeComponentSectionHeader(
         title: 'Transaction Menu',
         subtitle: 'Manage your finances and account',
-        showLeadingIcon: true,
+        trailingIcon: const Icon(Icons.chevron_right),
         onTap: () => debugPrint("Transaction Menu tapped"),
       ),
       listTransaction: [
@@ -133,7 +132,7 @@ class _MainTabPageState extends State<MainTabPage> {
         title: 'Promo',
         subtitle: 'Latest offers and discounts',
       ),
-      promoBannerTw: TpePromoBannerTw(
+      promoBannerTw: TpePromoListBannerTw(
         imageUrls: [
           'assets/images/placeholder.png',
           'https://hondapekalonganmotor.com/wp-content/uploads/2020/03/71044716-red-easy-vector-illustration-isolated-paper-bubble-banner-promo-this-element-is-well-adapted-for-web.jpg',
