@@ -21,6 +21,8 @@ import '../widgets/tpe_component_menu_horizontal.dart';
 import '../widgets/tpe_component_menu_vertical.dart';
 import '../widgets/tpe_component_section.dart';
 import '../widgets/tpe_component_header.dart';
+import '../widgets/tpe_horizontal_menu_group.dart';
+
 
 class ComponentCatalogScreen extends StatelessWidget {
   const ComponentCatalogScreen({super.key});
@@ -89,11 +91,11 @@ class ComponentCatalogScreen extends StatelessWidget {
         title: "Organisms",
         items: [
           CatalogItem(label: "TPEAccountHeader", icon: Icons.navigation, destination: const TPEComponentHeader()),
-          CatalogItem(label: "TPEMainFeatureScroller", icon: Icons.featured_play_list),
           CatalogItem(label: "TPERencentTransactionList", icon: Icons.list),
           CatalogItem(label: "TPEPromoSection", icon: Icons.local_activity),
           CatalogItem(label: "TPEMenuIVertical", icon: Icons.vertical_split),
-          CatalogItem(label: "TPEMenuHorizontal", icon: Icons.horizontal_split, destination: const TpeOrganismMenu()),
+          CatalogItem(label: "TPEMenuHorizontal", icon: Icons.horizontal_split, destination: TPEComponentMenuHorizontalPage()),
+          
           CatalogItem(label: "TPESection", icon: Icons.view_week, destination: const TPEComponentSection()),
         ],
       ),
