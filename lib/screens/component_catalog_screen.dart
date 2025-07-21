@@ -1,5 +1,14 @@
 
 import 'package:flutter/material.dart';
+import 'package:hello_ios/widgets/atoms/tpe_balance_indicator.dart';
+import 'package:hello_ios/widgets/atoms/tpe_base_card.dart';
+import 'package:hello_ios/widgets/atoms/tpe_base_icon.dart';
+import 'package:hello_ios/widgets/atoms/tpe_copy_button.dart';
+import 'package:hello_ios/widgets/atoms/tpe_count_badge_label.dart';
+import 'package:hello_ios/widgets/atoms/tpe_eye_toggle_button.dart';
+import 'package:hello_ios/widgets/atoms/tpe_menu_badge_label.dart';
+import 'package:hello_ios/widgets/atoms/tpe_text_variant.dart';
+import 'package:hello_ios/widgets/tpe_transaction_item.dart';
 import '../models/catalog_item.dart';
 import '../models/catalog_section.dart';
 
@@ -54,13 +63,15 @@ class ComponentCatalogScreen extends StatelessWidget {
       CatalogSection(
         title: "Atoms",
         items: [
-          CatalogItem(label: "TPEEyeToggleButton", icon: Icons.remove_red_eye),
-          CatalogItem(label: "TPECopyButton", icon: Icons.copy),
-          CatalogItem(label: "TPEArrowButton", icon: Icons.arrow_forward),
-          CatalogItem(label: "TPENotificationBadgeIcon", icon: Icons.notifications),
-          CatalogItem(label: "TPEFeatureIcon", icon: Icons.star),
-          CatalogItem(label: "TPEColoredLabel", icon: Icons.label_important, destination: const TPEComponentLabel()),
-          CatalogItem(label: "TPETextPrimary / Secondary", icon: Icons.text_fields),
+          CatalogItem(label: "TPETextVariant", icon: Icons.text_fields, destination: const TextVariant()),
+          CatalogItem(label: "TPEBaseIcon", icon: Icons.copy, destination: const BaseIcon()),
+          CatalogItem(label: "TPEBaseCard", icon: Icons.arrow_forward, destination: const BaseCard()),
+          CatalogItem(label: "TPEEyeToggleButton", icon: Icons.remove_red_eye, destination: const EyeToggleButton()),
+          CatalogItem(label: "TPECopyIcon", icon: Icons.star, destination: const CopyButton()),
+          CatalogItem(label: "TPEBalanceIndicator", icon: Icons.label_important, destination: const TPEBalanceDot()),
+          CatalogItem(label: "TPECountBadgeLabel", icon: Icons.text_fields, destination: const TPECountBadgeLabel()),
+          CatalogItem(label: "TPEColoredLabel", icon: Icons.text_fields, destination: const TPEComponentLabel()),
+          CatalogItem(label: "TPEMenuBadgeLabel", icon: Icons.notifications, destination: const MenuBadgeLabel()),
         ],
       ),
       CatalogSection(
@@ -68,7 +79,7 @@ class ComponentCatalogScreen extends StatelessWidget {
         items: [
           CatalogItem(label: "TPEAccountCard", icon: Icons.account_balance_wallet, destination: const TPEComponentCardBalance()),
           CatalogItem(label: "TPECircleIconButton", icon: Icons.radio_button_checked, destination: const TPEComponentButtonCircle()),
-          CatalogItem(label: "TPETransactionItem", icon: Icons.receipt_long),
+          CatalogItem(label: "TPETransactionItem", icon: Icons.receipt_long, destination: const TransactionItem()),
           CatalogItem(label: "TPEPromoBanner", icon: Icons.local_offer),
           CatalogItem(label: "TPEMenuItemHorizontal", icon: Icons.dashboard_customize, destination: const TPEComponentMenuHorizontal()),
           CatalogItem(label: "TPEMenuItemVertical", icon: Icons.view_stream, destination: const TPEComponentMenuVertical()),

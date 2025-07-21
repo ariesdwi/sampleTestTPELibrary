@@ -35,9 +35,9 @@ dependencies:
   #     url: https://bitbucket.bri.co.id/scm/~70001390/tpecomponentsdk.git
   #     ref: v1.0.1
   tpe_component_sdk:
-    path: ../tpecomponentsdk
+    path: ../TPESdkComponent/tpecomponentsdk
   tpe_homepage_sdk:
-    path: ../tpe_homepage_sdk
+    path: ../TPEHomepageSDK/tpehomepagesdk
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
