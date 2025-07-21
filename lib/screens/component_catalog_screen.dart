@@ -8,12 +8,12 @@ import 'package:hello_ios/widgets/atoms/tpe_count_badge_label.dart';
 import 'package:hello_ios/widgets/atoms/tpe_eye_toggle_button.dart';
 import 'package:hello_ios/widgets/atoms/tpe_menu_badge_label.dart';
 import 'package:hello_ios/widgets/atoms/tpe_text_variant.dart';
+import 'package:hello_ios/widgets/tpe_organism_menu.dart';
 import 'package:hello_ios/widgets/tpe_transaction_item.dart';
 import '../models/catalog_item.dart';
 import '../models/catalog_section.dart';
 
 // Component pages
-import '../widgets/tpe_component_button.dart';
 import '../widgets/tpe_component_button_circle.dart';
 import '../widgets/tpe_component_card_balance.dart';
 import '../widgets/tpe_component_label.dart';
@@ -93,7 +93,7 @@ class ComponentCatalogScreen extends StatelessWidget {
           CatalogItem(label: "TPERencentTransactionList", icon: Icons.list),
           CatalogItem(label: "TPEPromoSection", icon: Icons.local_activity),
           CatalogItem(label: "TPEMenuIVertical", icon: Icons.vertical_split),
-          CatalogItem(label: "TPEMenuHorizontal", icon: Icons.horizontal_split),
+          CatalogItem(label: "TPEMenuHorizontal", icon: Icons.horizontal_split, destination: const TpeOrganismMenu()),
           CatalogItem(label: "TPESection", icon: Icons.view_week, destination: const TPEComponentSection()),
         ],
       ),

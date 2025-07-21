@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:tpe_component_sdk/components/card/tpe_base_card/tpe_base_card.dart';
-import 'package:tpe_component_sdk/components/icon/tpe_balance_indicator.dart';
-import 'package:tpe_component_sdk/foundations/color_utils.dart';
 import 'package:tpe_component_sdk/tpe_component_sdk.dart';
 
 class TPEComponentCardBalance extends StatelessWidget {
@@ -12,8 +9,7 @@ class TPEComponentCardBalance extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: const Text("TPE Card Balance")),
       body: Center(
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
+        child: ListView(
           children: [
             TPEBalanceCardTL(
               accountNumber: '1234567890',
@@ -37,7 +33,7 @@ class TPEComponentCardBalance extends StatelessWidget {
               currency: 'USD',
               currentBalance: 1234.56,
             ),
-            
+
             TPEBalanceCardTW(
               accountNumber: '1234567890',
               currency: 'USD',
