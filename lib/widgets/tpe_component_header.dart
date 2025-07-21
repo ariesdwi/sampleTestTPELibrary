@@ -9,7 +9,7 @@ class TPEComponentHeader extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: const Text("TPE Header")),
       body: Container(
-        color: const Color.fromARGB(255, 112, 97, 96), // 🔴 Set red background
+        color: const Color.fromARGB(255, 112, 97, 96), 
         child: Center(
 
           child:

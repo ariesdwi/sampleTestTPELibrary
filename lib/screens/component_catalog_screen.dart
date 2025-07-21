@@ -67,15 +67,15 @@ class ComponentCatalogScreen extends StatelessWidget {
       CatalogSection(
         title: "Atoms",
         items: [
-          CatalogItem(label: "TPETextVariant", icon: Icons.text_fields, destination: const TextVariant()),
-          CatalogItem(label: "TPEBaseIcon", icon: Icons.copy, destination: const BaseIcon()),
-          CatalogItem(label: "TPEPromoCard", icon: Icons.arrow_forward, destination: const BaseCard()),
-          CatalogItem(label: "TPEEyeToggleButton", icon: Icons.remove_red_eye, destination: const EyeToggleButton()),
-          CatalogItem(label: "TPECopyIcon", icon: Icons.star, destination: const CopyButton()),
+          CatalogItem(label: "TPETextVariant", icon: Icons.label_important, destination: const TextVariant()),
+          CatalogItem(label: "TPEBaseIcon", icon: Icons.label_important, destination: const BaseIcon()),
+          CatalogItem(label: "TPEPromoCard", icon: Icons.label_important, destination: const BaseCard()),
+          CatalogItem(label: "TPEEyeToggleButton", icon: Icons.label_important, destination: const EyeToggleButton()),
+          CatalogItem(label: "TPECopyIcon", icon: Icons.label_important, destination: const CopyButton()),
           CatalogItem(label: "TPEBalanceIndicator", icon: Icons.label_important, destination: const TPEBalanceDot()),
-          CatalogItem(label: "TPECountBadgeLabel", icon: Icons.text_fields, destination: const TPECountBadgeLabel()),
-          CatalogItem(label: "TPEColoredLabel", icon: Icons.text_fields, destination: const TPEComponentLabelChip()),
-          CatalogItem(label: "TPEMenuBadgeLabel", icon: Icons.notifications, destination: const MenuBadgeLabel()),
+          CatalogItem(label: "TPECountBadgeLabel", icon: Icons.label_important, destination: const TPECountBadgeLabel()),
+          CatalogItem(label: "TPEColoredLabel", icon: Icons.label_important, destination: const TPEComponentLabelChip()),
+          CatalogItem(label: "TPEMenuBadgeLabel", icon: Icons.label_important, destination: const MenuBadgeLabel()),
         ],
       ),
       CatalogSection(
