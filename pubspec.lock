@@ -485,14 +485,14 @@ packages:
   tpe_component_sdk:
     dependency: "direct main"
     description:
-      path: "../TPESdkComponent/tpecomponentsdk"
+      path: "../tpecomponentsdk"
       relative: true
     source: path
     version: "0.0.1"
   tpe_homepage_sdk:
     dependency: "direct main"
     description:
-      path: "../TPEHomepageSDK/tpehomepagesdk"
+      path: "../tpe_homepage_sdk"
       relative: true
     source: path
     version: "0.0.1"
