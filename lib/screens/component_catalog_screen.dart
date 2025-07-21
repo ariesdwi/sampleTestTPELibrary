@@ -9,6 +9,7 @@ import 'package:hello_ios/widgets/atoms/tpe_eye_toggle_button.dart';
 import 'package:hello_ios/widgets/atoms/tpe_menu_badge_label.dart';
 import 'package:hello_ios/widgets/atoms/tpe_text_variant.dart';
 import 'package:hello_ios/widgets/tpe_organism_menu.dart';
+import 'package:hello_ios/widgets/tpe_organism_promo.dart';
 import 'package:hello_ios/widgets/tpe_transaction_item.dart';
 import '../models/catalog_item.dart';
 import '../models/catalog_section.dart';
@@ -82,7 +83,6 @@ class ComponentCatalogScreen extends StatelessWidget {
           CatalogItem(label: "TPEAccountCard", icon: Icons.account_balance_wallet, destination: const TPEComponentCardBalance()),
           CatalogItem(label: "TPECircleIconButton", icon: Icons.radio_button_checked, destination: const TPEComponentButtonCircle()),
           CatalogItem(label: "TPETransactionItem", icon: Icons.receipt_long, destination: const TransactionItem()),
-          CatalogItem(label: "TPEPromoBanner", icon: Icons.local_offer),
           CatalogItem(label: "TPEMenuItemHorizontal", icon: Icons.dashboard_customize, destination: const TPEComponentMenuHorizontal()),
           CatalogItem(label: "TPEMenuItemVertical", icon: Icons.view_stream, destination: const TPEComponentMenuVertical()),
         ],
@@ -91,11 +91,10 @@ class ComponentCatalogScreen extends StatelessWidget {
         title: "Organisms",
         items: [
           CatalogItem(label: "TPEAccountHeader", icon: Icons.navigation, destination: const TPEComponentHeader()),
-          CatalogItem(label: "TPERencentTransactionList", icon: Icons.list),
-          CatalogItem(label: "TPEPromoSection", icon: Icons.local_activity),
-          CatalogItem(label: "TPEMenuIVertical", icon: Icons.vertical_split),
+          CatalogItem(label: "TPEtTransactionList", icon: Icons.list, destination: const TransactionItem()),
+          CatalogItem(label: "TPEPromoSection", icon: Icons.local_activity, destination: const TPEOrganismPromoBanner()),
+          CatalogItem(label: "TPEMenuIVertical", icon: Icons.vertical_split, destination: const TpeOrganismMenu()),
           CatalogItem(label: "TPEMenuHorizontal", icon: Icons.horizontal_split, destination: TPEComponentMenuHorizontalPage()),
-          
           CatalogItem(label: "TPESection", icon: Icons.view_week, destination: const TPEComponentSection()),
         ],
       ),
