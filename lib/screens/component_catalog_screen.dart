@@ -70,7 +70,7 @@ class ComponentCatalogScreen extends StatelessWidget {
           CatalogItem(label: "TPECopyIcon", icon: Icons.star, destination: const CopyButton()),
           CatalogItem(label: "TPEBalanceIndicator", icon: Icons.label_important, destination: const TPEBalanceDot()),
           CatalogItem(label: "TPECountBadgeLabel", icon: Icons.text_fields, destination: const TPECountBadgeLabel()),
-          CatalogItem(label: "TPEColoredLabel", icon: Icons.text_fields, destination: const TPEComponentLabel()),
+          CatalogItem(label: "TPEColoredLabel", icon: Icons.text_fields, destination: const TPEComponentLabelChip()),
           CatalogItem(label: "TPEMenuBadgeLabel", icon: Icons.notifications, destination: const MenuBadgeLabel()),
         ],
       ),

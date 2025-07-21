@@ -23,6 +23,7 @@ class _MainTabPageState extends State<MainTabPage> {
       child: TPEHomePageTL(
         header: TPEHeaderTLComponent(
           userName: 'Aries',
+          rightCircleButton: TPECircleIconButton(icon: Icons.logout),
           // onTap: () => debugPrint("Account tapped"),
         ),
         balanceCard: TPEBalanceCard(
