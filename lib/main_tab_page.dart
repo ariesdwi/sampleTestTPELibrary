@@ -21,10 +21,10 @@ class _MainTabPageState extends State<MainTabPage> {
     ComingSoonWrapper(
       isComingSoon: isHomeFeatureComingSoon,
       child: TPEHomePageTL(
-        header: TPEHeaderTLComponent(
+        header: TPEHeaderComponent(
           userName: 'Aries',
-          rightCircleButton: TPECircleIconButton(icon: Icons.logout),
-          // onTap: () => debugPrint("Account tapped"),
+          singleLineType: true,
+          rightCircleButton: TPECircleIconButton(icon: Icons.logout)
         ),
         balanceCard: TPEBalanceCard(
           type: TPEBalanceCardType.tl,
@@ -67,7 +67,8 @@ class _MainTabPageState extends State<MainTabPage> {
     ),
     TpeHomepageTWType(
       backgroundImageUrl: 'assets/images/promo.png',
-      header: TPEHeaderTw(userName: 'Farischa'),
+      header: TPEHeaderComponent(userName: 'Farischa', singleLineType: false,
+          rightCircleButton: TPECircleIconButton(icon: Icons.notifications)),
       balanceCard: TPEBalanceCard(
         type: TPEBalanceCardType.tw,
         accountNumber: '1234567890',
@@ -105,7 +106,7 @@ class _MainTabPageState extends State<MainTabPage> {
       sectionHeaderTransaction: TpeComponentSectionHeader(
         title: 'Transaction Menu',
         subtitle: 'Manage your finances and account',
-        showLeadingIcon: true,
+        trailingIcon: const Icon(Icons.chevron_right),
         onTap: () => debugPrint("Transaction Menu tapped"),
       ),
       listTransaction: [
@@ -133,7 +134,7 @@ class _MainTabPageState extends State<MainTabPage> {
         title: 'Promo',
         subtitle: 'Latest offers and discounts',
       ),
-      promoBannerTw: TpePromoBannerTw(
+      promoBannerTw: TpePromoListBannerTw(
         imageUrls: [
           'assets/images/placeholder.png',
           'https://hondapekalonganmotor.com/wp-content/uploads/2020/03/71044716-red-easy-vector-illustration-isolated-paper-bubble-banner-promo-this-element-is-well-adapted-for-web.jpg',

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tpe_component_sdk/tpe_component_sdk.dart';
+import 'package:tpe_component_sdk/components/card/tpe_promo_banner/tpe_promo_card.dart';
 
 class BaseCard extends StatelessWidget {
   const BaseCard({super.key});
@@ -12,13 +12,7 @@ class BaseCard extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: const [
-            TPEBaseCard(width: 100, height: 100),
-
-            TPEBaseCard(
-              backgroundColor: Colors.yellow,
-              width: 200,
-              height: 100,
-            ),
+            TPEPromoCard(imageUrl: 'test',)
           ],
         ),
       ),

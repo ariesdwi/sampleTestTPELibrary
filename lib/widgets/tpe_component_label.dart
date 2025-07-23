@@ -88,7 +88,7 @@ class _TPEComponentLabelChipState extends State<TPEComponentLabelChip> {
                     label: 'Gagal',
                     backgroundColor: Color.fromRGBO(255, 235, 235, 1),
                     textColor: Color.fromRGBO(235, 87, 87, 1),
-                    borderRadius: BorderRadius.all(Radius.circular(12)),
+                    borderRadius: BorderRadius.all(Radius.circular(4)),
                   ),
                 ],
               ),

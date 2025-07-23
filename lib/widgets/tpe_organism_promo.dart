@@ -9,13 +9,13 @@ class TPEOrganismPromoBanner extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("TPE Section")),
+      appBar: AppBar(title: const Text("TPE Promo Banner")),
       body: Center(
         child: Center(
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            TpePromoBannerTw(
+            TpePromoListBannerTw(
               imageUrls: [
                 'assets/images/placeholder.png',
                 'assets/images/placeholder.png',
