@@ -21,8 +21,9 @@ class _MainTabPageState extends State<MainTabPage> {
     ComingSoonWrapper(
       isComingSoon: isHomeFeatureComingSoon,
       child: TPEHomePageTL(
-        header: TPEHeaderTLComponent(
+        header: TPEHeaderComponent(
           userName: 'Aries',
+          singleLineType: true,
           rightCircleButton: TPECircleIconButton(icon: Icons.logout)
         ),
         balanceCard: TPEBalanceCard(
@@ -66,7 +67,8 @@ class _MainTabPageState extends State<MainTabPage> {
     ),
     TpeHomepageTWType(
       backgroundImageUrl: 'assets/images/promo.png',
-      header: TPEHeaderTw(userName: 'Farischa'),
+      header: TPEHeaderComponent(userName: 'Farischa', singleLineType: false,
+          rightCircleButton: TPECircleIconButton(icon: Icons.notifications)),
       balanceCard: TPEBalanceCard(
         type: TPEBalanceCardType.tw,
         accountNumber: '1234567890',

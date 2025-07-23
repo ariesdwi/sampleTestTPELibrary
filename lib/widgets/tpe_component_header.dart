@@ -13,7 +13,7 @@ class TPEComponentHeader extends StatelessWidget {
         child: Center(
 
           child:
-           TPEHeaderTLComponent(
+           TPEHeaderComponent(
             userName: 'Aries',
             rightCircleButton: 
             TPECircleIconButton(
