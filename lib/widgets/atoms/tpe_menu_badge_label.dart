@@ -11,7 +11,7 @@ class MenuBadgeLabel extends StatelessWidget {
       body: Center(
         child: Container(
           padding: const EdgeInsets.all(16.0),
-          child: TPEMenuBadgeLabel()
+          child: TPEMenuBadgeLabel(text: 'NEW',)
         ),
       ),
     );

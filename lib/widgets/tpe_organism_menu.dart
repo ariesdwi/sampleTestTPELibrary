@@ -9,14 +9,15 @@ class TpeOrganismMenu extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text("TPE Menu")),
-      backgroundColor: Colors.white, // <- Tambahkan ini kalau tetap gelap
+      backgroundColor: Colors.white, 
       body: Container(
         margin: EdgeInsets.all(16),
-        child: TpeMenuTransactionTw(
+        child: TPEMenuListVertical(
           menuItems: [
             TPEHomeMenuItemVertical(
               title: 'Transfer',
-              icon: Icon(Icons.money, size: 28, color: Colors.blue),
+              iconUrl: 'https://cdn-icons-png.flaticon.com/512/10384/10384161.png',
+              iconSize: 28,
               isNew: true,
               onTap: () {
                 debugPrint('Transfer menu tapped!');
@@ -24,7 +25,8 @@ class TpeOrganismMenu extends StatelessWidget {
             ),
             TPEHomeMenuItemVertical(
               title: 'Transfer International',
-              icon: Icon(Icons.money, size: 28, color: Colors.blue),
+              iconUrl: 'https://cdn-icons-png.flaticon.com/512/10384/10384161.png',
+              iconSize: 28,
               isNew: false,
               onTap: () {
                 debugPrint('Payment menu tapped!');
@@ -32,7 +34,8 @@ class TpeOrganismMenu extends StatelessWidget {
             ),
             TPEHomeMenuItemVertical(
               title: 'Konversi Valas ',
-              icon: Icon(Icons.money, size: 28, color: Colors.blue),
+              iconUrl: 'https://cdn-icons-png.flaticon.com/512/10384/10384161.png',
+              iconSize: 28,
               isNew: false,
               onTap: () {
                 debugPrint('Payment menu tapped!');
@@ -40,7 +43,8 @@ class TpeOrganismMenu extends StatelessWidget {
             ),
             TPEHomeMenuItemVertical(
               title: 'Payment',
-              icon: Icon(Icons.money, size: 28, color: Colors.blue),
+              iconUrl: 'https://cdn-icons-png.flaticon.com/512/10384/10384161.png',
+              iconSize: 28,
               isNew: false,
               onTap: () {
                 debugPrint('Payment menu tapped!');
@@ -48,7 +52,8 @@ class TpeOrganismMenu extends StatelessWidget {
             ),
             TPEHomeMenuItemVertical(
               title: 'Payment',
-              icon: Icon(Icons.money, size: 28, color: Colors.blue),
+              iconUrl: 'https://cdn-icons-png.flaticon.com/512/10384/10384161.png',
+              iconSize: 28,
               isNew: false,
               onTap: () {
                 debugPrint('Payment menu tapped!');

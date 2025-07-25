@@ -7,6 +7,7 @@ class TextVariant extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(title: const Text("TPE Text Variant")),
       body: Center(
         child: Column(
@@ -16,7 +17,7 @@ class TextVariant extends StatelessWidget {
             TPEText(text: "Primary Text", variant: TPETextVariant.primary),
             TPEText(text: "Secondary Text", variant: TPETextVariant.secondary),
             TPEText(text: "12 bold", variant: TPETextVariant.text12bold),
-            TPEText(text: "14 semibold 600 ", variant: TPETextVariant.text14SemiBold600),
+            TPEText(text: "14 semibold 600 ", variant: TPETextVariant.text14SemiBold600, color: Colors.blue,),
             TPEText(text: "14 semibold 700", variant: TPETextVariant.text14SemiBold700),
             TPEText(text: "16 bold", variant: TPETextVariant.text16Bold),
             TPEText(text: "20 semi bold 700", variant: TPETextVariant.text20SemiBold700),
