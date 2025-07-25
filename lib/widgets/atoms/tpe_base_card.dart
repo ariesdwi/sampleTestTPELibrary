@@ -12,7 +12,7 @@ class BaseCard extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: const [
-            TPEPromoCard(imageUrl: 'test',)
+            TPEPromoCard(imageUrl: 'https://assets/images/Taiwan_card_image_2.png',)
           ],
         ),
       ),

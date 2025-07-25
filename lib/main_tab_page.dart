@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tpe_component_sdk/components/menu/tpe_homepage_transaction_tw.dart';
 import 'package:tpe_component_sdk/components/menu/tpe_section_menu_horizontal.dart';
 import 'package:tpe_component_sdk/components/section/tpe_promo_section.dart';
 import 'package:tpe_component_sdk/components/section/tpe_transaction_section.dart';
@@ -80,34 +81,43 @@ class _MainTabPageState extends State<MainTabPage> {
         currency: 'USD',
         currentBalance: 1234.56,
       ),
-      listMenu: [
-        TPEHomeMenuItemVertical(
-          icon: const Icon(Icons.send),
-          title: 'Transfer',
-          onTap: () => debugPrint("Transfer tapped"),
-        ),
+      listMenu: TPEMenuListVertical(
+        menuItems: [
+          TPEHomeMenuItemVertical(
+            iconUrl:
+                'https://cdn-icons-png.flaticon.com/512/10384/10384161.png',
+            title: 'Transfer',
+            onTap: () => debugPrint("Transfer tapped"),
+          ),
 
-        TPEHomeMenuItemVertical(
-          icon: const Icon(Icons.send),
-          title: 'Transfer',
-          onTap: () => debugPrint("Transfer tapped"),
-        ),
+          TPEHomeMenuItemVertical(
+            iconUrl:
+                'https://cdn-icons-png.flaticon.com/512/10384/10384161.png',
+            iconSize: 20,
+            title: 'Transfer',
+            onTap: () => debugPrint("Transfer tapped"),
+          ),
 
-        TPEHomeMenuItemVertical(
-          icon: const Icon(Icons.send),
-          title: 'Transfer',
-          onTap: () => debugPrint("Transfer tapped"),
-        ),
+          TPEHomeMenuItemVertical(
+            iconUrl:
+                'https://cdn-icons-png.flaticon.com/512/10384/10384161.png',
+            iconSize: 20,
+            title: 'Transfer',
+            onTap: () => debugPrint("Transfer tapped"),
+          ),
 
-        TPEHomeMenuItemVertical(
-          icon: const Icon(Icons.send),
-          title: 'Transfer',
-          onTap: () => debugPrint("Transfer tapped"),
-        ),
-      ],
+          TPEHomeMenuItemVertical(
+            iconUrl:
+                'https://cdn-icons-png.flaticon.com/512/10384/10384161.png',
+            iconSize: 20,
+            title: 'Transfer',
+            onTap: () => debugPrint("Transfer tapped"),
+          ),
+        ],
+      ),
       transactionSection: TpeTransactionSection(
         sectionHeader: TpeComponentSectionHeader(
-          leadingIcon: const Icon(Icons.analytics),
+          leadingIcon: TPEBaseIconUrl(iconUrl: 'https://cdn-icons-png.flaticon.com/512/4256/4256863.png'),
           title: 'Transaction Menu',
           subtitle: 'Manage your finances and account',
           trailingIcon: const Icon(Icons.chevron_right),
@@ -135,17 +145,11 @@ class _MainTabPageState extends State<MainTabPage> {
           ),
         ],
       ),
-
-      // sectionHeaderTransaction: TpeComponentSectionHeader(
-      //   title: 'Transaction Menu',
-      //   subtitle: 'Manage your finances and account',
-      //   trailingIcon: const Icon(Icons.chevron_right),
-      //   onTap: () => debugPrint("Transaction Menu tapped"),
-      // ),
       promoSection: TpePromoSection(
         sectionHeaderPromo: TpeComponentSectionHeader(
-          title: 'Transaction Menu',
-          subtitle: 'Manage your finances and account',
+          title: 'Promo & Cashback',
+          subtitle: 'Penawaran khusus buat kamu',
+          leadingIcon: TPEBaseIconUrl(iconUrl: 'https://cdn-icons-png.flaticon.com/512/10384/10384161.png', size: 16),
         ),
         promoBannerTw: TpePromoListBannerTw(
           imageUrls: [

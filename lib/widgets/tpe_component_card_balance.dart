@@ -32,6 +32,9 @@ class TPEComponentCardBalance extends StatelessWidget {
               accountNumber: '1234567890',
               currency: 'USD',
               currentBalance: 1234.56,
+              onSeeAll: () {
+                // Handle see all
+              },
             ),
 
             TPEBalanceCardTW(

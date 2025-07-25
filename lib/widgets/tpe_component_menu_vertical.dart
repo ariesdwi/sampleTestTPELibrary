@@ -14,7 +14,8 @@ class TPEComponentMenuVertical extends StatelessWidget {
           children: [
             TPEHomeMenuItemVertical(
               title: 'Transfer',
-              icon: Icon(Icons.money, size: 28, color: Colors.blue),
+              iconUrl: 'https://cdn-icons-png.flaticon.com/512/10384/10384161.png',
+              iconSize: 20,
               isNew: true,
               onTap: () {
                 debugPrint('Transfer menu tapped!');
@@ -23,7 +24,8 @@ class TPEComponentMenuVertical extends StatelessWidget {
             const SizedBox(height: 8),
              TPEHomeMenuItemVertical(
               title: 'Payment',
-              icon: Icon(Icons.money, size: 28, color: Colors.blue),
+              iconUrl: 'https://cdn-icons-png.flaticon.com/512/4256/4256863.png',
+              iconSize: 20,
               isNew: false,
               onTap: () {
                 debugPrint('Transfer menu tapped!');
