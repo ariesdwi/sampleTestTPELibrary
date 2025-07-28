@@ -19,6 +19,19 @@ class _MainTabPageState extends State<MainTabPage> {
   int _selectedIndex = 0;
 
   final bool isHomeFeatureComingSoon = false;
+  bool isLoading = true;
+
+  @override
+  void initState() {
+    super.initState();
+    Future.delayed(Duration(milliseconds: 1000), () {
+      if (mounted) {
+        setState(() {
+          isLoading = false;
+        });
+      }
+    });
+  }
 
   late final List<Widget> _pages = [
     const ComponentCatalogScreen(),
@@ -34,6 +47,7 @@ class _MainTabPageState extends State<MainTabPage> {
           accountNumber: '1234567890',
           currency: 'USD',
           currentBalance: 1234.56,
+          isLoading: false,
         ),
         menuSection: TPEMenuHorizontalSection(
           sectionHeader: TpeComponentSectionHeader(
@@ -108,7 +122,7 @@ class _MainTabPageState extends State<MainTabPage> {
 
           TPEHomeMenuItemVertical(
             iconUrl:
-                'https://cdn-icons-png.flaticon.com/512/10384/10384161.png',
+                'tes.image',
             iconSize: 20,
             title: 'Transfer',
             onTap: () => debugPrint("Transfer tapped"),
@@ -131,7 +145,7 @@ class _MainTabPageState extends State<MainTabPage> {
             activityAmount: 'Rp 1.000.000',
             activityDate: '12 Jan 2023',
             activityIcon:
-                'https://hondapekalonganmotor.com/wp-content/uploads/2020/03/71044716-red-easy-vector-illustration-isolated-paper-bubble-banner-promo-this-element-is-well-adapted-for-web.jpg',
+                'assets/images/TRANSFER_NEW.png',
             activityStatus: 1,
           ),
           const TpeTransactionItemTw(
