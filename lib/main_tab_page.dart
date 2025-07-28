@@ -20,6 +20,16 @@ class _MainTabPageState extends State<MainTabPage> {
 
   final bool isHomeFeatureComingSoon = false;
   bool isLoading = true;
+    
+  void _showSnackbar(BuildContext context, String message) {
+    ScaffoldMessenger.of(context).clearSnackBars();
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text(message),
+        duration: const Duration(seconds: 2),
+      ),
+    );
+  }
 
   @override
   void initState() {
@@ -41,7 +51,10 @@ class _MainTabPageState extends State<MainTabPage> {
         header: TPEHeaderComponent(
           userName: 'Aries',
           singleLineType: true,
-          rightCircleButton: TPECircleIconButton(icon: Icons.logout),
+          rightCircleButton: TPECircleIconButton(
+            icon: Icons.logout, 
+            onPressed: () => _showSnackbar(context, "Logout tapped") 
+          ),
         ),
         balanceCard: TPEBalanceCardTL(
           accountNumber: '1234567890',
@@ -58,25 +71,25 @@ class _MainTabPageState extends State<MainTabPage> {
             TPEHorizontalMenuItem(
               icon: const Icon(Icons.send),
               title: 'Transfer',
-              onTap: () => debugPrint("Transfer tapped"),
+              onTap: () => _showSnackbar(context, "Transfer tapped"),
               subtitle: "Transfer money securely to any domestic bank account",
             ),
             TPEHorizontalMenuItem(
               icon: const Icon(Icons.account_balance),
               title: 'Account',
-              onTap: () => debugPrint("Account tapped"),
+              onTap: () => _showSnackbar(context, "Account tapped"),
               subtitle: "Check your account details and balance",
             ),
             TPEHorizontalMenuItem(
               icon: const Icon(Icons.account_balance_wallet),
               title: 'Account Statement',
-              onTap: () => debugPrint("Account Statemen tapped"),
+              onTap: () => _showSnackbar(context, "Account Statemen tapped"),
               subtitle: "Download your Account Statement",
             ),
             TPEHorizontalMenuItem(
               icon: const Icon(Icons.qr_code_scanner),
               title: 'QR Transfer',
-              onTap: () => debugPrint("QR tapped"),
+              onTap: () => _showSnackbar(context, "QR tapped"),
               subtitle: "Send money instantly by scanning QR codes",
             ),
           ],
@@ -101,31 +114,31 @@ class _MainTabPageState extends State<MainTabPage> {
             iconUrl:
                 'https://cdn-icons-png.flaticon.com/512/10384/10384161.png',
             title: 'Transfer',
-            onTap: () => debugPrint("Transfer tapped"),
+            onTap: () => _showSnackbar(context, "Transfer tapped"),
           ),
 
           TPEHomeMenuItemVertical(
             iconUrl:
                 'https://cdn-icons-png.flaticon.com/512/10384/10384161.png',
             iconSize: 20,
-            title: 'Transfer',
-            onTap: () => debugPrint("Transfer tapped"),
+            title: 'Account',
+            onTap: () => _showSnackbar(context, "Account tapped"),
           ),
 
           TPEHomeMenuItemVertical(
             iconUrl:
                 'https://cdn-icons-png.flaticon.com/512/10384/10384161.png',
             iconSize: 20,
-            title: 'Transfer',
-            onTap: () => debugPrint("Transfer tapped"),
+            title: 'Account Statement',
+            onTap: () => _showSnackbar(context, "Account Statement"),
           ),
 
           TPEHomeMenuItemVertical(
             iconUrl:
                 'tes.image',
             iconSize: 20,
-            title: 'Transfer',
-            onTap: () => debugPrint("Transfer tapped"),
+            title: 'QR Transfer',
+            onTap: () => _showSnackbar(context, "QR Transfer tapped"),
           ),
         ],
       ),
@@ -135,7 +148,7 @@ class _MainTabPageState extends State<MainTabPage> {
           title: 'Transaction Menu',
           subtitle: 'Manage your finances and account',
           trailingIcon: const Icon(Icons.chevron_right),
-          onTap: () => debugPrint("Transaction Menu tapped"),
+          onTap: () => _showSnackbar(context, "finances and account tapped"),
         ),
         listTransaction: [
           const TpeTransactionItemTw(
