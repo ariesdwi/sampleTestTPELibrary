@@ -9,7 +9,8 @@ class CopyButton extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: const Text("TPE Copy Button")),
       body: Center(
-        child: TPECopyButton(textToCopy: "Copy this text", copyText: "copy"),
+        child: TPECopyButton(textToCopy: "Copy this text", copyText: "copy",
+                  successMessage: "Nomor rekening disalin"),
       ),
     );
   }
