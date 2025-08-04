@@ -21,7 +21,7 @@ import '../models/catalog_section.dart';
 
 // Component pages
 import '../widgets/molecule/tpe_molecule_button_circle.dart';
-import '../widgets/atoms/tpe_atom_component_label.dart';
+import '../widgets/atoms/tpe_atom_label.dart';
 import '../widgets/molecule/tpe_molecule_menu_horizontal.dart';
 import '../widgets/molecule/tpe_molecule_menu_vertical.dart';
 import '../widgets/molecule/tpe_molecule_section.dart';

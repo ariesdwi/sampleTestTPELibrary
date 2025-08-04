@@ -11,7 +11,7 @@ class TPEComponentMenuHorizontalPage extends StatefulWidget {
 }
 
 class _TPEComponentMenuHorizontalPageState
-    extends State<TPEComponentMenuHorizontalPage> {
+  extends State<TPEComponentMenuHorizontalPage> {
   bool showStorybook = false;
 
   @override
