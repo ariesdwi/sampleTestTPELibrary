@@ -1,32 +1,32 @@
 
 import 'package:flutter/material.dart';
-import 'package:hello_ios/widgets/atoms/tpe_balance_indicator.dart';
-import 'package:hello_ios/widgets/atoms/tpe_base_card.dart';
-import 'package:hello_ios/widgets/atoms/tpe_base_card_balance.dart';
-import 'package:hello_ios/widgets/atoms/tpe_base_icon.dart';
-import 'package:hello_ios/widgets/atoms/tpe_copy_button.dart';
-import 'package:hello_ios/widgets/atoms/tpe_count_badge_label.dart';
-import 'package:hello_ios/widgets/atoms/tpe_eye_toggle_button.dart';
-import 'package:hello_ios/widgets/atoms/tpe_menu_badge_label.dart';
-import 'package:hello_ios/widgets/molecule/tpe_navigation_card.dart';
-import 'package:hello_ios/widgets/atoms/tpe_text_variant.dart';
-import 'package:hello_ios/widgets/organizm/tpe_component_card_balance.dart';
-import 'package:hello_ios/widgets/organizm/tpe_component_card_balance_tl.dart';
+import 'package:hello_ios/widgets/atoms/tpe_atom_balance_indicator.dart';
+import 'package:hello_ios/widgets/atoms/tpe_atom_base_card.dart';
+import 'package:hello_ios/widgets/atoms/tpe_atom_base_card_balance.dart';
+import 'package:hello_ios/widgets/atoms/tpe_atom_base_icon.dart';
+import 'package:hello_ios/widgets/atoms/tpe_atom_copy_button.dart';
+import 'package:hello_ios/widgets/atoms/tpe_atom_count_badge_label.dart';
+import 'package:hello_ios/widgets/atoms/tpe_atom_eye_toggle_button.dart';
+import 'package:hello_ios/widgets/atoms/tpe_atom_menu_badge_label.dart';
+import 'package:hello_ios/widgets/molecule/tpe_molecule_navigation_card.dart';
+import 'package:hello_ios/widgets/atoms/tpe_atom_text_variant.dart';
+import 'package:hello_ios/widgets/organizm/tpe_organism_card_balance.dart';
+import 'package:hello_ios/widgets/organizm/tpe_organism_card_balance_tl.dart';
 import 'package:hello_ios/widgets/organizm/tpe_organism_menu.dart';
 import 'package:hello_ios/widgets/organizm/tpe_organism_promo.dart';
 import 'package:hello_ios/widgets/organizm/tpe_organism_transaction.dart';
-import 'package:hello_ios/widgets/molecule/tpe_transaction_item.dart';
+import 'package:hello_ios/widgets/molecule/tpe_molecule_transaction_item.dart';
 import '../models/catalog_item.dart';
 import '../models/catalog_section.dart';
 
 // Component pages
-import '../widgets/molecule/tpe_component_button_circle.dart';
-import '../widgets/atoms/tpe_component_label.dart';
-import '../widgets/molecule/tpe_component_menu_horizontal.dart';
-import '../widgets/molecule/tpe_component_menu_vertical.dart';
-import '../widgets/molecule/tpe_component_section.dart';
-import '../widgets/organizm/tpe_component_header.dart';
-import '../widgets/organizm/tpe_horizontal_menu_group.dart';
+import '../widgets/molecule/tpe_molecule_button_circle.dart';
+import '../widgets/atoms/tpe_atom_component_label.dart';
+import '../widgets/molecule/tpe_molecule_menu_horizontal.dart';
+import '../widgets/molecule/tpe_molecule_menu_vertical.dart';
+import '../widgets/molecule/tpe_molecule_section.dart';
+import '../widgets/organizm/tpe_organism_header.dart';
+import '../widgets/organizm/tpe_organism_horizontal_menu_group.dart';
 
 
 class ComponentCatalogScreen extends StatelessWidget {
