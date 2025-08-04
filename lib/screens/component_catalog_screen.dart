@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:hello_ios/widgets/atoms/tpe_atom_textfield.dart';
 import 'package:hello_ios/widgets/atoms/tpe_balance_indicator.dart';
 import 'package:hello_ios/widgets/atoms/tpe_base_card.dart';
 import 'package:hello_ios/widgets/atoms/tpe_base_card_balance.dart';
@@ -79,6 +80,9 @@ class ComponentCatalogScreen extends StatelessWidget {
           CatalogItem(label: "TPEMenuBadgeLabel", icon: Icons.label_important, destination: const MenuBadgeLabel()),
           CatalogItem(label: "TPEPromoCard", icon: Icons.label_important, destination: const BaseCard()),
           CatalogItem(label: "TPEBaseCardBalance", icon: Icons.label_important, destination: const BalanceBaseCard()),
+          //Login
+          CatalogItem(label: "TPETextField", icon: Icons.label_important, destination: TPEAtomTextField()),
+
         ],
       ),
       CatalogSection(

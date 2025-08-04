@@ -341,6 +341,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "6.1.5"
+  reactive_forms:
+    dependency: "direct main"
+    description:
+      name: reactive_forms
+      sha256: "4c8fe71f21ac88996c01a56fe19ea5ec39b47292cb07f99a467e1bb977136a98"
+      url: "https://pub.dev"
+    source: hosted
+    version: "18.1.1"
   recase:
     dependency: transitive
     description:
@@ -485,20 +493,16 @@ packages:
   tpe_component_sdk:
     dependency: "direct main"
     description:
-      path: "packages/tpe_component_sdk"
-      ref: master
-      resolved-ref: "5691c7dc82e96c092c9d47a72e509ee3cfb4fec5"
-      url: "https://bitbucket.bri.co.id/scm/~00283969/tpe-composablemobileapp.git"
-    source: git
+      path: "../TPE-Components/tpe-composablemobileapp/packages/tpe_component_sdk"
+      relative: true
+    source: path
     version: "0.0.1"
   tpe_homepage_sdk:
     dependency: "direct main"
     description:
-      path: "packages/tpe_homepage_sdk"
-      ref: master
-      resolved-ref: "5691c7dc82e96c092c9d47a72e509ee3cfb4fec5"
-      url: "https://bitbucket.bri.co.id/scm/~00283969/tpe-composablemobileapp.git"
-    source: git
+      path: "../TPE-Components/tpe-composablemobileapp/packages/tpe_homepage_sdk"
+      relative: true
+    source: path
     version: "0.0.1"
   typed_data:
     dependency: transitive
