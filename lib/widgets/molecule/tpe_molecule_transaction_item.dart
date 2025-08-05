@@ -34,14 +34,18 @@ class _TransactionItemState extends State<TransactionItem> {
 
   Widget _buildTransactionItem() {
     return Center(
-      child: TpeTransactionItemTw(
-        isLoading: false,
-        activityTitle: 'Transfer to BRI',
-        activityText: 'Transfer to BRI',
-        activityAmount: 'Rp 1.000.000',
-        activityDate: '12 Jan 2023',
-        activityIcon: 'assets/images/TRANSFER_NEW.png',
-        activityStatus: 2,
+      child: Column(
+        children: [
+          TpeTransactionItemTw(
+            isLoading: false,
+            activityTitle: 'Transfer to BRI',
+            activityText: 'Transfer to BRI',
+            activityAmount: 'Rp 1.000.000',
+            activityDate: '12 Jan 2023',
+            activityIcon: 'assets/images/TRANSFER_NEW.png',
+            activityStatus: 2,
+          ),
+        ],
       ),
     );
   }
@@ -50,17 +54,24 @@ class _TransactionItemState extends State<TransactionItem> {
     return Storybook(
       wrapperBuilder: (context, child) => Padding(
         padding: const EdgeInsets.all(16),
-        child: Center(child: child),
+        child: Column(
+          children: [if (child != null) child],
+        ),
       ),
       stories: [
         Story(
           name: 'TpeTransactionItemTw / Customizable',
           builder: (context) {
-            final isLoading = context.knobs.boolean(label: 'Loading', initial: false);
-            final title = context.knobs.text(label: 'Title', initial: 'Transfer to BRI');
-            final text = context.knobs.text(label: 'Text', initial: 'Transfer to BRI');
-            final amount = context.knobs.text(label: 'Amount', initial: 'Rp 1.000.000');
-            final date = context.knobs.text(label: 'Date', initial: '12 Jan 2023');
+            final isLoading =
+                context.knobs.boolean(label: 'Loading', initial: false);
+            final title =
+                context.knobs.text(label: 'Title', initial: 'Transfer to BRI');
+            final text =
+                context.knobs.text(label: 'Text', initial: 'Transfer to BRI');
+            final amount =
+                context.knobs.text(label: 'Amount', initial: 'Rp 1.000.000');
+            final date =
+                context.knobs.text(label: 'Date', initial: '12 Jan 2023');
             final icon = context.knobs.text(
               label: 'Icon Path or URL',
               initial: 'assets/images/TRANSFER_NEW.png',

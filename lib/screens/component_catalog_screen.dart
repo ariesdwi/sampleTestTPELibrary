@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:hello_ios/widgets/atoms/tpe_atom_textfield.dart';
 import 'package:hello_ios/widgets/atoms/tpe_atom_balance_indicator.dart';
 import 'package:hello_ios/widgets/atoms/tpe_atom_base_card.dart';
-import 'package:hello_ios/widgets/atoms/tpe_atom_base_card_balance.dart';
 import 'package:hello_ios/widgets/atoms/tpe_atom_base_icon.dart';
 import 'package:hello_ios/widgets/atoms/tpe_atom_copy_button.dart';
 import 'package:hello_ios/widgets/atoms/tpe_atom_count_badge_label.dart';
