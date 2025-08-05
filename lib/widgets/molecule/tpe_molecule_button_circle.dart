@@ -94,7 +94,7 @@ class _TPEComponentButtonCircleState extends State<TPEComponentButtonCircle> {
                   ),
                   const SizedBox(height: 8),
                   TPECircleIconButton(
-                    icon: Icons.notifications_outlined,
+                    icon: Icons.zoom_in_map,
                     badgeCount: 3,
                     onPressed: () => ScaffoldMessenger.of(context).showSnackBar(
                       const SnackBar(

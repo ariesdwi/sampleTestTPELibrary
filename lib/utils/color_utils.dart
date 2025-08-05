@@ -79,7 +79,7 @@ class TPEColors {
   static const Color red70 = Color(0xFFEB5858);
   static const Color red80 = Color(0xFFE84040);
   static const Color red90 = Color(0xFFE41F1F);
-  static const Color red100 = Color(0xFB61616);
+  static const Color red100 = Color(0x0fb61616);
 
   // === OTHERS ===
   static const Color transparent = Colors.transparent;
