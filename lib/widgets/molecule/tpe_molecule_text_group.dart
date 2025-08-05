@@ -61,25 +61,25 @@ class _TPEComponentTextGroupStorybookState
                       ],
                     );
 
-                    final titleVariant = context.knobs.options<TPETextVariant>(
+                    final titleStyle = context.knobs.options<TPEText>(
                       label: 'Title Style',
-                      initial: TPETextVariant.text16Bold,
+                      initial: TPEText(text: "Title Style Black text16SemiBold600", variant: TPETextVariant.text16SemiBold600, color: Colors.black,),
                       options: const [
-                        Option(label: 'text14SemiBold600', value: TPETextVariant.text14SemiBold600),
-                        Option(label: 'text16Bold', value: TPETextVariant.text16Bold),
-                        Option(label: 'text18Bold', value: TPETextVariant.text16SemiBold600),
-                        Option(label: 'text20Bold', value: TPETextVariant.text20SemiBold700),
+                        Option(label: "Title Style Black text14SemiBold600", value: TPEText(text: "Title Style Black text16SemiBold600", variant: TPETextVariant.text16SemiBold600, color: Colors.black,) ),
+                        Option(label: 'Title Style red secondary', value: TPEText(text: "Title Style red text16SemiBold600", variant: TPETextVariant.secondary, color: Colors.red,)),
+                        Option(label: 'Title Style yellow primary', value: TPEText(text: "Title Style yellow text16SemiBold600", variant: TPETextVariant.primary, color: Colors.yellow,)),
+                        Option(label: 'Title Style pink text20Bold', value: TPEText(text: "Title Style pink text16SemiBold600", variant: TPETextVariant.text20SemiBold700, color: Colors.pink,)),
                       ],
                     );
 
-                    final descVariant = context.knobs.options<TPETextVariant>(
+                    final descStyle = context.knobs.options<TPEText>(
                       label: 'Description Style',
-                      initial: TPETextVariant.text14SemiBold600,
+                      initial: TPEText(text: "Description Style Black text16SemiBold600", variant: TPETextVariant.secondary, color: Colors.black,),
                       options: const [
-                        Option(label: 'text14SemiBold600', value: TPETextVariant.text14SemiBold600),
-                        Option(label: 'text12Regular', value: TPETextVariant.secondary),
-                        Option(label: 'text16Regular', value: TPETextVariant.primary),
-                        Option(label: 'text16SemiBold', value: TPETextVariant.text16SemiBold600),
+                        Option(label: "Description Style Black text14SemiBold600", value: TPEText(text: "Description Black text16SemiBold600", variant: TPETextVariant.text16SemiBold600, color: Colors.black,) ),
+                        Option(label: 'Description Style red secondary', value: TPEText(text: "Description red secondary", variant: TPETextVariant.secondary, color: Colors.red,)),
+                        Option(label: 'Description Style yellow primary', value: TPEText(text: "Description yellow Primary", variant: TPETextVariant.primary, color: Colors.yellow,)),
+                        Option(label: 'Description Style pink text20Bold', value: TPEText(text: "Description pink text20SemiBold700", variant: TPETextVariant.text20SemiBold700, color: Colors.pink,)),
                       ],
                     );
 
@@ -88,16 +88,8 @@ class _TPEComponentTextGroupStorybookState
                         title: title,
                         description: description,
                         alignment: alignment,
-                        titleStyle: TPEText(
-                          text: title,
-                          variant: titleVariant,
-                          textAlign: TextAlign.center,
-                        ),
-                        descriptionStyle: TPEText(
-                          text: description,
-                          variant: descVariant,
-                          textAlign: TextAlign.center,
-                        ),
+                        titleStyle: titleStyle,
+                        descriptionStyle: descStyle,
                       ),
                     );
                   },

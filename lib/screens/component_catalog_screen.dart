@@ -113,7 +113,7 @@ class ComponentCatalogScreen extends StatelessWidget {
           CatalogItem(
               icon: Icons.label_important,
               label: "TPETextLink",
-              destination: TPEComponentLinkTextStorybook())
+              destination: TPEComponentLinkTextStorybook()),
           // CatalogItem(label: "TPEBaseCardBalance", icon: Icons.label_important, destination: const BalanceBaseCard()),
           //Login
           CatalogItem(label: "TPETextField", icon: Icons.label_important, destination: TPEAtomTextField()),

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:storybook_flutter/storybook_flutter.dart';
 import 'package:tpe_component_sdk/tpe_component_sdk.dart';
 
-
 class TPEComponentInfoCardStorybook extends StatefulWidget {
   const TPEComponentInfoCardStorybook({super.key});
 
@@ -69,11 +68,13 @@ class _TPEComponentInfoCardStorybookState
                       initial: 'assets/images/info_filled.png',
                     );
 
-                    return TPEInfoCard(
-                      title: title,
-                      descriptions: [description1, description2],
-                      backgroundColor: backgroundColor,
-                      iconAssetPath: iconAsset.isNotEmpty ? iconAsset : null,
+                    return Center(
+                      child: TPEInfoCard(
+                        title: title,
+                        descriptions: [description1, description2],
+                        backgroundColor: backgroundColor,
+                        iconAssetPath: iconAsset.isNotEmpty ? iconAsset : null,
+                      ),
                     );
                   },
                 ),
@@ -85,7 +86,7 @@ class _TPEComponentInfoCardStorybookState
                 descriptions: [
                   "First line of description.",
                   "Second line of description.",
-                ],
+                ]
               ),
             ),
     );

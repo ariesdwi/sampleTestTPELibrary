@@ -13,6 +13,7 @@ class TPEComponentLanguageItemTileStorybook extends StatefulWidget {
 class _TPEComponentLanguageItemTileStorybookState
     extends State<TPEComponentLanguageItemTileStorybook> {
   bool showStorybook = false;
+  bool isSelected = false;
 
   @override
   Widget build(BuildContext context) {
@@ -53,11 +54,13 @@ class _TPEComponentLanguageItemTileStorybookState
                       initial: false,
                     );
 
-                    return TPELanguageItemTile(
-                      languageName: languageName,
-                      languageCode: languageCode,
-                      selectedLanguage: isSelected,
-                      onTap: () {}, // No-op for demo
+                    return Center(
+                      child: TPELanguageItemTile(
+                        languageName: languageName,
+                        languageCode: languageCode,
+                        isSelected: isSelected,
+                        onTap: () {}, // No-op for demo
+                      ),
                     );
                   },
                 ),
@@ -65,12 +68,15 @@ class _TPEComponentLanguageItemTileStorybookState
             )
           : Center(
               child: TPELanguageItemTile(
-                languageName: "English",
-                languageCode: "US",
-                selectedLanguage: true,
-                onTap: () {}, // No-op
-              ),
-            ),
+              languageCode: 'id',
+              languageName: 'Bahasa Indonesia',
+              isSelected: isSelected,
+              onTap: () {
+                setState(() {
+                  isSelected = !isSelected;
+                });
+              },
+            )),
     );
   }
 }

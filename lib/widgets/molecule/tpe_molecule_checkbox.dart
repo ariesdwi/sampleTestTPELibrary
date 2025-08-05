@@ -14,6 +14,7 @@ class TPEComponentCheckedTextStorybook extends StatefulWidget {
 class _TPEComponentCheckedTextStorybookState
     extends State<TPEComponentCheckedTextStorybook> {
   bool showStorybook = false;
+  bool isChecked = false;
 
   @override
   Widget build(BuildContext context) {
@@ -81,7 +82,7 @@ class _TPEComponentCheckedTextStorybookState
                             context.knobs.boolean(
                               label: 'Checked',
                               initial: val,
-                            ); // update for demo; won't persist
+                            ); 
                           }),
                         );
                       },
@@ -92,13 +93,14 @@ class _TPEComponentCheckedTextStorybookState
             )
           : Center(
               child: TPECheckedText(
-                value: false,
-                text: "I agree to the terms and conditions",
-                activeColor: Colors.blue,
-                checkColor: Colors.white,
-                onChanged: (_) {},
-              ),
-            ),
+              value: isChecked,
+              onChanged: (val) {
+                setState(() {
+                  isChecked = val;
+                });
+              },
+              text: "Saya menyetujui syarat dan ketentuan",
+            )),
     );
   }
 }
