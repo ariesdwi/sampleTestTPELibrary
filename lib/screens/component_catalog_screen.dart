@@ -1,8 +1,6 @@
-
 import 'package:flutter/material.dart';
 import 'package:hello_ios/widgets/atoms/tpe_atom_balance_indicator.dart';
 import 'package:hello_ios/widgets/atoms/tpe_atom_base_card.dart';
-import 'package:hello_ios/widgets/atoms/tpe_atom_base_card_balance.dart';
 import 'package:hello_ios/widgets/atoms/tpe_atom_base_icon.dart';
 import 'package:hello_ios/widgets/atoms/tpe_atom_copy_button.dart';
 import 'package:hello_ios/widgets/atoms/tpe_atom_count_badge_label.dart';
@@ -27,7 +25,11 @@ import '../widgets/molecule/tpe_molecule_menu_vertical.dart';
 import '../widgets/molecule/tpe_molecule_section.dart';
 import '../widgets/organizm/tpe_organism_header.dart';
 import '../widgets/organizm/tpe_organism_horizontal_menu_group.dart';
-
+import '../widgets/molecule/tpe_molecule_text_field.dart';
+import '../widgets/molecule/tpe_molecule_switch_language.dart';
+import '../widgets/molecule/tpe_molecule_loading.dart';
+import '../widgets/molecule/tpe_molecule_checkbox.dart';
+import '../widgets/molecule/tpe_molecule_text_group.dart';
 
 class ComponentCatalogScreen extends StatelessWidget {
   const ComponentCatalogScreen({super.key});
@@ -43,7 +45,8 @@ class ComponentCatalogScreen extends StatelessWidget {
         itemBuilder: (context, index) {
           final section = sections[index];
           return ExpansionTile(
-            title: Text(section.title, style: const TextStyle(fontWeight: FontWeight.bold)),
+            title: Text(section.title,
+                style: const TextStyle(fontWeight: FontWeight.bold)),
             children: section.items.map((item) {
               return ListTile(
                 leading: Icon(item.icon, color: Colors.blue),
@@ -70,42 +73,127 @@ class ComponentCatalogScreen extends StatelessWidget {
       CatalogSection(
         title: "Atoms",
         items: [
-          CatalogItem(label: "TPETextVariant", icon: Icons.label_important, destination: const TextVariant()),
-          CatalogItem(label: "TPEBaseIcon", icon: Icons.label_important, destination: const BaseIcon()),
-          CatalogItem(label: "TPEEyeToggleButton", icon: Icons.label_important, destination: const EyeToggleButton()),
-          CatalogItem(label: "TPEBalanceIndicator", icon: Icons.label_important, destination: const TPEBalanceDot()),
-          CatalogItem(label: "TPECountBadgeLabel", icon: Icons.label_important, destination: const TPECountBadgeLabel()),
-          CatalogItem(label: "TPEColoredLabel", icon: Icons.label_important, destination: const TPEComponentLabelChip()),
-          CatalogItem(label: "TPEMenuBadgeLabel", icon: Icons.label_important, destination: const MenuBadgeLabel()),
-          CatalogItem(label: "TPEPromoCard", icon: Icons.label_important, destination: const BaseCard()),
+          CatalogItem(
+              label: "TPETextVariant",
+              icon: Icons.label_important,
+              destination: const TextVariant()),
+          CatalogItem(
+              label: "TPEBaseIcon",
+              icon: Icons.label_important,
+              destination: const BaseIcon()),
+          CatalogItem(
+              label: "TPEEyeToggleButton",
+              icon: Icons.label_important,
+              destination: const EyeToggleButton()),
+          CatalogItem(
+              label: "TPEBalanceIndicator",
+              icon: Icons.label_important,
+              destination: const TPEBalanceDot()),
+          CatalogItem(
+              label: "TPECountBadgeLabel",
+              icon: Icons.label_important,
+              destination: const TPECountBadgeLabel()),
+          CatalogItem(
+              label: "TPEColoredLabel",
+              icon: Icons.label_important,
+              destination: const TPEComponentLabelChip()),
+          CatalogItem(
+              label: "TPEMenuBadgeLabel",
+              icon: Icons.label_important,
+              destination: const MenuBadgeLabel()),
+          CatalogItem(
+              label: "TPEPromoCard",
+              icon: Icons.label_important,
+              destination: const BaseCard()),
           // CatalogItem(label: "TPEBaseCardBalance", icon: Icons.label_important, destination: const BalanceBaseCard()),
         ],
       ),
       CatalogSection(
         title: "Molecules",
         items: [
-          CatalogItem(label: "TPECopyIcon", icon: Icons.label_important, destination: const CopyButton()),
-          CatalogItem(label: "TPENavigationCardButton", icon: Icons.label_important, destination: const NavigationButtonCard()),
-          CatalogItem(label: "TPECircleIconButton", icon: Icons.radio_button_checked, destination: const TPEComponentButtonCircle()),
-          CatalogItem(label: "TPETransactionItem", icon: Icons.receipt_long, destination: const TransactionItem()),
-          CatalogItem(label: "TPEMenuItemHorizontal", icon: Icons.dashboard_customize, destination: const TPEComponentMenuHorizontal()),
-          CatalogItem(label: "TPEMenuItemVertical", icon: Icons.view_stream, destination: const TPEComponentMenuVertical()),
-          CatalogItem(label: "TPESection", icon: Icons.view_week, destination: const TPEComponentSection()),
+          CatalogItem(
+              label: "TPECopyIcon",
+              icon: Icons.label_important,
+              destination: const CopyButton()),
+          CatalogItem(
+              label: "TPENavigationCardButton",
+              icon: Icons.label_important,
+              destination: const NavigationButtonCard()),
+          CatalogItem(
+              label: "TPECircleIconButton",
+              icon: Icons.radio_button_checked,
+              destination: const TPEComponentButtonCircle()),
+          CatalogItem(
+              label: "TPETransactionItem",
+              icon: Icons.receipt_long,
+              destination: const TransactionItem()),
+          CatalogItem(
+              label: "TPEMenuItemHorizontal",
+              icon: Icons.dashboard_customize,
+              destination: const TPEComponentMenuHorizontal()),
+          CatalogItem(
+              label: "TPEMenuItemVertical",
+              icon: Icons.view_stream,
+              destination: const TPEComponentMenuVertical()),
+          CatalogItem(
+              label: "TPESection",
+              icon: Icons.view_week,
+              destination: const TPEComponentSection()),
+          CatalogItem(
+              label: "TPEInputTextfield",
+              icon: Icons.label_important,
+              destination: const TPEComponentInputTextFieldStorybook()),
+          CatalogItem(
+              label: "TPESwitchLanguage",
+              icon: Icons.label_important,
+              destination: const TPESwitchLanguageStorybook()),
+          CatalogItem(
+              label: "TPELoadingCircularBar",
+              icon: Icons.label_important,
+              destination: const TPEComponentLoadingCircularBarStorybook()),
+          CatalogItem(
+              label: "TPECheckedText",
+              icon: Icons.label_important,
+              destination: const TPEComponentCheckedTextStorybook()),
+          CatalogItem(
+              label: "TPETextGroup",
+              icon: Icons.label_important,
+              destination: const TPEComponentTextGroupStorybook()),
         ],
       ),
       CatalogSection(
         title: "Organisms",
         items: [
-          CatalogItem(label: "TPEAccountHeader", icon: Icons.navigation, destination: const TPEComponentHeader()),
-          CatalogItem(label: "TPEAccountCardTL", icon: Icons.account_balance_wallet, destination: const TPEComponentCardBalanceTL()),
-          CatalogItem(label: "TPEAccountCardTW", icon: Icons.account_balance_wallet, destination: const TPEComponentCardBalanceTW()),
-          CatalogItem(label: "TPETransactionList", icon: Icons.list, destination: const TransactionItemList()),
-          CatalogItem(label: "TPEPromoSection", icon: Icons.local_activity, destination: const TPEOrganismPromoBanner()),
-          CatalogItem(label: "TPEMenuIVertical", icon: Icons.vertical_split, destination: const TpeOrganismMenu()),
-          CatalogItem(label: "TPEMenuHorizontal", icon: Icons.horizontal_split, destination: TPEComponentMenuHorizontalPage()),
+          CatalogItem(
+              label: "TPEAccountHeader",
+              icon: Icons.navigation,
+              destination: const TPEComponentHeader()),
+          CatalogItem(
+              label: "TPEAccountCardTL",
+              icon: Icons.account_balance_wallet,
+              destination: const TPEComponentCardBalanceTL()),
+          CatalogItem(
+              label: "TPEAccountCardTW",
+              icon: Icons.account_balance_wallet,
+              destination: const TPEComponentCardBalanceTW()),
+          CatalogItem(
+              label: "TPETransactionList",
+              icon: Icons.list,
+              destination: const TransactionItemList()),
+          CatalogItem(
+              label: "TPEPromoSection",
+              icon: Icons.local_activity,
+              destination: const TPEOrganismPromoBanner()),
+          CatalogItem(
+              label: "TPEMenuIVertical",
+              icon: Icons.vertical_split,
+              destination: const TpeOrganismMenu()),
+          CatalogItem(
+              label: "TPEMenuHorizontal",
+              icon: Icons.horizontal_split,
+              destination: TPEComponentMenuHorizontalPage()),
         ],
       ),
     ];
   }
 }
-
