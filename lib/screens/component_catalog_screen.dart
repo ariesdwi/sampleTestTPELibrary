@@ -31,6 +31,10 @@ import '../widgets/molecule/tpe_molecule_switch_language.dart';
 import '../widgets/molecule/tpe_molecule_loading.dart';
 import '../widgets/molecule/tpe_molecule_checkbox.dart';
 import '../widgets/molecule/tpe_molecule_text_group.dart';
+import '../widgets/atoms/tpe_atom_text_link.dart';
+import '../widgets/molecule/tpe_molecule_button.dart';
+import '../widgets/molecule/tpe_molecule_info_card.dart';
+import '../widgets/molecule/tpe_molecule_language_title.dart';
 
 class ComponentCatalogScreen extends StatelessWidget {
   const ComponentCatalogScreen({super.key});
@@ -106,6 +110,10 @@ class ComponentCatalogScreen extends StatelessWidget {
               label: "TPEPromoCard",
               icon: Icons.label_important,
               destination: const BaseCard()),
+          CatalogItem(
+              icon: Icons.label_important,
+              label: "TPETextLink",
+              destination: TPEComponentLinkTextStorybook())
           // CatalogItem(label: "TPEBaseCardBalance", icon: Icons.label_important, destination: const BalanceBaseCard()),
           //Login
           CatalogItem(label: "TPETextField", icon: Icons.label_important, destination: TPEAtomTextField()),
@@ -163,6 +171,18 @@ class ComponentCatalogScreen extends StatelessWidget {
               label: "TPETextGroup",
               icon: Icons.label_important,
               destination: const TPEComponentTextGroupStorybook()),
+          CatalogItem(
+              label: "TPERefineButton",
+              icon: Icons.label_important,
+              destination: const TPEComponentButtonStorybook()),
+          CatalogItem(
+              label: "TPEInfoCard",
+              icon: Icons.label_important,
+              destination: const TPEComponentInfoCardStorybook()),
+          CatalogItem(
+              label: "TPELanguageItemTile",
+              icon: Icons.label_important,
+              destination: const TPEComponentLanguageItemTileStorybook()),
         ],
       ),
       CatalogSection(
