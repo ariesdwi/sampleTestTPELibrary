@@ -36,6 +36,8 @@ import '../widgets/molecule/tpe_molecule_button.dart';
 import '../widgets/molecule/tpe_molecule_info_card.dart';
 import '../widgets/molecule/tpe_molecule_language_title.dart';
 
+import '../widgets/organizm/tpe_organism_form_login.dart';
+
 class ComponentCatalogScreen extends StatelessWidget {
   const ComponentCatalogScreen({super.key});
 
@@ -216,6 +218,10 @@ class ComponentCatalogScreen extends StatelessWidget {
               label: "TPEMenuHorizontal",
               icon: Icons.horizontal_split,
               destination: TPEComponentMenuHorizontalPage()),
+           CatalogItem(
+              label: "TPEBottomSheet",
+              icon: Icons.horizontal_split,
+              destination: TPELoginBottomSheetPage()),
         ],
       ),
     ];

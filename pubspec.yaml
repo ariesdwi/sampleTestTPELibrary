@@ -39,10 +39,13 @@ dependencies:
   cupertino_icons: ^1.0.8
 
   tpe_component_sdk:
-    path: ../TPE-Components/tpe-composablemobileapp/packages/tpe_component_sdk
+    path: ../tpe-composablemobileapp/packages/tpe_component_sdk
 
   tpe_homepage_sdk:
-    path: ../TPE-Components/tpe-composablemobileapp/packages/tpe_homepage_sdk
+    path: ../tpe-composablemobileapp/packages/tpe_homepage_sdk
+  
+  tpe_login_sdk:
+    path: ../tpe-composablemobileapp/packages/tpe_login_sdk
 
   # tpe_component_sdk:
   #   git:
@@ -54,6 +57,12 @@ dependencies:
   #   git:
   #     url: https://bitbucket.bri.co.id/scm/~00283969/tpe-composablemobileapp.git
   #     path: packages/tpe_homepage_sdk
+  #     ref: master
+  
+  # tpe_login_sdk:
+  #   git:
+  #     url: https://bitbucket.bri.co.id/scm/~00283969/tpe-composablemobileapp.git
+  #     path: packages/tpe_login_sdk
   #     ref: master
 
   # The following adds the Cupertino Icons font to your application.
