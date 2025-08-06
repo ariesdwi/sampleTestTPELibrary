@@ -37,6 +37,7 @@ import '../widgets/molecule/tpe_molecule_info_card.dart';
 import '../widgets/molecule/tpe_molecule_language_title.dart';
 
 import '../widgets/organizm/tpe_organism_form_login.dart';
+import '../widgets/organizm/tpe_organism_biometric.dart';
 
 class ComponentCatalogScreen extends StatelessWidget {
   const ComponentCatalogScreen({super.key});
@@ -118,8 +119,10 @@ class ComponentCatalogScreen extends StatelessWidget {
               destination: TPEComponentLinkTextStorybook()),
           // CatalogItem(label: "TPEBaseCardBalance", icon: Icons.label_important, destination: const BalanceBaseCard()),
           //Login
-          CatalogItem(label: "TPETextField", icon: Icons.label_important, destination: TPEAtomTextField()),
-
+          CatalogItem(
+              label: "TPETextField",
+              icon: Icons.label_important,
+              destination: TPEAtomTextField()),
         ],
       ),
       CatalogSection(
@@ -218,10 +221,14 @@ class ComponentCatalogScreen extends StatelessWidget {
               label: "TPEMenuHorizontal",
               icon: Icons.horizontal_split,
               destination: TPEComponentMenuHorizontalPage()),
-           CatalogItem(
-              label: "TPEBottomSheet",
+          CatalogItem(
+              label: "TPELoginBottomSheet",
               icon: Icons.horizontal_split,
               destination: TPELoginBottomSheetPage()),
+          CatalogItem(
+              label: "TPEBiometricBottomSheet",
+              icon: Icons.horizontal_split,
+              destination: TPEBiometricBottomSheetPage()),
         ],
       ),
     ];
