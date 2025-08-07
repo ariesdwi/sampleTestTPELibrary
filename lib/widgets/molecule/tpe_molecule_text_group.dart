@@ -45,7 +45,8 @@ class _TPEComponentTextGroupStorybookState
 
                     final description = context.knobs.text(
                       label: 'Description',
-                      initial: 'Explore all the features now.',
+                      initial:
+                          'To open a new account, please visit BRI branch office. New account registrations can only be processed at our branch office.',
                     );
 
                     final alignment = context.knobs.options<MainAxisAlignment>(
@@ -53,33 +54,96 @@ class _TPEComponentTextGroupStorybookState
                       initial: MainAxisAlignment.center,
                       options: const [
                         Option(label: 'Start', value: MainAxisAlignment.start),
-                        Option(label: 'Center', value: MainAxisAlignment.center),
+                        Option(
+                            label: 'Center', value: MainAxisAlignment.center),
                         Option(label: 'End', value: MainAxisAlignment.end),
-                        Option(label: 'Space Around', value: MainAxisAlignment.spaceAround),
-                        Option(label: 'Space Between', value: MainAxisAlignment.spaceBetween),
-                        Option(label: 'Space Evenly', value: MainAxisAlignment.spaceEvenly),
+                        Option(
+                            label: 'Center',
+                            value: MainAxisAlignment.center),
+                        Option(
+                            label: 'Start',
+                            value: MainAxisAlignment.start),
+                        Option(
+                            label: 'End',
+                            value: MainAxisAlignment.end),
                       ],
                     );
 
                     final titleStyle = context.knobs.options<TPEText>(
                       label: 'Title Style',
-                      initial: TPEText(text: "Title Style Black text16SemiBold600", variant: TPETextVariant.text16SemiBold600, color: Colors.black,),
+                      initial: TPEText(
+                        text: "Title Style Black text16SemiBold600",
+                        variant: TPETextVariant.text16SemiBold600,
+                        color: Colors.black,
+                      ),
                       options: const [
-                        Option(label: "Title Style Black text14SemiBold600", value: TPEText(text: "Title Style Black text16SemiBold600", variant: TPETextVariant.text16SemiBold600, color: Colors.black,) ),
-                        Option(label: 'Title Style red secondary', value: TPEText(text: "Title Style red text16SemiBold600", variant: TPETextVariant.secondary, color: Colors.red,)),
-                        Option(label: 'Title Style yellow primary', value: TPEText(text: "Title Style yellow text16SemiBold600", variant: TPETextVariant.primary, color: Colors.yellow,)),
-                        Option(label: 'Title Style pink text20Bold', value: TPEText(text: "Title Style pink text16SemiBold600", variant: TPETextVariant.text20SemiBold700, color: Colors.pink,)),
+                        Option(
+                            label: "Title Style Black text14SemiBold600",
+                            value: TPEText(
+                              text: "Title Style Black text16SemiBold600",
+                              variant: TPETextVariant.text16SemiBold600,
+                              color: Colors.black,
+                            )),
+                        Option(
+                            label: 'Title Style red secondary',
+                            value: TPEText(
+                              text: "Title Style red text16SemiBold600",
+                              variant: TPETextVariant.secondary,
+                              color: Colors.red,
+                            )),
+                        Option(
+                            label: 'Title Style yellow primary',
+                            value: TPEText(
+                              text: "Title Style yellow text16SemiBold600",
+                              variant: TPETextVariant.primary,
+                              color: Colors.yellow,
+                            )),
+                        Option(
+                            label: 'Title Style pink text20Bold',
+                            value: TPEText(
+                              text: "Title Style pink text16SemiBold600",
+                              variant: TPETextVariant.text20SemiBold700,
+                              color: Colors.pink,
+                            )),
                       ],
                     );
 
                     final descStyle = context.knobs.options<TPEText>(
                       label: 'Description Style',
-                      initial: TPEText(text: "Description Style Black text16SemiBold600", variant: TPETextVariant.secondary, color: Colors.black,),
+                      initial: TPEText(
+                        text: "Description Style Black text16SemiBold600",
+                        variant: TPETextVariant.secondary,
+                        color: Colors.black,
+                      ),
                       options: const [
-                        Option(label: "Description Style Black text14SemiBold600", value: TPEText(text: "Description Black text16SemiBold600", variant: TPETextVariant.text16SemiBold600, color: Colors.black,) ),
-                        Option(label: 'Description Style red secondary', value: TPEText(text: "Description red secondary", variant: TPETextVariant.secondary, color: Colors.red,)),
-                        Option(label: 'Description Style yellow primary', value: TPEText(text: "Description yellow Primary", variant: TPETextVariant.primary, color: Colors.yellow,)),
-                        Option(label: 'Description Style pink text20Bold', value: TPEText(text: "Description pink text20SemiBold700", variant: TPETextVariant.text20SemiBold700, color: Colors.pink,)),
+                        Option(
+                            label: "Description Style Black text14SemiBold600",
+                            value: TPEText(
+                              text: "Description Black text16SemiBold600",
+                              variant: TPETextVariant.text16SemiBold600,
+                              color: Colors.black,
+                            )),
+                        Option(
+                            label: 'Description Style red secondary',
+                            value: TPEText(
+                              text: "Description red secondary",
+                              variant: TPETextVariant.secondary,
+                              color: Colors.red,
+                            )),
+                        Option(
+                            label: 'Description Style yellow primary',
+                            value: TPEText(
+                              text: "Description yellow Primary",
+                              variant: TPETextVariant.primary,
+                              color: Colors.yellow,
+                            )),
+                        Option(
+                            label: 'Description Style pink text20Bold',
+                            value: TPEText(
+                              text: "Description pink text20SemiBold700",
+                              variant: TPETextVariant.text20SemiBold700,
+                              color: Colors.pink,
+                            )),
                       ],
                     );
 
@@ -87,8 +151,8 @@ class _TPEComponentTextGroupStorybookState
                       child: TPETextGroup(
                         title: title,
                         description: description,
-                        alignment: alignment,
                         titleStyle: titleStyle,
+                        alignment: alignment,
                         descriptionStyle: descStyle,
                       ),
                     );
@@ -99,11 +163,10 @@ class _TPEComponentTextGroupStorybookState
           : Center(
               child: TPETextGroup(
                 title: 'Default Title',
-                description: 'This is the default description.',
+                description:
+                    'To open a new account, please visit BRI branch office. New account registrations can only be processed at our branch office.',
               ),
             ),
     );
   }
 }
-
-
