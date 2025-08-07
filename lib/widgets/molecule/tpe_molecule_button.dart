@@ -57,9 +57,13 @@ class _TPEComponentButtonStorybookState
                       label: 'Variant',
                       initial: TPEButtonVariant.primary,
                       options: const [
-                        Option(label: 'Primary', value: TPEButtonVariant.primary),
-                        Option(label: 'Outline', value: TPEButtonVariant.outline),
-                        Option(label: 'Secondary', value: TPEButtonVariant.secondary),
+                        Option(
+                            label: 'Primary', value: TPEButtonVariant.primary),
+                        Option(
+                            label: 'Outline', value: TPEButtonVariant.outline),
+                        Option(
+                            label: 'Secondary',
+                            value: TPEButtonVariant.secondary),
                         Option(label: 'Plain', value: TPEButtonVariant.plain),
                       ],
                     );
@@ -139,4 +143,3 @@ class _TPEComponentButtonStorybookState
     );
   }
 }
-

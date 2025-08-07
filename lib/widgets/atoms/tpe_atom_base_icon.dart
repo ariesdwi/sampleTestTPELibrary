@@ -1,7 +1,6 @@
 // import 'package:flutter/material.dart';
 // import 'package:tpe_component_sdk/components/icon/tpe_icon_base.dart';
 
-
 import 'package:flutter/material.dart';
 import 'package:storybook_flutter/storybook_flutter.dart';
 import 'package:tpe_component_sdk/components/icon/tpe_icon_base.dart';
@@ -41,7 +40,8 @@ class _BaseIconStorybookState extends State<BaseIcon> {
                   builder: (context) {
                     final iconUrl = context.knobs.text(
                       label: 'Icon URL',
-                      initial: 'https://cdn-icons-png.flaticon.com/512/3449/3449748.png',
+                      initial:
+                          'https://cdn-icons-png.flaticon.com/512/3449/3449748.png',
                     );
 
                     final size = context.knobs.slider(
@@ -63,10 +63,7 @@ class _BaseIconStorybookState extends State<BaseIcon> {
                     //   ],
                     // );
 
-                    return TPEBaseIconUrl(
-                      iconUrl: iconUrl,
-                      size: size
-                    );
+                    return TPEBaseIconUrl(iconUrl: iconUrl, size: size);
                   },
                 ),
               ],
@@ -76,19 +73,22 @@ class _BaseIconStorybookState extends State<BaseIcon> {
                 mainAxisSize: MainAxisSize.min,
                 children: const [
                   TPEBaseIconUrl(
-                    iconUrl: 'https://cdn-icons-png.flaticon.com/512/3449/3449748.png',
+                    iconUrl:
+                        'https://cdn-icons-png.flaticon.com/512/3449/3449748.png',
                     size: 40,
                     color: Colors.blue,
                   ),
                   SizedBox(height: 8),
                   TPEBaseIconUrl(
-                    iconUrl: 'https://cdn-icons-png.flaticon.com/512/3186/3186949.png',
+                    iconUrl:
+                        'https://cdn-icons-png.flaticon.com/512/3186/3186949.png',
                     size: 40,
                     color: Colors.red,
                   ),
                   SizedBox(height: 8),
                   TPEBaseIconUrl(
-                    iconUrl: 'https://cdn-icons-png.flaticon.com/512/18717/18717283.png',
+                    iconUrl:
+                        'https://cdn-icons-png.flaticon.com/512/18717/18717283.png',
                     size: 40,
                     color: Colors.green,
                   ),
