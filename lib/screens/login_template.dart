@@ -3,6 +3,7 @@ import '../models/catalog_item.dart';
 import '../models/catalog_section.dart';
 import '../widgets/organizm/tpe_organism_form_login.dart';
 import '../widgets/organizm/tpe_organism_biometric.dart';
+import 'package:tpe_login_sdk/tpe_login_sdk.dart';
 
 class LoginTemplate extends StatelessWidget {
   const LoginTemplate({super.key});
@@ -65,7 +66,19 @@ class LoginTemplate extends StatelessWidget {
           CatalogItem(
               label: "TPEBiometricBottomSheet",
               icon: Icons.horizontal_split,
-              destination: TPEBiometricBottomSheetPage()),
+              destination: TpeTemplateLoginTl(
+                // backgroundUrl: 'https://example.com/bg.png',
+                title: 'Your Financial Partner On The Go!',
+                subtitle:
+                    'BRImo Timor-Leste is your go-to solution for hassle-free banking. Make your transaction always simple, always accessible.',
+                loginText: 'Login',
+                onLoginTap: () {
+                  // Handle login
+                },
+                onRegisterTap: () {
+                  // Navigate to registration
+                },
+              )),
         ],
       ),
     ];
