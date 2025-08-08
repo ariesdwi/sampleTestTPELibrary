@@ -8,6 +8,13 @@ import 'package:tpe_component_sdk/components/section/tpe_transaction_section.dar
 
 import 'package:tpe_homepage_sdk/tpe_homepage_sdk.dart';
 import 'package:tpe_component_sdk/tpe_component_sdk.dart';
+import 'package:tpe_login_sdk/tpe_login_sdk.dart';
+import '../widgets/organizm/tpe_organism_form_login.dart';
+import '../widgets/organizm/tpe_organism_biometric.dart';
+import 'package:hello_ios/widgets/organizm/tpe_organism_language.dart';
+import 'package:hello_ios/widgets/organizm/tpe_organism_primary_secondary_bs.dart';
+import 'package:hello_ios/widgets/organizm/tpe_organism_single_button_bs.dart';
+import '../widgets/template/tpe_login_page.dart';
 
 class HompageTemplate extends StatelessWidget {
   const HompageTemplate({super.key});
@@ -17,7 +24,7 @@ class HompageTemplate extends StatelessWidget {
     final sections = _buildSections(context);
 
     return Scaffold(
-      appBar: AppBar(title: const Text("Homepage Template")),
+      appBar: AppBar(title: const Text("Template")),
       body: ListView.builder(
         itemCount: sections.length,
         itemBuilder: (context, index) {
@@ -61,7 +68,7 @@ class HompageTemplate extends StatelessWidget {
   List<CatalogSection> _buildSections(BuildContext context) {
     return [
       CatalogSection(
-        title: "Template",
+        title: "Template Homepage",
         items: [
           CatalogItem(
             label: "Homepage Timor Leste",
@@ -214,6 +221,36 @@ class HompageTemplate extends StatelessWidget {
               ),
             ),
           ),
+        ],
+      ),
+      CatalogSection(
+        title: "Template Login",
+        items: [
+          CatalogItem(
+              label: "TPELoginBottomSheet",
+              icon: Icons.horizontal_split,
+              destination: TPELoginBottomSheetPage()),
+          CatalogItem(
+              label: "TPEBiometricBottomSheet",
+              icon: Icons.horizontal_split,
+              destination: TPEBiometricBottomSheetPage()),
+          CatalogItem(
+              label: "TPE Login TL",
+              icon: Icons.horizontal_split,
+              destination: TpeLoginPage()
+              ),
+          CatalogItem(
+              label: "TPELanguageBottomSheet",
+              icon: Icons.menu,
+              destination: const TpeOrganismLanguage()),
+          CatalogItem(
+              label: "TPEPrimarySecondaryBottomSheet",
+              icon: Icons.menu,
+              destination: const TpeOrganismPrimarySecondaryBs()),
+          CatalogItem(
+              label: "TPESingleButtonBottomSheet",
+              icon: Icons.menu,
+              destination: const TpeOrganismSingleButtonBottomSheet()),
         ],
       ),
     ];

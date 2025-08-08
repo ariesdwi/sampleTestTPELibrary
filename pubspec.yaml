@@ -39,13 +39,13 @@ dependencies:
   cupertino_icons: ^1.0.8
 
   tpe_component_sdk:
-    path: ../TPE-Components/tpe-composablemobileapp/packages/tpe_component_sdk
+    path: ../tpe-composablemobileapp/packages/tpe_component_sdk
 
   tpe_homepage_sdk:
-    path: ../TPE-Components/tpe-composablemobileapp/packages/tpe_homepage_sdk
+    path: ../tpe-composablemobileapp/packages/tpe_homepage_sdk
 
   tpe_login_sdk:
-    path: ../TPE-Components/tpe-composablemobileapp/packages/tpe_login_sdk
+    path: ../tpe-composablemobileapp/packages/tpe_login_sdk
 
   # tpe_component_sdk:
   #   git:

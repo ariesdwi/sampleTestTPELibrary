@@ -12,9 +12,9 @@ class TPELoginBottomSheetPage extends StatefulWidget {
 
 class _TPELoginBottomSheetPageState extends State<TPELoginBottomSheetPage> {
   final form = FormGroup({
-    'field1': FormControl<String>(validators: [Validators.required]),
-    'field2': FormControl<String>(),
-    'field3': FormControl<String>(),
+    'idcard': FormControl<String>(validators: [Validators.required]),
+    'username': FormControl<String>(),
+    'password': FormControl<String>(),
   });
 
   bool checkboxValue = false;
@@ -23,18 +23,14 @@ class _TPELoginBottomSheetPageState extends State<TPELoginBottomSheetPage> {
     showTPELoginBottomSheet(
       context: context,
       form: form,
-      checkboxValue: checkboxValue,
-      onCheckboxChanged: (val) {
-        setState(() => checkboxValue = val);
-      },
+      showIdCardField: true,
+      showCheckbox: true,
+      titleText: "Login TW",
       onSaveSuccess: () {
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(
-            content: Text(
-              "field1: ${form.control('field1').value}, Checkbox: $checkboxValue",
-            ),
-          ),
-        );
+        // print("ID Card: ${data['idCard']}");
+        // print("Username: ${data['username']}");
+        // print("Password: ${data['password']}");
+        // print("Checkbox: ${data['checkbox']}");
       },
     );
   }
