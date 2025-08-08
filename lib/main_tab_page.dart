@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:hello_ios/screens/login_template.dart';
 import 'screens/component_catalog_screen.dart';
 import 'screens/homepage_template.dart';
-import 'screens/login_template.dart';
-import 'screens/account_template.dart';
 // import 'widgets/coming_soon_wrapper.dart';
 
 class MainTabPage extends StatefulWidget {
