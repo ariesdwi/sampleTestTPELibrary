@@ -24,8 +24,25 @@ class TpeOrganismPrimarySecondaryBs extends StatelessWidget {
                         description:
                             "Your username, or password was Inputed incorrectly 3 times. Recover your account below or check your email for further information.")),
                 primarySecondaryButton: TPEPrimarySecondaryButton(
-                    primaryButtonText: "Recover Your Account",
-                    secondaryButtonText: "Not Now"));
+                  primaryButtonText: "Recover Your Account",
+                  secondaryButtonText: "Not Now",
+                  onPrimaryButtonPressed: () {
+                    Navigator.pop(context);
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      const SnackBar(
+                        content: Text("Primary button pressed"),
+                      ),
+                    );
+                  },
+                  onSecondaryButtonPressed: () {
+                    Navigator.pop(context);
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      const SnackBar(
+                        content: Text("Secondary button pressed"),
+                      ),
+                    );
+                  },
+                ));
           },
         )));
   }

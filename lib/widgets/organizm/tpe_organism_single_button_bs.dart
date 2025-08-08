@@ -19,6 +19,11 @@ class TpeOrganismSingleButtonBottomSheet extends StatelessWidget {
               buttonText: "Activate Registration",
               onButtonPressed: () {
                 Navigator.pop(context);
+                ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(
+                    content: Text("Primary button pressed"),
+                  ),
+                );
               },
               confirmationSection: TPEConfirmationSection(
                   content: TPETextGroup(
