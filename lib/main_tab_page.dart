@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:hello_ios/screens/login_template.dart';
 import 'screens/component_catalog_screen.dart';
 import 'screens/homepage_template.dart';
+
+import 'screens/account_template.dart';
 // import 'widgets/coming_soon_wrapper.dart';
 
 class MainTabPage extends StatefulWidget {
@@ -32,8 +34,6 @@ class _MainTabPageState extends State<MainTabPage> {
   late final List<Widget> _pages = [
     ComponentCatalogScreen(),
     HompageTemplate(),
-    LoginTemplate(),
-    // AccountTemplate(),
   ];
 
   @override
@@ -46,9 +46,7 @@ class _MainTabPageState extends State<MainTabPage> {
         items: [
           BottomNavigationBarItem(
               icon: Icon(Icons.widgets), label: 'Components'),
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Homepage'),
-          BottomNavigationBarItem(icon: Icon(Icons.login), label: 'Login'),
-          // BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Account'),
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Template'),
         ],
       ),
     );

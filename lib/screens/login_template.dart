@@ -1,73 +1,128 @@
 import 'package:flutter/material.dart';
-import '../models/catalog_item.dart';
-import '../models/catalog_section.dart';
-import '../widgets/organizm/tpe_organism_form_login.dart';
-import '../widgets/organizm/tpe_organism_biometric.dart';
+import 'package:tpe_component_sdk/tpe_component_sdk.dart'; // adjust path if needed
 
-class LoginTemplate extends StatelessWidget {
-  const LoginTemplate({super.key});
+class BlueBackgroundWithCardPage extends StatelessWidget {
+  final String? backgroundUrl;
+  final AlignmentGeometry backgroundAlignment;
+  final String title;
+  final String subtitle;
+  final String loginText;
+  final VoidCallback onLoginTap;
+  final VoidCallback onRegisterTap;
+
+  const BlueBackgroundWithCardPage({
+    super.key,
+    this.backgroundUrl,
+    this.backgroundAlignment = Alignment.center,
+    required this.title,
+    required this.subtitle,
+    required this.loginText,
+    required this.onLoginTap,
+    required this.onRegisterTap,
+  });
+
+  // Show image from network if available, else show asset fallback
+  Widget _buildNetworkImage() {
+    return Image.network(
+      backgroundUrl!,
+      fit: BoxFit.contain,
+      alignment: backgroundAlignment,
+      errorBuilder: (context, error, stackTrace) => _buildAssetImage(),
+    );
+  }
+
+  Widget _buildAssetImage() {
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 0),
+      child: Align(
+        alignment: backgroundAlignment,
+        child: Image.asset(
+          'packages/tpe_login_sdk/assets/images/onboarding_illustration.png',
+          fit: BoxFit.contain,
+          alignment: backgroundAlignment,
+        ),
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
-    final sections = _buildSections(context);
-
     return Scaffold(
-      appBar: AppBar(title: const Text("Login Template")),
-      body: ListView.builder(
-        itemCount: sections.length,
-        itemBuilder: (context, index) {
-          final section = sections[index];
-          return ExpansionTile(
-            title: Text(
-              section.title,
-              style: const TextStyle(fontWeight: FontWeight.bold),
+      backgroundColor: TPEColors.blue70, // Blue background
+      body: Stack(
+        children: [
+          // Blue background layer
+          Container(color: TPEColors.blue70),
+
+          // Image layer (either network or asset)
+          Align(
+            alignment: backgroundAlignment,
+            child: backgroundUrl != null
+                ? _buildNetworkImage()
+                : _buildAssetImage(),
+          ),
+
+          // White card at the bottom
+          Align(
+            alignment: Alignment.bottomCenter,
+            child: Container(
+              width: double.infinity,
+              padding: const EdgeInsets.fromLTRB(24, 32, 24, 40),
+              decoration: const BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(24),
+                  topRight: Radius.circular(24),
+                ),
+              ),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  TPEText(
+                    text: title,
+                    variant: TPETextVariant.text16Bold,
+                    color: TPEColors.black,
+                    textAlign: TextAlign.center,
+                  ),
+                  const SizedBox(height: 8),
+                  TPEText(
+                    text: subtitle,
+                    variant: TPETextVariant.secondary,
+                    color: TPEColors.black,
+                    textAlign: TextAlign.center,
+                  ),
+                  const SizedBox(height: 24),
+                  TPERefineButton(
+                    title: loginText,
+                    variant: TPEButtonVariant.primary,
+                    size: TPEButtonSize.medium,
+                    roundType: TPEButtonRound.rounded,
+                    isCentered: true,
+                    isEnabled: true,
+                    onPressed: onLoginTap,
+                  ),
+                  const SizedBox(height: 24),
+                  Wrap(
+                    alignment: WrapAlignment.center,
+                    children: [
+                      TPEText(
+                        text: "Don't have account? ",
+                        variant: TPETextVariant.secondary,
+                        color: TPEColors.black,
+                      ),
+                      TPELinkText(
+                        text: "Registration Account",
+                        color: TPEColors.blue70,
+                        onTap: onRegisterTap,
+                      ),
+                    ],
+                  ),
+                ],
+              ),
             ),
-            children: section.items.map((item) {
-              return ListTile(
-                leading: Icon(item.icon, color: Colors.blue),
-                title: Text(item.label),
-                trailing: const Icon(Icons.chevron_right),
-                onTap: () {
-                  if (item.destination != null) {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (_) => item.destination!),
-                    );
-                  }
-                },
-              );
-            }).toList(),
-          );
-        },
-      ),
-    );
-  }
-
-  void _showSnackbar(BuildContext context, String message) {
-    ScaffoldMessenger.of(context).clearSnackBars();
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(
-        content: Text(message),
-        duration: const Duration(seconds: 2),
-      ),
-    );
-  }
-
-  List<CatalogSection> _buildSections(BuildContext context) {
-    return [
-      CatalogSection(
-        title: "Template",
-        items: [
-          CatalogItem(
-              label: "TPELoginBottomSheet",
-              icon: Icons.horizontal_split,
-              destination: TPELoginBottomSheetPage()),
-          CatalogItem(
-              label: "TPEBiometricBottomSheet",
-              icon: Icons.horizontal_split,
-              destination: TPEBiometricBottomSheetPage()),
+          ),
         ],
       ),
-    ];
+    );
   }
 }

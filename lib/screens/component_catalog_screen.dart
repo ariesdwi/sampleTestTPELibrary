@@ -11,14 +11,12 @@ import 'package:hello_ios/widgets/molecule/tpe_molecule_navigation_card.dart';
 import 'package:hello_ios/widgets/atoms/tpe_atom_text_variant.dart';
 import 'package:hello_ios/widgets/organizm/tpe_organism_card_balance.dart';
 import 'package:hello_ios/widgets/organizm/tpe_organism_card_balance_tl.dart';
-import 'package:hello_ios/widgets/organizm/tpe_organism_language.dart';
+
 import 'package:hello_ios/widgets/organizm/tpe_organism_menu.dart';
-import 'package:hello_ios/widgets/organizm/tpe_organism_primary_secondary_bs.dart';
+
 import 'package:hello_ios/widgets/organizm/tpe_organism_promo.dart';
-import 'package:hello_ios/widgets/organizm/tpe_organism_single_button_bs.dart';
 import 'package:hello_ios/widgets/organizm/tpe_organism_transaction.dart';
 import 'package:hello_ios/widgets/molecule/tpe_molecule_transaction_item.dart';
-import 'package:tpe_component_sdk/components/button/tpe_primary_secondary_button.dart';
 import '../models/catalog_item.dart';
 import '../models/catalog_section.dart';
 
@@ -225,26 +223,26 @@ class ComponentCatalogScreen extends StatelessWidget {
               label: "TPEMenuHorizontal",
               icon: Icons.horizontal_split,
               destination: TPEComponentMenuHorizontalPage()),
-          CatalogItem(
-              label: "TPELanguageBottomSheet",
-              icon: Icons.menu,
-              destination: const TpeOrganismLanguage()),
-          CatalogItem(
-              label: "TPEPrimarySecondaryBottomSheet",
-              icon: Icons.menu,
-              destination: const TpeOrganismPrimarySecondaryBs()),
-          CatalogItem(
-              label: "TPESingleButtonBottomSheet",
-              icon: Icons.menu,
-              destination: const TpeOrganismSingleButtonBottomSheet()),
-          CatalogItem(
-              label: "TPELoginBottomSheet",
-              icon: Icons.horizontal_split,
-              destination: TPELoginBottomSheetPage()),
-          CatalogItem(
-              label: "TPEBiometricBottomSheet",
-              icon: Icons.horizontal_split,
-              destination: TPEBiometricBottomSheetPage()),
+          // CatalogItem(
+          //     label: "TPELanguageBottomSheet",
+          //     icon: Icons.menu,
+          //     destination: const TpeOrganismLanguage()),
+          // CatalogItem(
+          //     label: "TPEPrimarySecondaryBottomSheet",
+          //     icon: Icons.menu,
+          //     destination: const TpeOrganismPrimarySecondaryBs()),
+          // CatalogItem(
+          //     label: "TPESingleButtonBottomSheet",
+          //     icon: Icons.menu,
+          //     destination: const TpeOrganismSingleButtonBottomSheet()),
+          // CatalogItem(
+          //     label: "TPELoginBottomSheet",
+          //     icon: Icons.horizontal_split,
+          //     destination: TPELoginBottomSheetPage()),
+          // CatalogItem(
+          //     label: "TPEBiometricBottomSheet",
+          //     icon: Icons.horizontal_split,
+          //     destination: TPEBiometricBottomSheetPage()),
         ],
       ),
     ];
