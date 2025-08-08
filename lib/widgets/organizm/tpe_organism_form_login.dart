@@ -11,11 +11,6 @@ class TPELoginBottomSheetPage extends StatefulWidget {
 }
 
 class _TPELoginBottomSheetPageState extends State<TPELoginBottomSheetPage> {
-  final form = FormGroup({
-    'idcard': FormControl<String>(validators: [Validators.required]),
-    'username': FormControl<String>(),
-    'password': FormControl<String>(),
-  });
 
   bool checkboxValue = false;
 

@@ -10,11 +10,6 @@ class TpeLoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<TpeLoginPage> {
-  final form = FormGroup({
-    'username': FormControl<String>(validators: [Validators.required]),
-    'password': FormControl<String>(validators: [Validators.required]),
-  });
-
   bool checkboxValue = false;
 
   void _openLoginSheet() {
