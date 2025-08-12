@@ -10,18 +10,23 @@ class TpeLoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<TpeLoginPage> {
+  final form = FormGroup({
+    'username': FormControl<String>(validators: [Validators.required]),
+    'password': FormControl<String>(validators: [Validators.required]),
+  });
+
   bool checkboxValue = false;
 
   void _openLoginSheet() {
     showTPELoginBottomSheet(
       context: context,
-      // form: form,
+      form: form,
       showIdCardField: false,
       showCheckbox: false,
       titleText: "Login TL",
-      onSaveSuccess: (data) {
-        print("Username: ${data['username']}");
-        print("Password: ${data['password']}");
+      onSaveSuccess: () {
+        // print("Username: ${data['username']}");
+        // print("Password: ${data['password']}");
       },
     );
   }
