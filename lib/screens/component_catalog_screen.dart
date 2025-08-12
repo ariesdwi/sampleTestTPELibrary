@@ -9,7 +9,6 @@ import 'package:hello_ios/widgets/atoms/tpe_atom_eye_toggle_button.dart';
 import 'package:hello_ios/widgets/atoms/tpe_atom_menu_badge_label.dart';
 import 'package:hello_ios/widgets/molecule/tpe_molecule_navigation_card.dart';
 import 'package:hello_ios/widgets/atoms/tpe_atom_text_variant.dart';
-import 'package:hello_ios/widgets/molecule/tpe_molecule_password.dart';
 import 'package:hello_ios/widgets/organizm/tpe_organism_card_balance.dart';
 import 'package:hello_ios/widgets/organizm/tpe_organism_card_balance_tl.dart';
 
@@ -160,11 +159,6 @@ class ComponentCatalogScreen extends StatelessWidget {
               label: "TPEUsernameTextField",
               icon: Icons.label_important,
               destination: const TPEComponentInputTextFieldStorybook()),
-
-          CatalogItem(
-              label: "TPEPasswordField",
-              icon: Icons.label_important,
-              destination: const TPEMoleculePasswordStorybook()),
           CatalogItem(
               label: "TPESwitchLanguage",
               icon: Icons.label_important,
@@ -178,7 +172,7 @@ class ComponentCatalogScreen extends StatelessWidget {
               icon: Icons.label_important,
               destination: const TPEComponentCheckedTextStorybook()),
           CatalogItem(
-              label: "TPETextGroup", 
+              label: "TPETextGroup",
               icon: Icons.label_important,
               destination: const TPEComponentTextGroupStorybook()),
           CatalogItem(

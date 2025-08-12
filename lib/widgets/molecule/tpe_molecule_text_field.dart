@@ -109,9 +109,19 @@ class _TPEComponentInputTextFieldStorybookState
                   children: [
                     const Text('Default Input Field Preview'),
                     const SizedBox(height: 12),
-                    TPEUsernameField(onChanged: (value) {
-                      usernameValue = value;
-                    },),
+                    TPEInputTextField(formControlName: 'Email',
+                      textfieldTitle: "Email",
+                      labelText: "Email Address",
+                      hintText: "Enter your email",
+                      obscureText: false,
+                      enableToggleVisibility: false,
+                      readOnly: false,
+                      prefixIcon: Icons.email,
+                      validationMessages: {
+                        ValidationMessage.required: (_) => 'This field is required',
+                        ValidationMessage.email: (_) => 'Invalid email',
+                      },
+                    ),
                     const SizedBox(height: 16),
                     TPERefineButton(
                       title: "Simpan",
