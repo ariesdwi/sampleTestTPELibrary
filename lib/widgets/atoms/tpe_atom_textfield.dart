@@ -10,41 +10,22 @@ class TPEAtomTextField extends StatelessWidget {
     'Password': FormControl<String>(validators: [Validators.required]),
   });
 
-  @override        
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("TPE Text Field")),
-      body: ReactiveForm(
-        formGroup: form,
-        child: Center(
-          child: Padding(
-            padding: const EdgeInsets.all(16.0),
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                TPEInputTextField(
-                  prefixIcon: Icons.person,
-                  textfieldTitle: "Username",
+        appBar: AppBar(title: const Text("TPE Text Field")),
+        body: ReactiveForm(
+            formGroup: form,
+            child: Center(
+              child: Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: TPEInputTextField(
                   formControlName: 'Username',
-                  enableToggleVisibility: true,
                   validationMessages: {
                     ValidationMessage.required: (_) => "Wajib diisi!",
                   },
                 ),
-                SizedBox(height: 16.0),
-                TPEInputTextField(
-                  textfieldTitle: "Password",
-                  prefixIcon: Icons.lock,
-                  formControlName: 'Password',
-                  validationMessages: {
-                    ValidationMessage.required: (_) => "Wajib diisi!",
-                  },
-                ),
-              ],
-            ),
-          ),
-        ),
-      ),
-    );
+              ),
+            )));
   }
 }

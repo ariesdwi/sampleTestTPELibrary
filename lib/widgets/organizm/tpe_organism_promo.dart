@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:storybook_flutter/storybook_flutter.dart';
 import 'package:tpe_component_sdk/tpe_component_sdk.dart';
-import 'package:tpe_component_sdk/components/section/tpe_promo_section.dart';
 
 class TPEOrganismPromoBanner extends StatefulWidget {
   const TPEOrganismPromoBanner({super.key});

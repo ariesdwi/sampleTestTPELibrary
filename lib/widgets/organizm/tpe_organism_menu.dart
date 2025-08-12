@@ -69,8 +69,6 @@
 import 'package:flutter/material.dart';
 import 'package:storybook_flutter/storybook_flutter.dart';
 import 'package:tpe_component_sdk/tpe_component_sdk.dart';
-import 'package:tpe_component_sdk/components/menu/tpe_component_menu_vertical.dart';
-import 'package:tpe_component_sdk/components/menu/tpe_homepage_transaction_tw.dart';
 
 class TpeOrganismMenu extends StatefulWidget {
   const TpeOrganismMenu({super.key});

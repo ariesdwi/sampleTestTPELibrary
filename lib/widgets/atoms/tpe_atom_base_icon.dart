@@ -76,21 +76,18 @@ class _BaseIconStorybookState extends State<BaseIcon> {
                     iconUrl:
                         'https://cdn-icons-png.flaticon.com/512/3449/3449748.png',
                     size: 40,
-                    color: Colors.blue,
                   ),
                   SizedBox(height: 8),
                   TPEBaseIconUrl(
                     iconUrl:
                         'https://cdn-icons-png.flaticon.com/512/3186/3186949.png',
                     size: 40,
-                    color: Colors.red,
                   ),
                   SizedBox(height: 8),
                   TPEBaseIconUrl(
                     iconUrl:
                         'https://cdn-icons-png.flaticon.com/512/18717/18717283.png',
                     size: 40,
-                    color: Colors.green,
                   ),
                 ],
               ),

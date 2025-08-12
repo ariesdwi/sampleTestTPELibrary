@@ -3,19 +3,19 @@ import 'package:storybook_flutter/storybook_flutter.dart';
 import 'package:tpe_component_sdk/tpe_component_sdk.dart';
 import 'package:reactive_forms/reactive_forms.dart';
 
-
-class TPEComponentInputTextFieldStorybook extends StatefulWidget {
-  const TPEComponentInputTextFieldStorybook({super.key});
+class TPEMoleculePasswordStorybook extends StatefulWidget {
+  const TPEMoleculePasswordStorybook({super.key});
 
   @override
-  State<TPEComponentInputTextFieldStorybook> createState() =>
-      _TPEComponentInputTextFieldStorybookState();
+  State<TPEMoleculePasswordStorybook> createState() =>
+      _TPEMoleculePasswordStorybook();
 }
 
-class _TPEComponentInputTextFieldStorybookState
-    extends State<TPEComponentInputTextFieldStorybook> {
+class _TPEMoleculePasswordStorybook
+    extends State<TPEMoleculePasswordStorybook> {
   bool showStorybook = false;
-  String usernameValue = '';
+  String passwordValue = '';
+  String confrimPasswordValue = '';
 
   final FormGroup form = FormGroup({
     'email': FormControl<String>(
@@ -109,9 +109,18 @@ class _TPEComponentInputTextFieldStorybookState
                   children: [
                     const Text('Default Input Field Preview'),
                     const SizedBox(height: 12),
-                    TPEUsernameField(onChanged: (value) {
-                      usernameValue = value;
-                    },),
+                    TPEPasswordField(
+                      onChanged: (value) {
+                        passwordValue = value;
+                      },
+                    ),
+                    const SizedBox(height: 16),
+                    TPEPasswordField(
+                      onChanged: (value) {
+                        confrimPasswordValue = value;
+                      },
+                      hintPassword: 'Confirm Your Password',
+                    ),
                     const SizedBox(height: 16),
                     TPERefineButton(
                       title: "Simpan",
@@ -124,7 +133,9 @@ class _TPEComponentInputTextFieldStorybookState
                       isLoading: false,
                       onPressed: () {
                         ScaffoldMessenger.of(context).showSnackBar(
-                          SnackBar(content: Text("Simpan $usernameValue!")),
+                          SnackBar(
+                              content: Text(
+                                  "Simpan pass : $passwordValue, confirm : $confrimPasswordValue!")),
                         );
                       },
                     )
