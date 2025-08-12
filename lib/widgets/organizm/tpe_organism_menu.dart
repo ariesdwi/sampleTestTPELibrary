@@ -1,71 +1,3 @@
-// import 'package:flutter/material.dart';
-// import 'package:tpe_component_sdk/components/menu/tpe_component_menu_vertical.dart';
-// import 'package:tpe_component_sdk/components/menu/tpe_homepage_transaction_tw.dart';
-
-// class TpeOrganismMenu extends StatelessWidget {
-//   const TpeOrganismMenu({super.key});
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       appBar: AppBar(title: const Text("TPE Menu")),
-//       backgroundColor: Colors.white, 
-//       body: Container(
-//         margin: EdgeInsets.all(16),
-//         child: TPEMenuListVertical(
-//           menuItems: [
-//             TPEHomeMenuItemVertical(
-//               title: 'Transfer',
-//               iconUrl: 'https://cdn-icons-png.flaticon.com/512/10384/10384161.png',
-//               iconSize: 28,
-//               isNew: true,
-//               onTap: () {
-//                 debugPrint('Transfer menu tapped!');
-//               },
-//             ),
-//             TPEHomeMenuItemVertical(
-//               title: 'Transfer International',
-//               iconUrl: 'https://cdn-icons-png.flaticon.com/512/10384/10384161.png',
-//               iconSize: 28,
-//               isNew: false,
-//               onTap: () {
-//                 debugPrint('Payment menu tapped!');
-//               },
-//             ),
-//             TPEHomeMenuItemVertical(
-//               title: 'Konversi Valas ',
-//               iconUrl: 'https://cdn-icons-png.flaticon.com/512/10384/10384161.png',
-//               iconSize: 28,
-//               isNew: false,
-//               onTap: () {
-//                 debugPrint('Payment menu tapped!');
-//               },
-//             ),
-//             TPEHomeMenuItemVertical(
-//               title: 'Payment',
-//               iconUrl: 'https://cdn-icons-png.flaticon.com/512/10384/10384161.png',
-//               iconSize: 28,
-//               isNew: false,
-//               onTap: () {
-//                 debugPrint('Payment menu tapped!');
-//               },
-//             ),
-//             TPEHomeMenuItemVertical(
-//               title: 'Payment',
-//               iconUrl: 'https://cdn-icons-png.flaticon.com/512/10384/10384161.png',
-//               iconSize: 28,
-//               isNew: false,
-//               onTap: () {
-//                 debugPrint('Payment menu tapped!');
-//               },
-//             ),
-//           ],
-//         ),
-//       ),
-//     );
-//   }
-// }
-
 import 'package:flutter/material.dart';
 import 'package:storybook_flutter/storybook_flutter.dart';
 import 'package:tpe_component_sdk/tpe_component_sdk.dart';
@@ -109,7 +41,8 @@ class _TpeOrganismMenuState extends State<TpeOrganismMenu> {
                   name: 'TPEMenuListVertical / Custom List',
                   builder: (context) {
                     final itemCount = context.knobs
-                        .slider(label: 'Item Count', initial: 4, min: 1, max: 10)
+                        .slider(
+                            label: 'Item Count', initial: 4, min: 1, max: 10)
                         .toInt();
 
                     final iconUrl = context.knobs.text(
@@ -123,8 +56,8 @@ class _TpeOrganismMenuState extends State<TpeOrganismMenu> {
                       initial: 'Menu',
                     );
 
-                    final iconSize = context.knobs
-                        .slider(label: 'Icon Size', initial: 28, min: 12, max: 40);
+                    final iconSize = context.knobs.slider(
+                        label: 'Icon Size', initial: 28, min: 12, max: 40);
 
                     final alternateNewBadges = context.knobs.boolean(
                       label: 'Alternate NEW badges',
@@ -152,7 +85,8 @@ class _TpeOrganismMenuState extends State<TpeOrganismMenu> {
                 menuItems: [
                   TPEHomeMenuItemVertical(
                     title: 'Transfer',
-                    iconUrl: 'https://cdn-icons-png.flaticon.com/512/10384/10384161.png',
+                    iconUrl:
+                        'https://cdn-icons-png.flaticon.com/512/10384/10384161.png',
                     iconSize: 28,
                     isNew: true,
                     onTap: () {
@@ -161,7 +95,8 @@ class _TpeOrganismMenuState extends State<TpeOrganismMenu> {
                   ),
                   TPEHomeMenuItemVertical(
                     title: 'Transfer International',
-                    iconUrl: 'https://cdn-icons-png.flaticon.com/512/10384/10384161.png',
+                    iconUrl:
+                        'https://cdn-icons-png.flaticon.com/512/10384/10384161.png',
                     iconSize: 28,
                     isNew: false,
                     onTap: () {
@@ -170,7 +105,8 @@ class _TpeOrganismMenuState extends State<TpeOrganismMenu> {
                   ),
                   TPEHomeMenuItemVertical(
                     title: 'Konversi Valas',
-                    iconUrl: 'https://cdn-icons-png.flaticon.com/512/10384/10384161.png',
+                    iconUrl:
+                        'https://cdn-icons-png.flaticon.com/512/10384/10384161.png',
                     iconSize: 28,
                     isNew: false,
                     onTap: () {
@@ -179,7 +115,8 @@ class _TpeOrganismMenuState extends State<TpeOrganismMenu> {
                   ),
                   TPEHomeMenuItemVertical(
                     title: 'Payment',
-                    iconUrl: 'https://cdn-icons-png.flaticon.com/512/10384/10384161.png',
+                    iconUrl:
+                        'https://cdn-icons-png.flaticon.com/512/10384/10384161.png',
                     iconSize: 28,
                     isNew: false,
                     onTap: () {
@@ -188,7 +125,8 @@ class _TpeOrganismMenuState extends State<TpeOrganismMenu> {
                   ),
                   TPEHomeMenuItemVertical(
                     title: 'Payment',
-                    iconUrl: 'https://cdn-icons-png.flaticon.com/512/10384/10384161.png',
+                    iconUrl:
+                        'https://cdn-icons-png.flaticon.com/512/10384/10384161.png',
                     iconSize: 28,
                     isNew: false,
                     onTap: () {

@@ -5,11 +5,11 @@ import '../models/catalog_section.dart';
 import 'package:tpe_homepage_sdk/tpe_homepage_sdk.dart';
 import 'package:tpe_component_sdk/tpe_component_sdk.dart';
 import '../widgets/organizm/tpe_organism_form_login.dart';
-import '../widgets/organizm/tpe_organism_biometric.dart';
-import 'package:hello_ios/widgets/organizm/tpe_organism_language.dart';
-import 'package:hello_ios/widgets/organizm/tpe_organism_primary_secondary_bs.dart';
-import 'package:hello_ios/widgets/organizm/tpe_organism_single_button_bs.dart';
-import '../widgets/template/tpe_login_page.dart';
+// import '../widgets/organizm/tpe_organism_biometric.dart';
+// import 'package:hello_ios/widgets/organizm/tpe_organism_language.dart';
+// import 'package:hello_ios/widgets/organizm/tpe_organism_primary_secondary_bs.dart';
+// import 'package:hello_ios/widgets/organizm/tpe_organism_single_button_bs.dart';
+// import '../widgets/template/tpe_login_page.dart';
 
 class HompageTemplate extends StatelessWidget {
   const HompageTemplate({super.key});
@@ -225,27 +225,27 @@ class HompageTemplate extends StatelessWidget {
               label: "TPELoginBottomSheet",
               icon: Icons.horizontal_split,
               destination: TPELoginBottomSheetPage()),
-          CatalogItem(
-              label: "TPEBiometricBottomSheet",
-              icon: Icons.horizontal_split,
-              destination: TPEBiometricBottomSheetPage()),
-          CatalogItem(
-              label: "TPE Login TL",
-              icon: Icons.horizontal_split,
-              destination: TpeLoginPage()
-              ),
-          CatalogItem(
-              label: "TPELanguageBottomSheet",
-              icon: Icons.menu,
-              destination: const TpeOrganismLanguage()),
-          CatalogItem(
-              label: "TPEPrimarySecondaryBottomSheet",
-              icon: Icons.menu,
-              destination: const TpeOrganismPrimarySecondaryBs()),
-          CatalogItem(
-              label: "TPESingleButtonBottomSheet",
-              icon: Icons.menu,
-              destination: const TpeOrganismSingleButtonBottomSheet()),
+          // CatalogItem(
+          //     label: "TPEBiometricBottomSheet",
+          //     icon: Icons.horizontal_split,
+          //     destination: TPEBiometricBottomSheetPage()),
+          // CatalogItem(
+          //     label: "TPE Login TL",
+          //     icon: Icons.horizontal_split,
+          //     destination: TpeLoginPage()
+          //     ),
+          // CatalogItem(
+          //     label: "TPELanguageBottomSheet",
+          //     icon: Icons.menu,
+          //     destination: const TpeOrganismLanguage()),
+          // CatalogItem(
+          //     label: "TPEPrimarySecondaryBottomSheet",
+          //     icon: Icons.menu,
+          //     destination: const TpeOrganismPrimarySecondaryBs()),
+          // CatalogItem(
+          //     label: "TPESingleButtonBottomSheet",
+          //     icon: Icons.menu,
+          //     destination: const TpeOrganismSingleButtonBottomSheet()),
         ],
       ),
     ];

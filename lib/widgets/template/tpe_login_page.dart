@@ -23,11 +23,10 @@ class _LoginPageState extends State<TpeLoginPage> {
       showIdCardField: false,
       showCheckbox: false,
       titleText: "Login TL",
-      onSaveSuccess: (data) => {},
-      // onSaveSuccess: () {
-      //   print("Username: ${data['username']}");
-      //   print("Password: ${data['password']}");
-      // },
+      onSaveSuccess: (data) {
+        // print("Username: ${data['username']}");
+        // print("Password: ${data['password']}");
+      },
     );
   }
 

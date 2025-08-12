@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:storybook_flutter/storybook_flutter.dart';
 import 'package:tpe_component_sdk/tpe_component_sdk.dart';
-import 'package:tpe_component_sdk/components/section/tpe_transaction_section.dart';
 
 class TransactionItemList extends StatefulWidget {
   const TransactionItemList({super.key});
@@ -31,7 +30,8 @@ class _TransactionItemListState extends State<TransactionItemList> {
       ),
       body: showStorybook
           ? Storybook(
-              wrapperBuilder: (context, child) => Center(child: Padding(
+              wrapperBuilder: (context, child) => Center(
+                  child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: child,
               )),
@@ -67,7 +67,8 @@ class _TransactionItemListState extends State<TransactionItemList> {
                     return TpeTransactionSection(
                       sectionHeader: TpeComponentSectionHeader(
                         leadingIcon: TPEBaseIconUrl(
-                          iconUrl: 'https://cdn-icons-png.flaticon.com/512/4256/4256863.png',
+                          iconUrl:
+                              'https://cdn-icons-png.flaticon.com/512/4256/4256863.png',
                         ),
                         title: 'Transaction Menu',
                         subtitle: 'Manage your finances and account',
@@ -81,7 +82,8 @@ class _TransactionItemListState extends State<TransactionItemList> {
                           activityText: title,
                           activityAmount: amount,
                           activityDate: '12 Jan 2023',
-                          activityIcon: 'https://cdn-icons-png.flaticon.com/512/709/709496.png',
+                          activityIcon:
+                              'https://cdn-icons-png.flaticon.com/512/709/709496.png',
                           activityStatus: status,
                         ),
                       ],
@@ -97,7 +99,8 @@ class _TransactionItemListState extends State<TransactionItemList> {
                   TpeTransactionSection(
                     sectionHeader: TpeComponentSectionHeader(
                       leadingIcon: TPEBaseIconUrl(
-                        iconUrl: 'https://cdn-icons-png.flaticon.com/512/4256/4256863.png',
+                        iconUrl:
+                            'https://cdn-icons-png.flaticon.com/512/4256/4256863.png',
                       ),
                       title: 'Transaction Menu',
                       subtitle: 'Manage your finances and account',
