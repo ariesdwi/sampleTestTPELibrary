@@ -11,26 +11,21 @@ class TPELoginBottomSheetPage extends StatefulWidget {
 }
 
 class _TPELoginBottomSheetPageState extends State<TPELoginBottomSheetPage> {
-  final form = FormGroup({
-    'idcard': FormControl<String>(validators: [Validators.required]),
-    'username': FormControl<String>(),
-    'password': FormControl<String>(),
-  });
 
   bool checkboxValue = false;
 
   void _openLoginSheet() {
     showTPELoginBottomSheet(
       context: context,
-      form: form,
+      // form: form,
       showIdCardField: true,
       showCheckbox: true,
       titleText: "Login TW",
-      onSaveSuccess: () {
-        // print("ID Card: ${data['idCard']}");
-        // print("Username: ${data['username']}");
-        // print("Password: ${data['password']}");
-        // print("Checkbox: ${data['checkbox']}");
+      onSaveSuccess: (data) {
+        print("ID Card: ${data['idCard']}");
+        print("Username: ${data['username']}");
+        print("Password: ${data['password']}");
+        print("Checkbox: ${data['checkbox']}");
       },
     );
   }
