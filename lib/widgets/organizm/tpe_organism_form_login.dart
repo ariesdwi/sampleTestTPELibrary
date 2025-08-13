@@ -26,7 +26,10 @@ class _TPELoginBottomSheetPageState extends State<TPELoginBottomSheetPage> {
       showCheckbox: true,
       titleText: "Login TW",
       onSaveSuccess: (data) {
-        
+        // print("ID Card: ${data['idCard']}");
+        // print("Username: ${data['username']}");
+        // print("Password: ${data['password']}");
+        // print("Checkbox: ${data['checkbox']}");
       },
     );
   }

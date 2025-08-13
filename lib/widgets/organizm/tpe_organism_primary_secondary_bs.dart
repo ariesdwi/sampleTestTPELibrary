@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:tpe_component_sdk/components/bottomsheet/tpe_primary_secondary_bottom_sheet_base.dart';
 import 'package:tpe_component_sdk/tpe_component_sdk.dart';
 
 class TpeOrganismPrimarySecondaryBs extends StatelessWidget {
