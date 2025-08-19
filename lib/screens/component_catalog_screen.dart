@@ -7,6 +7,7 @@ import 'package:hello_ios/widgets/atoms/tpe_atom_copy_button.dart';
 import 'package:hello_ios/widgets/atoms/tpe_atom_count_badge_label.dart';
 import 'package:hello_ios/widgets/atoms/tpe_atom_eye_toggle_button.dart';
 import 'package:hello_ios/widgets/atoms/tpe_atom_menu_badge_label.dart';
+import 'package:hello_ios/widgets/molecule/tpe_molecule_app_bar.dart';
 import 'package:hello_ios/widgets/molecule/tpe_molecule_navigation_card.dart';
 import 'package:hello_ios/widgets/atoms/tpe_atom_text_variant.dart';
 import 'package:hello_ios/widgets/organizm/tpe_organism_card_balance.dart';
@@ -175,6 +176,7 @@ class ComponentCatalogScreen extends StatelessWidget {
               label: "TPETextGroup",
               icon: Icons.label_important,
               destination: const TPEComponentTextGroupStorybook()),
+          CatalogItem(icon: Icons.label_important, label: "TPEAppBar", destination: const TpeMoleculeAppBar()),
           CatalogItem(
               label: "TPERefineButton",
               icon: Icons.label_important,

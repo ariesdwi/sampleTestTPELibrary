@@ -131,12 +131,12 @@ class HompageTemplate extends StatelessWidget {
             label: "Homepage Taipei",
             icon: Icons.label_important,
             destination: TpeHomepageTWType(
-              backgroundImageUrl: 'assets/images/promo.png',
               header: TPEHeaderComponent(
                 userName: 'Farischa',
                 singleLineType: false,
                 rightCircleButton: TPECircleIconButton(
-                    icon: Icons.logout,
+                    icon: Icons.notifications,
+                    size: 36,
                     onPressed: () => Navigator.pop(context)),
               ),
               balanceCard: TPEBalanceCardTW(

@@ -60,6 +60,10 @@ class _LoginPageState extends State<TpeLoginPageTW> {
         {'code': 'ko', 'name': 'Korean'},
         {'code': 'pt', 'name': 'Português'},
         {'code': 'fr', 'name': 'Français'},
+        {'code': 'ja', 'name': 'Japanese'},
+        {'code': 'ko', 'name': 'Korean'},
+        {'code': 'pt', 'name': 'Português'},
+        {'code': 'fr', 'name': 'Français'},
       ],
       onLanguageTap: (String selectedcode, String selectedLanguage) {
         ScaffoldMessenger.of(context).showSnackBar(
