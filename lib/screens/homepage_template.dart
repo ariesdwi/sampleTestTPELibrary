@@ -1,4 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:hello_ios/widgets/organizm/tpe_organism_biometric.dart';
+import 'package:hello_ios/widgets/organizm/tpe_organism_language.dart';
+import 'package:hello_ios/widgets/organizm/tpe_organism_language_with_button.dart';
+import 'package:hello_ios/widgets/organizm/tpe_organism_primary_secondary_bs.dart';
+import 'package:hello_ios/widgets/organizm/tpe_organism_single_button_bs.dart';
+import 'package:hello_ios/widgets/template/tpe_login_page.dart';
+import 'package:hello_ios/widgets/template/tpe_login_page_tw.dart';
+import 'package:hello_ios/widgets/template/tpe_register_page.dart';
 import '../models/catalog_item.dart';
 import '../models/catalog_section.dart';
 
@@ -225,27 +233,38 @@ class HompageTemplate extends StatelessWidget {
               label: "TPELoginBottomSheet",
               icon: Icons.horizontal_split,
               destination: TPELoginBottomSheetPage()),
-          // CatalogItem(
-          //     label: "TPEBiometricBottomSheet",
-          //     icon: Icons.horizontal_split,
-          //     destination: TPEBiometricBottomSheetPage()),
-          // CatalogItem(
-          //     label: "TPE Login TL",
-          //     icon: Icons.horizontal_split,
-          //     destination: TpeLoginPage()
-          //     ),
-          // CatalogItem(
-          //     label: "TPELanguageBottomSheet",
-          //     icon: Icons.menu,
-          //     destination: const TpeOrganismLanguage()),
-          // CatalogItem(
-          //     label: "TPEPrimarySecondaryBottomSheet",
-          //     icon: Icons.menu,
-          //     destination: const TpeOrganismPrimarySecondaryBs()),
-          // CatalogItem(
-          //     label: "TPESingleButtonBottomSheet",
-          //     icon: Icons.menu,
-          //     destination: const TpeOrganismSingleButtonBottomSheet()),
+          CatalogItem(
+              label: "TPEBiometricBottomSheet",
+              icon: Icons.horizontal_split,
+              destination: TPEBiometricBottomSheetPage()),
+          CatalogItem(
+              label: "TPE Login TL",
+              icon: Icons.horizontal_split,
+              destination: TpeLoginPage()),
+          CatalogItem(
+              label: "TPE Login TW",
+              icon: Icons.horizontal_split,
+              destination: TpeLoginPageTW()),
+          CatalogItem(
+              label: "TPELanguageBottomSheet",
+              icon: Icons.menu,
+              destination: const TpeOrganismLanguage()),
+          CatalogItem(
+              label: "TPELanguageBottomSheetWithButton",
+              icon: Icons.menu,
+              destination: const TpeOrganismLanguageWithButton()),
+          CatalogItem(
+              label: "TPEPrimarySecondaryBottomSheet",
+              icon: Icons.menu,
+              destination: const TpeOrganismPrimarySecondaryBs()),
+          CatalogItem(
+              label: "TPESingleButtonBottomSheet",
+              icon: Icons.menu,
+              destination: const TpeOrganismSingleButtonBottomSheet()),
+          CatalogItem(
+              label: "TPERegisterPage",
+              icon: Icons.menu,
+              destination: const TpeRegisterPage()),
         ],
       ),
     ];
