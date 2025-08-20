@@ -109,7 +109,7 @@ class _TPEComponentInputTextFieldStorybookState
                   children: [
                     const Text('Default Input Field Preview'),
                     const SizedBox(height: 12),
-                    TPEInputTextField(formControlName: 'Email',
+                    TPEInputTextField(formControlName: 'email',
                       textfieldTitle: "Email",
                       labelText: "Email Address",
                       hintText: "Enter your email",

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:hello_ios/widgets/atoms/tpe_atom_textfield.dart';
 import 'package:hello_ios/widgets/atoms/tpe_atom_balance_indicator.dart';
 import 'package:hello_ios/widgets/atoms/tpe_atom_base_card.dart';
 import 'package:hello_ios/widgets/atoms/tpe_atom_base_icon.dart';
@@ -8,14 +7,18 @@ import 'package:hello_ios/widgets/atoms/tpe_atom_count_badge_label.dart';
 import 'package:hello_ios/widgets/atoms/tpe_atom_eye_toggle_button.dart';
 import 'package:hello_ios/widgets/atoms/tpe_atom_menu_badge_label.dart';
 import 'package:hello_ios/widgets/molecule/tpe_molecule_app_bar.dart';
+import 'package:hello_ios/widgets/molecule/tpe_molecule_confirmation_section.dart';
 import 'package:hello_ios/widgets/molecule/tpe_molecule_navigation_card.dart';
 import 'package:hello_ios/widgets/atoms/tpe_atom_text_variant.dart';
+import 'package:hello_ios/widgets/molecule/tpe_molecule_primary_secondary_btn.dart';
 import 'package:hello_ios/widgets/organizm/tpe_organism_card_balance.dart';
 import 'package:hello_ios/widgets/organizm/tpe_organism_card_balance_tl.dart';
 
 import 'package:hello_ios/widgets/organizm/tpe_organism_menu.dart';
+import 'package:hello_ios/widgets/organizm/tpe_organism_primary_secondary_bs.dart';
 
 import 'package:hello_ios/widgets/organizm/tpe_organism_promo.dart';
+import 'package:hello_ios/widgets/organizm/tpe_organism_single_button_bs.dart';
 import 'package:hello_ios/widgets/organizm/tpe_organism_transaction.dart';
 import 'package:hello_ios/widgets/molecule/tpe_molecule_transaction_item.dart';
 import '../models/catalog_item.dart';
@@ -119,10 +122,15 @@ class ComponentCatalogScreen extends StatelessWidget {
               destination: TPEComponentLinkTextStorybook()),
           // CatalogItem(label: "TPEBaseCardBalance", icon: Icons.label_important, destination: const BalanceBaseCard()),
           //Login
+          // CatalogItem(
+          //     label: "TPETextField",
+          //     icon: Icons.label_important,
+          //     destination: TPEAtomTextField()),
+
           CatalogItem(
-              label: "TPETextField",
+              label: "TPERefineButton",
               icon: Icons.label_important,
-              destination: TPEAtomTextField()),
+              destination: const TPEComponentButtonStorybook()),
         ],
       ),
       CatalogSection(
@@ -156,39 +164,44 @@ class ComponentCatalogScreen extends StatelessWidget {
               label: "TPESection",
               icon: Icons.view_week,
               destination: const TPEComponentSection()),
+          //Login
           CatalogItem(
-              label: "TPEUsernameTextField",
+              label: "TPEInputTextField",
               icon: Icons.label_important,
               destination: const TPEComponentInputTextFieldStorybook()),
           CatalogItem(
               label: "TPESwitchLanguage",
               icon: Icons.label_important,
               destination: const TPESwitchLanguageStorybook()),
-          CatalogItem(
-              label: "TPELoadingCircularBar",
-              icon: Icons.label_important,
-              destination: const TPEComponentLoadingCircularBarStorybook()),
-          CatalogItem(
-              label: "TPECheckedText",
-              icon: Icons.label_important,
-              destination: const TPEComponentCheckedTextStorybook()),
+              CatalogItem(icon: Icons.label_important, label: "TPEPrimarySecondaryButton", destination: TpeMoleculePrimarySecondaryBtn()),
           CatalogItem(
               label: "TPETextGroup",
               icon: Icons.label_important,
               destination: const TPEComponentTextGroupStorybook()),
-          CatalogItem(icon: Icons.label_important, label: "TPEAppBar", destination: const TpeMoleculeAppBar()),
-          CatalogItem(
-              label: "TPERefineButton",
+              CatalogItem(
+              label: "TPEConfirmationSection",
               icon: Icons.label_important,
-              destination: const TPEComponentButtonStorybook()),
+              destination: const TpeMoleculeConfirmationSection()),
           CatalogItem(
               label: "TPEInfoCard",
               icon: Icons.label_important,
               destination: const TPEComponentInfoCardStorybook()),
           CatalogItem(
+              label: "TPECheckedText",
+              icon: Icons.label_important,
+              destination: const TPEComponentCheckedTextStorybook()),
+          CatalogItem(
+              label: "TPELoadingCircularBar",
+              icon: Icons.label_important,
+              destination: const TPEComponentLoadingCircularBarStorybook()),
+          CatalogItem(
               label: "TPELanguageItemTile",
               icon: Icons.label_important,
               destination: const TPEComponentLanguageItemTileStorybook()),
+          CatalogItem(
+              icon: Icons.label_important,
+              label: "TPEAppBar",
+              destination: const TpeMoleculeAppBar()),
         ],
       ),
       CatalogSection(
@@ -222,26 +235,15 @@ class ComponentCatalogScreen extends StatelessWidget {
               label: "TPEMenuHorizontal",
               icon: Icons.horizontal_split,
               destination: TPEComponentMenuHorizontalPage()),
-          // CatalogItem(
-          //     label: "TPELanguageBottomSheet",
-          //     icon: Icons.menu,
-          //     destination: const TpeOrganismLanguage()),
-          // CatalogItem(
-          //     label: "TPEPrimarySecondaryBottomSheet",
-          //     icon: Icons.menu,
-          //     destination: const TpeOrganismPrimarySecondaryBs()),
-          // CatalogItem(
-          //     label: "TPESingleButtonBottomSheet",
-          //     icon: Icons.menu,
-          //     destination: const TpeOrganismSingleButtonBottomSheet()),
-          // CatalogItem(
-          //     label: "TPELoginBottomSheet",
-          //     icon: Icons.horizontal_split,
-          //     destination: TPELoginBottomSheetPage()),
-          // CatalogItem(
-          //     label: "TPEBiometricBottomSheet",
-          //     icon: Icons.horizontal_split,
-          //     destination: TPEBiometricBottomSheetPage()),
+          //Login
+          CatalogItem(
+              label: "TPESingleButtonBottomSheet",
+              icon: Icons.menu,
+              destination: const TpeOrganismSingleButtonBottomSheet()),
+          CatalogItem(
+              label: "TPEPrimarySecondaryBottomSheet",
+              icon: Icons.menu,
+              destination: const TpeOrganismPrimarySecondaryBs()),
         ],
       ),
     ];

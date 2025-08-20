@@ -143,25 +143,30 @@ class HompageTemplate extends StatelessWidget {
                 accountNumber: '1234567890',
                 currency: 'USD',
                 currentBalance: 1234.56,
+                copyColor: TPEColors.white,
+                toggleColor: TPEColors.white,
+                textBalanceLabelColor: TPEColors.white,
+                balanceIndicatorColor: TPEColors.white,
+                accountNumberTextColor: TPEColors.white,
+                currencyTextColor: TPEColors.white,
+                currentBalanceTextColor: TPEColors.white,
+                backgroundColor: TPEColors.blue90,
               ),
               listMenu: TPEMenuListVertical(
                 menuItems: [
                   TPEHomeMenuItemVertical(
-                    iconUrl:
-                        'https://cdn-icons-png.flaticon.com/512/10384/10384161.png',
+                    iconUrl: 'tes.image',
                     title: 'Transfer',
                     onTap: () => _showSnackbar(context, "Transfer tapped"),
                   ),
                   TPEHomeMenuItemVertical(
-                    iconUrl:
-                        'https://cdn-icons-png.flaticon.com/512/10384/10384161.png',
+                    iconUrl: 'tes.image',
                     iconSize: 20,
                     title: 'Account',
                     onTap: () => _showSnackbar(context, "Account tapped"),
                   ),
                   TPEHomeMenuItemVertical(
-                    iconUrl:
-                        'https://cdn-icons-png.flaticon.com/512/10384/10384161.png',
+                    iconUrl: 'tes.image',
                     iconSize: 20,
                     title: 'Account Statement',
                     onTap: () => _showSnackbar(context, "Account Statement"),
@@ -176,9 +181,6 @@ class HompageTemplate extends StatelessWidget {
               ),
               transactionSection: TpeTransactionSection(
                 sectionHeader: TpeComponentSectionHeader(
-                  leadingIcon: TPEBaseIconUrl(
-                      iconUrl:
-                          'https://cdn-icons-png.flaticon.com/512/4256/4256863.png'),
                   title: 'Transaction Menu',
                   subtitle: 'Manage your finances and account',
                   trailingIcon: const Icon(Icons.chevron_right),
@@ -210,10 +212,7 @@ class HompageTemplate extends StatelessWidget {
                 sectionHeaderPromo: TpeComponentSectionHeader(
                   title: 'Promo & Cashback',
                   subtitle: 'Penawaran khusus buat kamu',
-                  leadingIcon: TPEBaseIconUrl(
-                      iconUrl:
-                          'https://cdn-icons-png.flaticon.com/512/10384/10384161.png',
-                      size: 16),
+                  trailingIcon: const Icon(Icons.chevron_right),
                 ),
                 promoBannerTw: TpePromoListBannerTw(
                   imageUrls: [

@@ -29,15 +29,105 @@ class _TpeMoleculeAppBarState extends State<TpeMoleculeAppBar> {
           ),
         ],
       ),
-      body: Center(
-        child: Column(
-          children: [
-            TPEAppBar(
-              title: 'Login',
+      body: showStorybook
+          ? Storybook(
+              stories: [
+                /// 📌 Default
+                Story(
+                  name: 'TPEAppBar / Default',
+                  builder: (context) => Scaffold(
+                    appBar: const TPEAppBar(
+                      title: 'Default AppBar',
+                    ),
+                    body: const Center(child: Text("Content goes here")),
+                  ),
+                ),
+
+                /// 📌 With Back Button
+                Story(
+                  name: 'TPEAppBar / With Back Button',
+                  builder: (context) => Scaffold(
+                    appBar: TPEAppBar(
+                      title: 'With Back Button',
+                      useBackButton: true,
+                      onPressed: () => debugPrint("Back pressed"),
+                    ),
+                    body: const Center(child: Text("Content goes here")),
+                  ),
+                ),
+
+                /// 📌 Without Back Button
+                Story(
+                  name: 'TPEAppBar / Without Back Button',
+                  builder: (context) => Scaffold(
+                    appBar: const TPEAppBar(
+                      title: 'No Back Button',
+                      useBackButton: false,
+                    ),
+                    body: const Center(child: Text("Content goes here")),
+                  ),
+                ),
+
+                /// 📌 Custom Background
+                Story(
+                  name: 'TPEAppBar / Custom Background',
+                  builder: (context) => Scaffold(
+                    appBar: const TPEAppBar(
+                      title: 'Custom BG',
+                      backgroundColor: Colors.deepOrange,
+                      useBackButton: false,
+                    ),
+                    body: const Center(child: Text("Content goes here")),
+                  ),
+                ),
+
+                /// 📌 Knobs Interaktif
+                Story(
+                  name: 'TPEAppBar / Knobs Playground',
+                  builder: (context) {
+                    final k = context.knobs;
+
+                    return Scaffold(
+                      appBar: TPEAppBar(
+                        title: k.text(label: 'Title', initial: 'TPE App Bar'),
+                        useBackButton: k.boolean(
+                          label: 'Use Back Button',
+                          initial: true,
+                        ),
+                        automaticallyImplyLeading: k.boolean(
+                          label: 'Automatically Imply Leading',
+                          initial: false,
+                        ),
+                        backgroundColor: k.options(
+                          label: 'Background Color',
+                          initial: TPEColors.blue70,
+                          options: const [
+                            Option(label: 'Blue70', value: TPEColors.blue70),
+                            Option(label: 'Red', value: Colors.red),
+                            Option(label: 'Green', value: Colors.green),
+                            Option(label: 'Orange', value: Colors.orange),
+                          ],
+                        ),
+                        onPressed: () => debugPrint("Back button pressed!"),
+                      ),
+                      body: const Center(
+                        child: Text("Edit values via knobs →"),
+                      ),
+                    );
+                  },
+                ),
+              ],
+            )
+          : const Center(
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  TPEAppBar(
+                    title: 'Login',
+                  ),
+                ],
+              ),
             ),
-          ],
-        ),
-      ),
     );
   }
 }
