@@ -581,29 +581,23 @@ packages:
   tpe_component_sdk:
     dependency: "direct main"
     description:
-      path: "packages/tpe_component_sdk"
-      ref: master
-      resolved-ref: "35788a61d3ee5f522851054cf262c9149528c787"
-      url: "https://bitbucket.bri.co.id/scm/~00283969/tpe-composablemobileapp.git"
-    source: git
+      path: "../TPE-Components/tpe-composablemobileapp/packages/tpe_component_sdk"
+      relative: true
+    source: path
     version: "0.0.1"
   tpe_homepage_sdk:
     dependency: "direct main"
     description:
-      path: "packages/tpe_homepage_sdk"
-      ref: master
-      resolved-ref: "35788a61d3ee5f522851054cf262c9149528c787"
-      url: "https://bitbucket.bri.co.id/scm/~00283969/tpe-composablemobileapp.git"
-    source: git
+      path: "../TPE-Components/tpe-composablemobileapp/packages/tpe_homepage_sdk"
+      relative: true
+    source: path
     version: "0.0.1"
   tpe_login_sdk:
     dependency: "direct main"
     description:
-      path: "packages/tpe_login_sdk"
-      ref: master
-      resolved-ref: "35788a61d3ee5f522851054cf262c9149528c787"
-      url: "https://bitbucket.bri.co.id/scm/~00283969/tpe-composablemobileapp.git"
-    source: git
+      path: "../TPE-Components/tpe-composablemobileapp/packages/tpe_login_sdk"
+      relative: true
+    source: path
     version: "0.0.1"
   typed_data:
     dependency: transitive
