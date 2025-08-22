@@ -6,7 +6,8 @@ class TPEComponentMenuVertical extends StatefulWidget {
   const TPEComponentMenuVertical({super.key});
 
   @override
-  State<TPEComponentMenuVertical> createState() => _TPEComponentMenuVerticalState();
+  State<TPEComponentMenuVertical> createState() =>
+      _TPEComponentMenuVerticalState();
 }
 
 class _TPEComponentMenuVerticalState extends State<TPEComponentMenuVertical> {
@@ -37,17 +38,18 @@ class _TPEComponentMenuVerticalState extends State<TPEComponentMenuVertical> {
                   name: 'TPEHomeMenuItemVertical / List (Customizable)',
                   builder: (context) {
                     final itemCount = context.knobs
-                        .slider(label: 'Item Count', initial: 4, min: 1, max: 10)
+                        .slider(
+                            label: 'Item Count', initial: 4, min: 1, max: 10)
                         .toInt();
 
                     final spacing = context.knobs
                         .slider(label: 'Spacing', initial: 8, min: 0, max: 32);
 
-                    final iconSize = context.knobs
-                        .slider(label: 'Icon Size', initial: 20, min: 12, max: 40);
+                    final iconSize = context.knobs.slider(
+                        label: 'Icon Size', initial: 20, min: 12, max: 40);
 
-                    final titlePrefix =
-                        context.knobs.text(label: 'Title Prefix', initial: 'Menu');
+                    final titlePrefix = context.knobs
+                        .text(label: 'Title Prefix', initial: 'Menu');
 
                     final iconUrl = context.knobs.text(
                       label: 'Icon URL',
@@ -95,11 +97,11 @@ class _TPEComponentMenuVerticalState extends State<TPEComponentMenuVertical> {
                           'https://cdn-icons-png.flaticon.com/512/4256/4256863.png',
                     );
 
-                    final iconSize = context.knobs
-                        .slider(label: 'Icon Size', initial: 20, min: 12, max: 40);
+                    final iconSize = context.knobs.slider(
+                        label: 'Icon Size', initial: 20, min: 12, max: 40);
 
-                    final isNew =
-                        context.knobs.boolean(label: 'Show NEW badge', initial: false);
+                    final isNew = context.knobs
+                        .boolean(label: 'Show NEW badge', initial: false);
 
                     return TPEHomeMenuItemVertical(
                       title: title,

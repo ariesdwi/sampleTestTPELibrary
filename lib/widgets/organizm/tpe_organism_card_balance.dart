@@ -202,7 +202,7 @@ class _TPEComponentCardBalanceTWState extends State<TPEComponentCardBalanceTW> {
           name: 'TPEBalanceCardTW / List (Variants)',
           builder: (context) {
             final itemCount = context.knobs
-                .slider(label: 'Item Count', initial: 3, min: 1, max: 8)
+                .sliderInt(label: 'Item Count', initial: 3, min: 1, max: 8)
                 .toInt();
 
             final alternateBackgrounds = context.knobs.boolean(
@@ -263,7 +263,8 @@ class _TPEComponentCardBalanceTWState extends State<TPEComponentCardBalanceTW> {
     required String accountNumber,
     required String currency,
     required double currentBalance,
-    Color? backgroundColor, // pass only when not null (non-nullable at the call site)
+    Color?
+        backgroundColor, // pass only when not null (non-nullable at the call site)
     TPEBalanceIndicator? balanceIndicator, // pass only when not null
     VoidCallback? onSeeAll,
   }) {
