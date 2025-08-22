@@ -19,17 +19,8 @@ class TpeOrganismLanguageWithButton extends StatelessWidget {
                 {'code': 'id', 'name': 'Bahasa Indonesia'},
                 {'code': 'en', 'name': 'English'},
                 {'code': 'es', 'name': 'Spanish'},
-                {'code': 'zh', 'name': 'Chinese'},
-                {'code': 'ja', 'name': 'Japanese'},
-                {'code': 'ko', 'name': 'Korean'},
-                {'code': 'pt', 'name': 'Português'},
                 {'code': 'fr', 'name': 'Français'},
               ],
-              onLanguageTilePressed: (selectedCode, selectedName) {
-                ScaffoldMessenger.of(context).showSnackBar(
-                  SnackBar(content: Text("Bahasa dipilih: $selectedName")),
-                );
-              },
               // buttonText: "Select Language",
               isCheckedTile: false,
               onButtonLanguagePressed: (selectedCode, selectedName) {

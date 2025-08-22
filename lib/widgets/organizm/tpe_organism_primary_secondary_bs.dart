@@ -17,7 +17,7 @@ class TpeOrganismPrimarySecondaryBs extends StatelessWidget {
             showTPEPrimarySecondaryBottomSheetBase(
                 context: context,
                 confirmationSection: TPEConfirmationSection(
-                    imageUrl: 'DFSFSDFSFSDS',
+                    imageUrl: 'https://image.png',
                     content: TPETextGroup(
                         title: "Account Access Blocked",
                         description:
