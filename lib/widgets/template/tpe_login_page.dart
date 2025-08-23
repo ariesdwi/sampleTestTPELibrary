@@ -20,8 +20,8 @@ class _LoginPageState extends State<TpeLoginPage> {
   void _openLoginSheet() {
     showTPELoginBottomSheet(
       context: context,
-      showIdCardField: false,
-      showCheckbox: false,
+      showIdCardField: true,
+      showCheckbox: true,
       titleText: "Login TL",
       onSaveSuccess: (data) {
         // print("Username: ${data['username']}");
