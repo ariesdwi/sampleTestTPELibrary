@@ -20,12 +20,11 @@ class _LoginPageState extends State<TpeLoginPage> {
   void _openLoginSheet() {
     showTPELoginBottomSheet(
       context: context,
-      showIdCardField: true,
-      showCheckbox: true,
+      loginType: 'tl', // Use string 'tl'
       titleText: "Login TL",
       onSaveSuccess: (data) {
-        // print("Username: ${data['username']}");
-        // print("Password: ${data['password']}");
+        print("Username: ${data['username']}");
+        print("Password: ${data['password']}");
       },
     );
   }

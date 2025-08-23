@@ -20,12 +20,13 @@ class _LoginPageState extends State<TpeLoginPageTW> {
   void _openLoginSheet() {
     showTPELoginBottomSheet(
       context: context,
-      showIdCardField: false,
-      showCheckbox: false,
+      loginType: 'tw',
       titleText: "Login TW",
       onSaveSuccess: (data) {
-        // print("Username: ${data['username']}");
-        // print("Password: ${data['password']}");
+        print("ID Card: ${data['idCard']}");
+        print("Username: ${data['username']}");
+        print("Password: ${data['password']}");
+        print("Checkbox: ${data['checkbox']}");
       },
     );
   }
@@ -56,10 +57,6 @@ class _LoginPageState extends State<TpeLoginPageTW> {
         {'code': 'en', 'name': 'English'},
         {'code': 'es', 'name': 'Spanish'},
         {'code': 'zh', 'name': 'Chinese'},
-        {'code': 'ja', 'name': 'Japanese'},
-        {'code': 'ko', 'name': 'Korean'},
-        {'code': 'pt', 'name': 'Português'},
-        {'code': 'fr', 'name': 'Français'},
         {'code': 'ja', 'name': 'Japanese'},
         {'code': 'ko', 'name': 'Korean'},
         {'code': 'pt', 'name': 'Português'},
