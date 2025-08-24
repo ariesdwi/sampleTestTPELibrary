@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:storybook_flutter/storybook_flutter.dart';
+import 'package:tpe_component_sdk/components/button/tpe_copy_button.dart';
+import 'package:tpe_component_sdk/components/button/tpe_navigation_card.dart';
 import 'package:tpe_component_sdk/tpe_component_sdk.dart';
 
 class TPEComponentCardBalanceTW extends StatefulWidget {
@@ -45,18 +47,13 @@ class _TPEComponentCardBalanceTWState extends State<TPEComponentCardBalanceTW> {
               accountNumber: '1234567890',
               currency: 'USD',
               currentBalance: 1234.56,
-              onSeeAll: () {
-                debugPrint('See all tapped (default item 1)');
-              },
-            ),
-            const SizedBox(height: 12),
-            TPEBalanceCardTW(
-              accountNumber: '1234567890',
-              currency: 'USD',
-              currentBalance: 1234.56,
-              backgroundColor: TPEColors.blue80, // non-nullable
-              balanceIndicator:
-                  const TPEBalanceIndicator(color: TPEColors.white),
+              onSeeAll: TPENavigationCardButton(
+                  text: "See All Account!",
+                  textColor: TPEColors.black,
+                  onTap: () {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                        SnackBar(content: Text("See all account tapped")));
+                  }),
             ),
           ],
         ),
@@ -274,8 +271,14 @@ class _TPEComponentCardBalanceTWState extends State<TPEComponentCardBalanceTW> {
         child: TPEBalanceCardTW(
           accountNumber: accountNumber,
           currency: currency,
-          currentBalance: currentBalance,
-          onSeeAll: onSeeAll ?? () => debugPrint('See all tapped'),
+          currentBalance: currentBalance, // non-nullable provided
+          onSeeAll: TPENavigationCardButton(
+              text: "See All Account!",
+              textColor: TPEColors.black,
+              onTap: () {
+                ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(content: Text("See all account tapped")));
+              }),
         ),
       );
     } else if (backgroundColor == null && balanceIndicator != null) {
@@ -285,8 +288,14 @@ class _TPEComponentCardBalanceTWState extends State<TPEComponentCardBalanceTW> {
           accountNumber: accountNumber,
           currency: currency,
           currentBalance: currentBalance,
-          balanceIndicator: balanceIndicator,
-          onSeeAll: onSeeAll ?? () => debugPrint('See all tapped'),
+          balanceIndicator: balanceIndicator, // non-nullable provided
+          onSeeAll: TPENavigationCardButton(
+              text: "See All Account!",
+              textColor: TPEColors.blue80,
+              onTap: () {
+                ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(content: Text("See all account tapped")));
+              }),
         ),
       );
     } else if (backgroundColor != null && balanceIndicator == null) {
@@ -297,7 +306,13 @@ class _TPEComponentCardBalanceTWState extends State<TPEComponentCardBalanceTW> {
           currency: currency,
           currentBalance: currentBalance,
           backgroundColor: backgroundColor, // non-nullable provided
-          onSeeAll: onSeeAll ?? () => debugPrint('See all tapped'),
+          onSeeAll: TPENavigationCardButton(
+              text: "See All Account!",
+              backgroundColor: backgroundColor.withOpacity(0.8),
+              onTap: () {
+                ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(content: Text("See all account tapped")));
+              }),
         ),
       );
     } else {
@@ -308,8 +323,15 @@ class _TPEComponentCardBalanceTWState extends State<TPEComponentCardBalanceTW> {
           currency: currency,
           currentBalance: currentBalance,
           backgroundColor: backgroundColor!, // safe due to branch
-          balanceIndicator: balanceIndicator,
-          onSeeAll: onSeeAll ?? () => debugPrint('See all tapped'),
+          balanceIndicator: balanceIndicator, // non-nullable provided
+          onSeeAll: TPENavigationCardButton(
+              text: "See All Account!",
+              textColor: TPEColors.black,
+              backgroundColor: backgroundColor.withOpacity(0.8),
+              onTap: () {
+                ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(content: Text("See all account tapped")));
+              }),
         ),
       );
     }
@@ -330,8 +352,15 @@ class _TPEComponentCardBalanceTWState extends State<TPEComponentCardBalanceTW> {
         currency: currency,
         currentBalance: currentBalance,
         backgroundColor: TPEColors.blue80, // Color (non-nullable)
-        balanceIndicator: const TPEBalanceIndicator(color: TPEColors.white),
-        onSeeAll: onSeeAll,
+        balanceIndicator: const TPEBalanceIndicator(
+            color: TPEColors.white), // non-nullable provided
+        onSeeAll: TPENavigationCardButton(
+            text: "See All Account!",
+            backgroundColor: TPEColors.blue80.withOpacity(0.8),
+            onTap: () {
+              ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(content: Text("See all account tapped")));
+            }),
       );
     } else if (useBg && !useIndicator) {
       return TPEBalanceCardTW(
@@ -339,7 +368,13 @@ class _TPEComponentCardBalanceTWState extends State<TPEComponentCardBalanceTW> {
         currency: currency,
         currentBalance: currentBalance,
         backgroundColor: TPEColors.blue80,
-        onSeeAll: onSeeAll,
+        onSeeAll: TPENavigationCardButton(
+            text: "See All Account!",
+            backgroundColor: TPEColors.blue80.withOpacity(0.8),
+            onTap: () {
+              ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(content: Text("See all account tapped")));
+            }),
       );
     } else if (!useBg && useIndicator) {
       return TPEBalanceCardTW(
@@ -347,14 +382,26 @@ class _TPEComponentCardBalanceTWState extends State<TPEComponentCardBalanceTW> {
         currency: currency,
         currentBalance: currentBalance,
         balanceIndicator: const TPEBalanceIndicator(color: TPEColors.white),
-        onSeeAll: onSeeAll,
+        onSeeAll: TPENavigationCardButton(
+            text: "See All Account!",
+            backgroundColor: TPEColors.blue80.withOpacity(0.8),
+            onTap: () {
+              ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(content: Text("See all account tapped")));
+            }),
       );
     } else {
       return TPEBalanceCardTW(
         accountNumber: accountNumber,
         currency: currency,
         currentBalance: currentBalance,
-        onSeeAll: onSeeAll,
+        onSeeAll: TPENavigationCardButton(
+            text: "See All Account!",
+            backgroundColor: TPEColors.blue80.withOpacity(0.8),
+            onTap: () {
+              ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(content: Text("See all account tapped")));
+            }),
       );
     }
   }

@@ -7,6 +7,7 @@ import 'package:hello_ios/widgets/organizm/tpe_organism_single_button_bs.dart';
 import 'package:hello_ios/widgets/template/tpe_login_page.dart';
 import 'package:hello_ios/widgets/template/tpe_login_page_tw.dart';
 import 'package:hello_ios/widgets/template/tpe_register_page.dart';
+import 'package:tpe_component_sdk/components/button/tpe_navigation_card.dart';
 import '../models/catalog_item.dart';
 import '../models/catalog_section.dart';
 
@@ -82,7 +83,31 @@ class HompageTemplate extends StatelessWidget {
                 singleLineType: true,
                 rightCircleButton: TPECircleIconButton(
                   icon: Icons.logout,
-                  onPressed: () => Navigator.pop(context),
+                  size: 36,
+                  onPressed: () {
+                    showDialog(
+                        context: context,
+                        builder: (context) {
+                          return TpeModalConfirmation(
+                            "You will need to enter your username and password to log in again",
+                            "Logout ?",
+                            textButtonNo: "Cancel",
+                            textButtonYa: "Logout",
+                            () {
+                              Navigator.pushAndRemoveUntil(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => const HompageTemplate(),
+                                ),
+                                (route) => false,
+                              );
+                            },
+                            () {
+                              Navigator.pop(context);
+                            },
+                          );
+                        });
+                  },
                 ),
               ),
               balanceCard: const TPEBalanceCardTL(
@@ -131,12 +156,17 @@ class HompageTemplate extends StatelessWidget {
             label: "Homepage Taipei",
             icon: Icons.label_important,
             destination: TpeHomepageTWType(
+              onRefreshTap: () async {
+                _showSnackbar(context, "Refresh homepage");
+              },
               header: TPEHeaderComponent(
                 userName: 'Farischa',
                 singleLineType: false,
                 rightCircleButton: TPECircleIconButton(
                     icon: Icons.notifications,
                     size: 36,
+                    badgeCount: 99,
+                    badgeSize: 12,
                     onPressed: () => Navigator.pop(context)),
               ),
               balanceCard: TPEBalanceCardTW(
@@ -151,6 +181,13 @@ class HompageTemplate extends StatelessWidget {
                 currencyTextColor: TPEColors.white,
                 currentBalanceTextColor: TPEColors.white,
                 backgroundColor: TPEColors.blue90,
+                onSeeAll: TPENavigationCardButton(
+                    text: "Lihat semua rekeningmu",
+                    backgroundColor: TPEColors.blue90.withOpacity(0.8),
+                    iconColor: TPEColors.white,
+                    onTap: () {
+                      _showSnackbar(context, "See all account tapped");
+                    }),
               ),
               listMenu: TPEMenuListVertical(
                 menuItems: [
@@ -161,22 +198,19 @@ class HompageTemplate extends StatelessWidget {
                   ),
                   TPEHomeMenuItemVertical(
                     iconUrl: 'tes.image',
-                    iconSize: 20,
                     title: 'Account',
                     onTap: () => _showSnackbar(context, "Account tapped"),
                   ),
                   TPEHomeMenuItemVertical(
                     iconUrl: 'tes.image',
-                    iconSize: 20,
                     title: 'Account Statement',
                     onTap: () => _showSnackbar(context, "Account Statement"),
                   ),
                   TPEHomeMenuItemVertical(
                     iconUrl: 'tes.image',
-                    iconSize: 20,
                     title: 'QR Transfer',
                     onTap: () => _showSnackbar(context, "QR Transfer tapped"),
-                  ),
+                  )
                 ],
               ),
               transactionSection: TpeTransactionSection(
@@ -213,6 +247,8 @@ class HompageTemplate extends StatelessWidget {
                   title: 'Promo & Cashback',
                   subtitle: 'Penawaran khusus buat kamu',
                   trailingIcon: const Icon(Icons.chevron_right),
+                  onTap: () =>
+                      _showSnackbar(context, "promo and cashback tapped"),
                 ),
                 promoBannerTw: TpePromoListBannerTw(
                   imageUrls: [
