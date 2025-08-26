@@ -168,7 +168,8 @@ class HompageTemplate extends StatelessWidget {
                     size: 36,
                     badgeCount: 99,
                     badgeSize: 12,
-                    onPressed: () => Navigator.pop(context)),
+                    onPressed: () =>
+                        _showSnackbar(context, "page notification tapped")),
               ),
               balanceCard: TPEBalanceCardTW(
                 accountNumber: '1234567890',

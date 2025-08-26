@@ -583,7 +583,7 @@ packages:
     description:
       path: "packages/tpe_component_sdk"
       ref: master
-      resolved-ref: "801d47c7281f977913a060760e3afe853c99dacf"
+      resolved-ref: fbecb907f4cad0f92b6859e9229a464c316fe4ad
       url: "https://bitbucket.bri.co.id/scm/~00283969/tpe-composablemobileapp.git"
     source: git
     version: "0.0.1"
@@ -592,7 +592,7 @@ packages:
     description:
       path: "packages/tpe_homepage_sdk"
       ref: master
-      resolved-ref: "801d47c7281f977913a060760e3afe853c99dacf"
+      resolved-ref: fbecb907f4cad0f92b6859e9229a464c316fe4ad
       url: "https://bitbucket.bri.co.id/scm/~00283969/tpe-composablemobileapp.git"
     source: git
     version: "0.0.1"
@@ -601,7 +601,7 @@ packages:
     description:
       path: "packages/tpe_login_sdk"
       ref: master
-      resolved-ref: "801d47c7281f977913a060760e3afe853c99dacf"
+      resolved-ref: fbecb907f4cad0f92b6859e9229a464c316fe4ad
       url: "https://bitbucket.bri.co.id/scm/~00283969/tpe-composablemobileapp.git"
     source: git
     version: "0.0.1"
