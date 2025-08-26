@@ -12,11 +12,6 @@ class TpeLoginPageTW extends StatefulWidget {
 }
 
 class _LoginPageState extends State<TpeLoginPageTW> {
-  final form = FormGroup({
-    'username': FormControl<String>(validators: [Validators.required]),
-    'password': FormControl<String>(validators: [Validators.required]),
-  });
-
   bool checkboxValue = false;
 
   void _openLoginSheet() {
@@ -25,6 +20,7 @@ class _LoginPageState extends State<TpeLoginPageTW> {
       loginType: 'tw',
       titleText: "Login TW",
       onSaveSuccess: (data) {
+<<<<<<< HEAD
         if ("${data['username']}" != "Farischa" &&
             "${data['password']}" != "Farischa123") {
           showTopSnackBar(
@@ -39,6 +35,12 @@ class _LoginPageState extends State<TpeLoginPageTW> {
                     Text("username should : Farischa, password : Farischa123")),
           );
         }
+=======
+        print("ID Card: ${data['idcard']}");
+        print("Username: ${data['username']}");
+        print("Password: ${data['password']}");
+        print("Checkbox: ${data['checkbox']}");
+>>>>>>> f619c88 (Update)
       },
     );
   }
