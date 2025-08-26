@@ -78,9 +78,7 @@ class HompageTemplate extends StatelessWidget {
             label: "Homepage Timor Leste",
             icon: Icons.label_important,
             destination: TPEHomePageTL(
-              refreshCallback: () async {
-                
-              },
+              refreshCallback: () async {},
               header: TPEHeaderComponent(
                 userName: 'Aries',
                 singleLineType: true,
@@ -186,6 +184,7 @@ class HompageTemplate extends StatelessWidget {
                 backgroundColor: TPEColors.blue90,
                 onSeeAll: TPENavigationCardButton(
                     text: "Lihat semua rekeningmu",
+                    textColor: TPEColors.white,
                     backgroundColor: TPEColors.blue90.withOpacity(0.8),
                     iconColor: TPEColors.white,
                     onTap: () {
