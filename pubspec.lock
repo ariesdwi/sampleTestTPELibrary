@@ -571,7 +571,7 @@ packages:
     source: hosted
     version: "0.7.4"
   top_snackbar_flutter:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: top_snackbar_flutter
       sha256: ad3f93062450e8c7db97b271d405c180536408cc2be4380a59da7022eb1d750c
@@ -581,29 +581,23 @@ packages:
   tpe_component_sdk:
     dependency: "direct main"
     description:
-      path: "packages/tpe_component_sdk"
-      ref: master
-      resolved-ref: af1485bfe858f00ba430e02729a33000222c9afa
-      url: "https://bitbucket.bri.co.id/scm/~00283969/tpe-composablemobileapp.git"
-    source: git
+      path: "../TPE-Components/tpe-composablemobileapp/packages/tpe_component_sdk"
+      relative: true
+    source: path
     version: "0.0.1"
   tpe_homepage_sdk:
     dependency: "direct main"
     description:
-      path: "packages/tpe_homepage_sdk"
-      ref: master
-      resolved-ref: af1485bfe858f00ba430e02729a33000222c9afa
-      url: "https://bitbucket.bri.co.id/scm/~00283969/tpe-composablemobileapp.git"
-    source: git
+      path: "../TPE-Components/tpe-composablemobileapp/packages/tpe_homepage_sdk"
+      relative: true
+    source: path
     version: "0.0.1"
   tpe_login_sdk:
     dependency: "direct main"
     description:
-      path: "packages/tpe_login_sdk"
-      ref: master
-      resolved-ref: af1485bfe858f00ba430e02729a33000222c9afa
-      url: "https://bitbucket.bri.co.id/scm/~00283969/tpe-composablemobileapp.git"
-    source: git
+      path: "../TPE-Components/tpe-composablemobileapp/packages/tpe_login_sdk"
+      relative: true
+    source: path
     version: "0.0.1"
   typed_data:
     dependency: transitive
