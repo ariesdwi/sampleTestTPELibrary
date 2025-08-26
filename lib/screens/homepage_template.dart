@@ -78,6 +78,9 @@ class HompageTemplate extends StatelessWidget {
             label: "Homepage Timor Leste",
             icon: Icons.label_important,
             destination: TPEHomePageTL(
+              refreshCallback: () async {
+                
+              },
               header: TPEHeaderComponent(
                 userName: 'Aries',
                 singleLineType: true,
@@ -215,8 +218,8 @@ class HompageTemplate extends StatelessWidget {
               ),
               transactionSection: TpeTransactionSection(
                 sectionHeader: TpeComponentSectionHeader(
-                  title: 'Transaction Menu',
-                  subtitle: 'Manage your finances and account',
+                  title: 'Aktivitas Terbaru',
+                  subtitle: 'Pantau aktivitas terbarumu di sini',
                   trailingIcon: const Icon(Icons.chevron_right),
                   onTap: () =>
                       _showSnackbar(context, "finances and account tapped"),
@@ -224,21 +227,30 @@ class HompageTemplate extends StatelessWidget {
                 listTransaction: [
                   const TpeTransactionItemTw(
                     isLoading: false,
-                    activityTitle: 'Transfer to BRI',
-                    activityText: 'Transfer to BRI',
-                    activityAmount: 'Rp 1.000.000',
-                    activityDate: '12 Jan 2023',
+                    activityTitle: 'Penerimaan Negara',
+                    activityText: 'KUA Sukajadi - 7625563555167',
+                    activityAmount: 'Rp550.000',
+                    activityDate: '14 Des 2024  ·  09:30 WIB',
                     activityIcon: 'assets/images/TRANSFER_NEW.png',
                     activityStatus: 1,
                   ),
                   const TpeTransactionItemTw(
                     isLoading: false,
-                    activityTitle: 'Transfer to BRI',
-                    activityText: 'Transfer to BRI',
-                    activityAmount: 'Rp 1.000.000',
-                    activityDate: '12 Jan 2023',
+                    activityTitle: 'Penerimaan Negara',
+                    activityText: 'Pembuatan Paspor- 7625563555167',
+                    activityAmount: 'Rp5.050.000',
+                    activityDate: '14 Des 2024  ·  09:30 WIB',
                     activityIcon: 'assets/images/TRANSFER_NEW.png',
                     activityStatus: 2,
+                  ),
+                  const TpeTransactionItemTw(
+                    isLoading: false,
+                    activityTitle: 'Transfer Internasional',
+                    activityText: 'Bank BCA - 14927553223',
+                    activityAmount: 'Rp1.550.000',
+                    activityDate: '12 Des 2024  ·  09:30 WIB',
+                    activityIcon: 'assets/images/TRANSFER_NEW.png',
+                    activityStatus: 1,
                   ),
                 ],
               ),
