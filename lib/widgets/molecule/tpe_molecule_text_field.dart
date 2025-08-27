@@ -3,7 +3,6 @@ import 'package:storybook_flutter/storybook_flutter.dart';
 import 'package:tpe_component_sdk/tpe_component_sdk.dart';
 import 'package:reactive_forms/reactive_forms.dart';
 
-
 class TPEComponentInputTextFieldStorybook extends StatefulWidget {
   const TPEComponentInputTextFieldStorybook({super.key});
 
@@ -109,7 +108,8 @@ class _TPEComponentInputTextFieldStorybookState
                   children: [
                     const Text('Default Input Field Preview'),
                     const SizedBox(height: 12),
-                    TPEInputTextField(formControlName: 'email',
+                    TPEInputTextField(
+                      formControlName: 'Email',
                       textfieldTitle: "Email",
                       labelText: "Email Address",
                       hintText: "Enter your email",
@@ -118,7 +118,8 @@ class _TPEComponentInputTextFieldStorybookState
                       readOnly: false,
                       prefixIcon: Icons.email,
                       validationMessages: {
-                        ValidationMessage.required: (_) => 'This field is required',
+                        ValidationMessage.required: (_) =>
+                            'This field is required',
                         ValidationMessage.email: (_) => 'Invalid email',
                       },
                     ),

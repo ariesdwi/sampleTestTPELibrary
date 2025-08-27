@@ -100,19 +100,19 @@ class _TpeMoleculeAppBarState extends State<TpeMoleculeAppBar> {
                   ),
                 ),
 
-                Story(
-                  name: 'Navigation/Auto Imply Leading False',
-                  description:
-                      'AppBar with automaticallyImplyLeading set to false',
-                  builder: (context) => Scaffold(
-                    appBar: const TPEAppBar(
-                      title: 'No Auto Leading',
-                      automaticallyImplyLeading: false,
-                      useBackButton: true,
-                    ),
-                    body: const Center(child: Text("Content goes here")),
-                  ),
-                ),
+                // Story(
+                //   name: 'Navigation/Auto Imply Leading False',
+                //   description:
+                //       'AppBar with automaticallyImplyLeading set to false',
+                //   builder: (context) => Scaffold(
+                //     appBar: const TPEAppBar(
+                //       title: 'No Auto Leading',
+                //       automaticallyImplyLeading: false,
+                //       useBackButton: true,
+                //     ),
+                //     body: const Center(child: Text("Content goes here")),
+                //   ),
+                // ),
 
                 // 📌 Customization Stories
                 Story(
