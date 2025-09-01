@@ -12,6 +12,7 @@ import 'package:hello_ios/widgets/molecule/tpe_molecule_navigation_card.dart';
 import 'package:hello_ios/widgets/atoms/tpe_atom_text_variant.dart';
 import 'package:hello_ios/widgets/molecule/tpe_molecule_primary_secondary_btn.dart';
 import 'package:hello_ios/widgets/organizm/tpe_organism_card_balance.dart';
+import 'package:hello_ios/widgets/organizm/tpe_organism_card_balance_account.dart';
 import 'package:hello_ios/widgets/organizm/tpe_organism_card_balance_tl.dart';
 
 import 'package:hello_ios/widgets/organizm/tpe_organism_menu.dart';
@@ -173,12 +174,15 @@ class ComponentCatalogScreen extends StatelessWidget {
               label: "TPESwitchLanguage",
               icon: Icons.label_important,
               destination: const TPESwitchLanguageStorybook()),
-              CatalogItem(icon: Icons.label_important, label: "TPEPrimarySecondaryButton", destination: TpeMoleculePrimarySecondaryBtn()),
+          CatalogItem(
+              icon: Icons.label_important,
+              label: "TPEPrimarySecondaryButton",
+              destination: TpeMoleculePrimarySecondaryBtn()),
           CatalogItem(
               label: "TPETextGroup",
               icon: Icons.label_important,
               destination: const TPEComponentTextGroupStorybook()),
-              CatalogItem(
+          CatalogItem(
               label: "TPEConfirmationSection",
               icon: Icons.label_important,
               destination: const TpeMoleculeConfirmationSection()),
@@ -219,6 +223,10 @@ class ComponentCatalogScreen extends StatelessWidget {
               label: "TPEAccountCardTW",
               icon: Icons.account_balance_wallet,
               destination: const TPEComponentCardBalanceTW()),
+          CatalogItem(
+              label: "TPEAccountCardProfile",
+              icon: Icons.account_balance_wallet,
+              destination: const TpeOrganismCardBalanceAccount()),
           CatalogItem(
               label: "TPETransactionList",
               icon: Icons.list,

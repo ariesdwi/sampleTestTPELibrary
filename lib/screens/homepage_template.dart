@@ -7,6 +7,7 @@ import 'package:hello_ios/widgets/organizm/tpe_organism_single_button_bs.dart';
 import 'package:hello_ios/widgets/template/tpe_login_page.dart';
 import 'package:hello_ios/widgets/template/tpe_login_page_tw.dart';
 import 'package:hello_ios/widgets/template/tpe_register_page.dart';
+import 'package:tpe_account_management_sdk/tpe_account_management_sdk.dart';
 import 'package:tpe_component_sdk/components/button/tpe_navigation_card.dart';
 import '../models/catalog_item.dart';
 import '../models/catalog_section.dart';
@@ -134,7 +135,46 @@ class HompageTemplate extends StatelessWidget {
                     icon: const Icon(Icons.account_balance),
                     title: 'Account',
                     subtitle: "Check your account details and balance",
-                    onTap: () => _showSnackbar(context, "Account tapped"),
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (_) => TpeAccountManagementTl(
+                            dataListAccountCard: [
+                              AccountDataCardModel(
+                                  accountNumber: '1292321323123344',
+                                  shortName: 'Farischa',
+                                  currency: 'USD',
+                                  currentBalance: '100000.30'),
+                              AccountDataCardModel(
+                                  accountNumber: '1329232132312331',
+                                  shortName: 'Makay',
+                                  currency: 'USD',
+                                  currentBalance: '100000.30'),
+                              AccountDataCardModel(
+                                  accountNumber: '1232321323123379',
+                                  shortName: 'Aries',
+                                  currency: 'USD',
+                                  currentBalance: '100000.30'),
+                              AccountDataCardModel(
+                                  accountNumber: '1932321327122349',
+                                  shortName: 'Dwi',
+                                  currency: 'USD',
+                                  currentBalance: '100000.30'),
+                              AccountDataCardModel(
+                                  accountNumber: '2732321323123389',
+                                  shortName: 'Farischa',
+                                  currency: 'USD',
+                                  currentBalance: '10000030'),
+                            ],
+                            isLoading: false,
+                            accountBalance: 3000000,
+                            currency: 'USD',
+                          ),
+                        ),
+                      );
+                    },
+                    // onTap: () => _showSnackbar(context, "Account tapped"),
                   ),
                   TPEHorizontalMenuItem(
                     icon: const Icon(Icons.account_balance_wallet),
@@ -314,6 +354,7 @@ class HompageTemplate extends StatelessWidget {
               destination: const TpeRegisterPage()),
         ],
       ),
+      CatalogSection(title: "Template Account Management", items: [])
     ];
   }
 }
