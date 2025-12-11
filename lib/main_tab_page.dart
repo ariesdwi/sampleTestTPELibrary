@@ -31,7 +31,7 @@ class _MainTabPageState extends State<MainTabPage> {
 
   late final List<Widget> _pages = [
     ComponentCatalogScreen(),
-    HompageTemplate(),
+    // HompageTemplate(),
   ];
 
   @override

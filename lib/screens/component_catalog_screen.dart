@@ -145,10 +145,10 @@ class ComponentCatalogScreen extends StatelessWidget {
               label: "TPENavigationCardButton",
               icon: Icons.label_important,
               destination: const NavigationButtonCard()),
-          CatalogItem(
-              label: "TPECircleIconButton",
-              icon: Icons.radio_button_checked,
-              destination: const TPEComponentButtonCircle()),
+          // CatalogItem(
+          //     label: "TPECircleIconButton",
+          //     icon: Icons.radio_button_checked,
+          //     destination: const TPEComponentButtonCircle()),
           CatalogItem(
               label: "TPETransactionItem",
               icon: Icons.receipt_long,
@@ -223,10 +223,10 @@ class ComponentCatalogScreen extends StatelessWidget {
               label: "TPEAccountCardTW",
               icon: Icons.account_balance_wallet,
               destination: const TPEComponentCardBalanceTW()),
-          CatalogItem(
-              label: "TPEAccountCardProfile",
-              icon: Icons.account_balance_wallet,
-              destination: const TpeOrganismCardBalanceAccount()),
+          // CatalogItem(
+          //     label: "TPEAccountCardProfile",
+          //     icon: Icons.account_balance_wallet,
+          //     destination: const TpeOrganismCardBalanceAccount()),
           CatalogItem(
               label: "TPETransactionList",
               icon: Icons.list,
@@ -239,10 +239,10 @@ class ComponentCatalogScreen extends StatelessWidget {
               label: "TPEMenuIVertical",
               icon: Icons.vertical_split,
               destination: const TpeOrganismMenu()),
-          CatalogItem(
-              label: "TPEMenuHorizontal",
-              icon: Icons.horizontal_split,
-              destination: TPEComponentMenuHorizontalPage()),
+          // CatalogItem(
+          //     label: "TPEMenuHorizontal",
+          //     icon: Icons.horizontal_split,
+          //     destination: TPEComponentMenuHorizontalPage()),
           //Login
           CatalogItem(
               label: "TPESingleButtonBottomSheet",
